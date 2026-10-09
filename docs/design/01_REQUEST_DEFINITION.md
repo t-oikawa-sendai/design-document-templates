@@ -6,7 +6,7 @@ Created: 2026-10-09
 Last Updated: 2026-10-09
 Author: Takashi Oikawa
 AI: Cursor
-Memo: Document ID DDT-REQ-001。Version 0.3 / Draft。正式承認ではない
+Memo: Document ID DDT-REQ-001。Version 0.4 / Draft。正式承認ではない
 -->
 
 # Request Definition（要求定義）
@@ -15,7 +15,7 @@ Memo: Document ID DDT-REQ-001。Version 0.3 / Draft。正式承認ではない
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | DDT-REQ-001 |
-| Version（バージョン） | 0.3 |
+| Version（バージョン） | 0.4 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-10-09 |
 | Last Updated（最終更新日） | 2026-10-09 |
@@ -54,12 +54,14 @@ Memo: Document ID DDT-REQ-001。Version 0.3 / Draft。正式承認ではない
 - AI ペルソナ
 - アプリ開発
 - 中央標準の再設計
+- 今期の手順B・LEARNINGの提供
 
 ---
 
 ## 4. Assumptions（前提条件）
 
 - 利用者は 2026-10-09 に正式 Purpose を DISTRIBUTION と確定した。
+- 今期は手順Aのみ提供する。初期値は、既存文書ID、生徒のOwner、初期化日のCreated Date / Last Updated、Version 0.1、Status Draftとする。
 - この準備工程では、公開範囲は Private を維持する。元の専用 Repository を非公開のまま保つ。
 - 配布テンプレートの中央正本は `solacom_main` の `docs/standards/templates/design/` である。確認済みコミットは `16c44976638b48c53ef16399b1d51217c540be0a` である。
 

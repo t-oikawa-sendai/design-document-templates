@@ -6,7 +6,7 @@ Created: 2026-10-09
 Last Updated: 2026-10-09
 Author: Takashi Oikawa
 AI: Cursor
-Memo: Document ID DDT-DESIGN-INDEX-001。Version 0.4 / Draft。正式承認ではない
+Memo: Document ID DDT-DESIGN-INDEX-001。Version 0.5 / Draft。正式承認ではない
 -->
 
 # Design Documents Index（設計書一覧）
@@ -15,7 +15,7 @@ Memo: Document ID DDT-DESIGN-INDEX-001。Version 0.4 / Draft。正式承認で�
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | DDT-DESIGN-INDEX-001 |
-| Version（バージョン） | 0.4 |
+| Version（バージョン） | 0.5 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-10-09 |
 | Last Updated（最終更新日） | 2026-10-09 |
@@ -42,7 +42,7 @@ Memo: Document ID DDT-DESIGN-INDEX-001。Version 0.4 / Draft。正式承認で�
 
 ## 1. Project Overview（プロジェクト・機能の概要）
 
-このリポジトリの目的は、生徒が自身のプロジェクトの設計書を作成するためのテンプレートの配布及び使用方法のガイドラインである。専用の非公開 Repository は公開しない。配布する設計テンプレートは、設計書 README と 01〜06、計7文書である。これに加えて、文書の役割、AI読込み、フォルダ構成、初回と再開の説明を [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) で提供する。使用説明書は第8の設計書ではない。
+このリポジトリの目的は、生徒が自身のプロジェクトの設計書を作成するためのテンプレートの配布及び使用方法のガイドラインである。専用の非公開 Repository は公開しない。配布する設計テンプレートは、設計書 README と 01〜06、計7文書である。これに加えて、手順Aの7文書の役割、取得と配置、初期化、AIとの記入と確認の説明を [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) で提供する。
 
 ---
 
@@ -52,8 +52,8 @@ Memo: Document ID DDT-DESIGN-INDEX-001。Version 0.4 / Draft。正式承認で�
 |---|---|---|
 | Current Problems（現在の問題点） | 専用の非公開 Repository を公開せず、生徒へ設計書のテンプレートを渡す。 | [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) |
 | Development Purpose（開発目的） | このリポジトリの目的は、生徒が自身のプロジェクトの設計書を作成するためのテンプレートの配布及び使用方法のガイドラインである。 | [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) |
-| Solution Approach（解決方針） | 7テンプレートを `templates/design/` に置く。使用説明書で、文書の役割、AI読込み、フォルダ構成、初回と再開を説明する。root README から説明書とテンプレートへ案内する。管理用文書と配布物を分ける。 | [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) |
-| System Functions（システム機能） | 設計書 README と 01〜06、計7文書を Markdown で配布する。使用説明書1文書で利用方法を案内する。独自アプリ機能は提供しない。 | [02_REQUIREMENTS_DEFINITION.md](./02_REQUIREMENTS_DEFINITION.md) |
+| Solution Approach（解決方針） | 7テンプレートを `templates/design/` に置く。使用説明書で、手順Aの7文書の役割、取得と配置、初期化、AIとの記入と確認を説明する。root README から説明書とテンプレートへ案内する。管理用文書と配布物を分ける。 | [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) |
+| System Functions（システム機能） | 設計書 README と 01〜06、計7文書を Markdown で配布する。生徒向け使用説明書で手順Aを案内する。手順B・LEARNINGは今期対象外の講師用参考資料に分離する。独自アプリ機能は提供しない。 | [02_REQUIREMENTS_DEFINITION.md](./02_REQUIREMENTS_DEFINITION.md) |
 | Expected Benefits（期待効果） | 生徒がテンプレートを取得し、自分のプロジェクトの `docs/design/` に置いて記入できる。文書の役割、AIへ渡す資料、再開方法を説明書で確認できる。 | [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) |
 | Completion Criteria（完成判定基準） | 7文書の取得と記入ができること。説明書から読み込み対象、順序、指示文、構成図を確認できること。元の専用 Repository が非公開を維持すること。配布元との内容照合と公開前確認が完了していること。公開前確認は未完了である。 | [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) |
 
@@ -73,13 +73,13 @@ Memo: Document ID DDT-DESIGN-INDEX-001。Version 0.4 / Draft。正式承認で�
 
 | File（ファイル名） | Document Name（文書名） | Status（ステータス） | Version（バージョン） | Owner（担当者） |
 |---|---|---|---|---|
-| [README.md](./README.md) | Design Documents Index（設計書一覧） | Draft | 0.4 | Takashi Oikawa |
-| [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) | Request Definition（要求定義） | Draft | 0.3 | Takashi Oikawa |
-| [02_REQUIREMENTS_DEFINITION.md](./02_REQUIREMENTS_DEFINITION.md) | Requirements Definition（要件定義） | Draft | 0.3 | Takashi Oikawa |
-| [03_DATA_AND_SECURITY_DESIGN.md](./03_DATA_AND_SECURITY_DESIGN.md) | Data and Security Design（データ・セキュリティ設計） | Draft | 0.3 | Takashi Oikawa |
-| [04_UI_AND_FLOW_DESIGN.md](./04_UI_AND_FLOW_DESIGN.md) | UI and Flow Design（UI・フロー設計） | Draft | 0.3 | Takashi Oikawa |
-| [05_ARCHITECTURE_DESIGN.md](./05_ARCHITECTURE_DESIGN.md) | Architecture Design（アーキテクチャ設計） | Draft | 0.3 | Takashi Oikawa |
-| [06_OPERATION_AND_HANDOFF.md](./06_OPERATION_AND_HANDOFF.md) | Operation and Handoff Design（運用・詳細設計引き継ぎ） | Draft | 0.3 | Takashi Oikawa |
+| [README.md](./README.md) | Design Documents Index（設計書一覧） | Draft | 0.5 | Takashi Oikawa |
+| [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) | Request Definition（要求定義） | Draft | 0.4 | Takashi Oikawa |
+| [02_REQUIREMENTS_DEFINITION.md](./02_REQUIREMENTS_DEFINITION.md) | Requirements Definition（要件定義） | Draft | 0.4 | Takashi Oikawa |
+| [03_DATA_AND_SECURITY_DESIGN.md](./03_DATA_AND_SECURITY_DESIGN.md) | Data and Security Design（データ・セキュリティ設計） | Draft | 0.4 | Takashi Oikawa |
+| [04_UI_AND_FLOW_DESIGN.md](./04_UI_AND_FLOW_DESIGN.md) | UI and Flow Design（UI・フロー設計） | Draft | 0.4 | Takashi Oikawa |
+| [05_ARCHITECTURE_DESIGN.md](./05_ARCHITECTURE_DESIGN.md) | Architecture Design（アーキテクチャ設計） | Draft | 0.4 | Takashi Oikawa |
+| [06_OPERATION_AND_HANDOFF.md](./06_OPERATION_AND_HANDOFF.md) | Operation and Handoff Design（運用・詳細設計引き継ぎ） | Draft | 0.4 | Takashi Oikawa |
 
 ---
 
@@ -89,7 +89,7 @@ Memo: Document ID DDT-DESIGN-INDEX-001。Version 0.4 / Draft。正式承認で�
 - 管理用設計書は `docs/design/`、生徒向け配布物は `templates/design/` とする。
 - 配布時に本文、日付、Owner、Status、Version、改行、相対リンクを変換しない。
 - 中央管理コピーは独自に編集しない。
-- 使用説明書は `docs/STUDENT_USAGE_GUIDE.md` とする。設計書一覧の第8行にはしない。
+- 使用説明書は `docs/STUDENT_USAGE_GUIDE.md` とする。今期は手順Aのみ提供する。手順B・LEARNINGの説明は `docs/GOVERNED_DEVELOPMENT_GUIDE.md` に分離し、導入経路や権限を確定した提供済み手順と扱わない。
 - この準備工程では、公開範囲は Private を維持する。この工程では Public にしない。元の専用 Repository を非公開のまま保つ。
 
 ---

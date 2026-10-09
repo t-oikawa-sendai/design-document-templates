@@ -6,7 +6,7 @@ Created: 2026-10-09
 Last Updated: 2026-10-09
 Author: Takashi Oikawa
 AI: Cursor
-Memo: Document ID DDT-ARCH-001。Version 0.3 / Draft。正式承認ではない
+Memo: Document ID DDT-ARCH-001。Version 0.4 / Draft。正式承認ではない
 -->
 
 # Architecture Design（アーキテクチャ設計）
@@ -15,7 +15,7 @@ Memo: Document ID DDT-ARCH-001。Version 0.3 / Draft。正式承認ではない
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | DDT-ARCH-001 |
-| Version（バージョン） | 0.3 |
+| Version（バージョン） | 0.4 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-10-09 |
 | Last Updated（最終更新日） | 2026-10-09 |
@@ -69,7 +69,7 @@ Memo: Document ID DDT-ARCH-001。Version 0.3 / Draft。正式承認ではない
 
 ### 5.1 System Architecture Diagram（システム構成図）
 
-追加後の配布元の主要なフォルダ構成は次のとおりである。管理用 `docs/design/` と配布用 `templates/design/` を区別する。図の意味は [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) の §4.1 と同じである。
+追加後の配布元の主要なフォルダ構成は次のとおりである。管理用 `docs/design/` と配布用 `templates/design/` を区別する。生徒向け説明書では手順Aの利用先の構成だけを示す。本図は管理側で配布元の構成を示す。
 
 ```mermaid
 flowchart TD
@@ -78,6 +78,7 @@ flowchart TD
     R --> DOCS["docs/"]
     R --> TEMPLATES["templates/"]
     DOCS --> GUIDE["STUDENT_USAGE_GUIDE.md"]
+    DOCS --> FUTURE["GOVERNED_DEVELOPMENT_GUIDE.md：講師用参考"]
     DOCS --> ADMIN["design/：Repository Design（配布元の設計）"]
     DOCS --> STANDARDS["standards/"]
     TEMPLATES --> DESIGN["design/：Student Templates（生徒用テンプレート）"]
@@ -85,7 +86,7 @@ flowchart TD
     DESIGN --> SIX["01〜06：Design Documents（設計6文書）"]
 ```
 
-中央正本から利用先までの対応は次のとおりである。生徒側のフォルダ構成図は [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) の §4.2 を参照する。中央の非公開配布元を生徒の必須読込み先にしない。
+中央正本から利用先までの対応は次のとおりである。生徒側のフォルダ構成図は [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) の §4 を参照する。中央の非公開配布元を生徒の必須読込み先にしない。
 
 | Source（対応元） | Destination（対応先） |
 |---|---|
@@ -109,7 +110,8 @@ flowchart TD
 アプリのレイヤー設計は対象外。理由: 新しいアプリは追加しない。配置は次のとおりである。
 
 - `docs/design/` は、この Repository の管理用設計正本である。
-- `docs/STUDENT_USAGE_GUIDE.md` は、生徒向け使用説明書である。文書の役割、AI読込み、フォルダ構成、初回と再開を説明する。配布テンプレート7文書には含めない。
+- `docs/GOVERNED_DEVELOPMENT_GUIDE.md` は、今期対象外の手順B・LEARNINGを整理した講師用参考資料である。
+- `docs/STUDENT_USAGE_GUIDE.md` は、生徒向け使用説明書である。手順Aの文書の役割、取得と配置、初期化、AIとの記入と確認を説明する。配布テンプレート7文書には含めない。
 - `templates/design/` は、配布コピーである。
 - `CONSTITUTION.md`、`AGENTS.md`、`docs/standards/DOCUMENT_GOVERNANCE_STANDARD.md` は、既存の標準管理コピーとして維持する。
 - `scripts/validate-docs.py` と `.github/workflows/validate-docs.yml` は、既存の検証資産として維持する。
@@ -135,7 +137,7 @@ flowchart TD
 
 | Environment（環境） | Configuration / Resources（構成・リソース概要） |
 |---|---|
-| Development（開発） | ローカル作業ディレクトリ `/Users/takashioikawa/Dev/design-document-templates`。 |
+| Development（開発） | ローカル作業ディレクトリ。 |
 | Staging（ステージング） | 対象外。理由: ステージング環境は追加しない。 |
 | Production（本番） | この準備工程では GitHub 上の Private repository である。Public への変更は後続工程である。 |
 

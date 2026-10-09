@@ -4,10 +4,10 @@
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | UI-001 |
-| Version（バージョン） | 0.2 |
+| Version（バージョン） | 0.3 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-06-21 |
-| Last Updated（最終更新日） | 2026-07-15 |
+| Last Updated（最終更新日） | 2026-10-09 |
 | Owner（管理者） | Takashi Oikawa |
 | Related Documents（関連文書） | README.md / 02_REQUIREMENTS_DEFINITION.md / 05_ARCHITECTURE_DESIGN.md |
 
@@ -91,7 +91,7 @@
 
 | Scenario ID（シナリオID） | Operation Name（操作名） | Steps（操作手順） |
 |---|---|---|
-| SC-001 | （記入欄） | 1. （記入欄） → 2. （記入欄） → 3. （記入欄） |
+| SCN-001 | （記入欄） | 1. （記入欄） → 2. （記入欄） → 3. （記入欄） |
 
 ### 5.5 Validation and Error Handling Policy（バリデーション・エラーハンドリング方針 / UI層）
 

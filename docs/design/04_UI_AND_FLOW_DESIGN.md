@@ -6,7 +6,7 @@ Created: 2026-10-09
 Last Updated: 2026-10-09
 Author: Takashi Oikawa
 AI: Cursor
-Memo: Document ID DDT-UI-001。Version 0.3 / Draft。正式承認ではない
+Memo: Document ID DDT-UI-001。Version 0.4 / Draft。正式承認ではない
 -->
 
 # UI and Flow Design（UI・フロー設計）
@@ -15,7 +15,7 @@ Memo: Document ID DDT-UI-001。Version 0.3 / Draft。正式承認ではない
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | DDT-UI-001 |
-| Version（バージョン） | 0.3 |
+| Version（バージョン） | 0.4 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-10-09 |
 | Last Updated（最終更新日） | 2026-10-09 |
@@ -44,7 +44,7 @@ Memo: Document ID DDT-UI-001。Version 0.3 / Draft。正式承認ではない
 
 ## 2. Scope（対象範囲）
 
-生徒の流れは、ルート README から使用説明書を読むこと、先生が指定した利用手順の確認、7テンプレートの取得と自分の `docs/design/` への配置、課題文と自分の最新文書を AI へ渡すこと、読めた資料と未読資料の確認、設計書の記入、一覧・参照・図の確認、CURRENT を運用している場合の引き継ぎである。フォルダ構成図と指示文の詳細は [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) を参照する。閲覧は GitHub の README とファイル閲覧を使う。独自 GUI は提供しない。
+生徒の流れは、ルート README から使用説明書を読むこと、今期の手順Aと初期値の確認、7テンプレートの取得と自分の `docs/design/` への配置、課題文と自分の最新文書を AI へ渡すこと、読めた資料と未読資料の確認、設計書の記入、一覧・参照・図の確認、決定済み・未決・次回の相談事項の記録である。フォルダ構成図と指示文の詳細は [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) を参照する。閲覧は GitHub の README とファイル閲覧を使う。独自 GUI は提供しない。
 
 ---
 
@@ -79,12 +79,12 @@ Memo: Document ID DDT-UI-001。Version 0.3 / Draft。正式承認ではない
 画面遷移図は作成しない。理由: 独自 GUI は提供しない。生徒の流れは次のとおりである。フォルダ構成図と指示文の詳細は [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) を参照する。
 
 1. ルートREADMEから使用説明書を読む。
-2. 先生が指定した利用手順を確認する。
+2. 今期の手順Aと初期値を確認する。
 3. 7テンプレートを取得し、自分の `docs/design/` へ配置する。
 4. 課題文と自分の最新文書を、該当する一覧・順序でAIへ渡す。
 5. 読めた資料・未読資料を確認して設計書を記入する。
 6. 一覧・参照・図と今回の設計内容を確認する。
-7. CURRENTを運用している場合は実施状態を記録し、次のAIへ引き継ぐ。
+7. 決定済み・未決・次回の相談事項を記録して、次のAIへ渡す。
 
 ### 5.3 Wireframes and Layout Policy（主要画面のワイヤーフレーム・レイアウト方針）
 
@@ -98,7 +98,7 @@ Memo: Document ID DDT-UI-001。Version 0.3 / Draft。正式承認ではない
 
 | Scenario ID（シナリオID） | Operation Name（操作名） | Steps（操作手順） |
 |---|---|---|
-| — | 説明書を使ってテンプレートを記入する | 1. ルートREADMEから使用説明書を読む。2. 先生が指定した利用手順を確認する。3. 7テンプレートを取得し、自分の `docs/design/` へ配置する。4. 課題文と自分の最新文書を、該当する一覧・順序でAIへ渡す。5. 読めた資料・未読資料を確認して設計書を記入する。6. 一覧・参照・図と今回の設計内容を確認する。7. CURRENTを運用している場合は実施状態を記録し、次のAIへ引き継ぐ。 |
+| — | 説明書を使ってテンプレートを記入する | 1. ルートREADMEから使用説明書を読む。2. 今期の手順Aと初期値を確認する。3. 7テンプレートを取得し、自分の `docs/design/` へ配置する。4. 課題文と自分の最新文書を、該当する一覧・順序でAIへ渡す。5. 読めた資料・未読資料を確認して設計書を記入する。6. 一覧・参照・図と今回の設計内容を確認する。7. 決定済み・未決・次回の相談事項を記録して、次のAIへ渡す。 |
 
 ### 5.5 Validation and Error Handling Policy（バリデーション・エラーハンドリング方針 / UI層）
 
