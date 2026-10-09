@@ -3,10 +3,10 @@ Program Name: DDT Architecture Design
 Language: Markdown
 Function: 管理文書と配布物の配置、および配布元との関係を定義する
 Created: 2026-10-09
-Last Updated: 2026-10-09
+Last Updated: 2026-10-10
 Author: Takashi Oikawa
 AI: Cursor
-Memo: Document ID DDT-ARCH-001。Version 0.4 / Draft。正式承認ではない
+Memo: Document ID DDT-ARCH-001。Version 0.5 / Draft。正式承認ではない
 -->
 
 # Architecture Design（アーキテクチャ設計）
@@ -15,12 +15,12 @@ Memo: Document ID DDT-ARCH-001。Version 0.4 / Draft。正式承認ではない
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | DDT-ARCH-001 |
-| Version（バージョン） | 0.4 |
+| Version（バージョン） | 0.5 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-10-09 |
-| Last Updated（最終更新日） | 2026-10-09 |
+| Last Updated（最終更新日） | 2026-10-10 |
 | Owner（管理者） | Takashi Oikawa |
-| Related Documents（関連文書） | README.md / 02_REQUIREMENTS_DEFINITION.md / 03_DATA_AND_SECURITY_DESIGN.md / 06_OPERATION_AND_HANDOFF.md / [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) |
+| Related Documents（関連文書） | README.md / 02_REQUIREMENTS_DEFINITION.md / 03_DATA_AND_SECURITY_DESIGN.md / 06_OPERATION_AND_HANDOFF.md / [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) / [../GOVERNED_DEVELOPMENT_GUIDE.md](../GOVERNED_DEVELOPMENT_GUIDE.md) |
 
 ---
 
@@ -44,7 +44,7 @@ Memo: Document ID DDT-ARCH-001。Version 0.4 / Draft。正式承認ではない
 
 ## 2. Scope（対象範囲）
 
-`solacom_main` の中央テンプレ正本、この Repository の `templates/design/`、生徒の `docs/design/`、この Repository の管理用 `docs/design/`、および `docs/STUDENT_USAGE_GUIDE.md` の関係を対象とする。
+`solacom_main` の中央テンプレ正本、この Repository の `templates/design/`、生徒の `docs/design/`、この Repository の管理用 `docs/design/`、`docs/STUDENT_USAGE_GUIDE.md`、および参考資料 `docs/GOVERNED_DEVELOPMENT_GUIDE.md` の関係を対象とする。
 
 ---
 
@@ -69,7 +69,7 @@ Memo: Document ID DDT-ARCH-001。Version 0.4 / Draft。正式承認ではない
 
 ### 5.1 System Architecture Diagram（システム構成図）
 
-追加後の配布元の主要なフォルダ構成は次のとおりである。管理用 `docs/design/` と配布用 `templates/design/` を区別する。生徒向け説明書では手順Aの利用先の構成だけを示す。本図は管理側で配布元の構成を示す。
+追加後の配布元の主要なフォルダ構成は次のとおりである。管理用 `docs/design/` と配布用 `templates/design/` を区別する。使用説明書では利用先の7文書配置だけを示す。本図は管理側で配布元の構成を示す。
 
 ```mermaid
 flowchart TD
@@ -78,7 +78,7 @@ flowchart TD
     R --> DOCS["docs/"]
     R --> TEMPLATES["templates/"]
     DOCS --> GUIDE["STUDENT_USAGE_GUIDE.md"]
-    DOCS --> FUTURE["GOVERNED_DEVELOPMENT_GUIDE.md：講師用参考"]
+    DOCS --> FUTURE["GOVERNED_DEVELOPMENT_GUIDE.md：参考資料"]
     DOCS --> ADMIN["design/：Repository Design（配布元の設計）"]
     DOCS --> STANDARDS["standards/"]
     TEMPLATES --> DESIGN["design/：Student Templates（生徒用テンプレート）"]
@@ -110,11 +110,11 @@ flowchart TD
 アプリのレイヤー設計は対象外。理由: 新しいアプリは追加しない。配置は次のとおりである。
 
 - `docs/design/` は、この Repository の管理用設計正本である。
-- `docs/GOVERNED_DEVELOPMENT_GUIDE.md` は、今期対象外の手順B・LEARNINGを整理した講師用参考資料である。
-- `docs/STUDENT_USAGE_GUIDE.md` は、生徒向け使用説明書である。手順Aの文書の役割、取得と配置、初期化、AIとの記入と確認を説明する。配布テンプレート7文書には含めない。
+- `docs/GOVERNED_DEVELOPMENT_GUIDE.md` は、7文書の記載先と任意の設定ファイルの参考資料である。使用説明書の指示例を全文では再掲しない。
+- `docs/STUDENT_USAGE_GUIDE.md` は、生徒向け使用説明書である。文書の役割、取得と配置、初期化、設定なしの記入・仕様変更・実装を説明する。配布テンプレート7文書には含めない。
 - `templates/design/` は、配布コピーである。
-- `CONSTITUTION.md`、`AGENTS.md`、`docs/standards/DOCUMENT_GOVERNANCE_STANDARD.md` は、既存の標準管理コピーとして維持する。
-- `scripts/validate-docs.py` と `.github/workflows/validate-docs.yml` は、既存の検証資産として維持する。
+- `CONSTITUTION.md`、`AGENTS.md`、`docs/standards/DOCUMENT_GOVERNANCE_STANDARD.md` は、既存の標準管理コピーとして維持する。利用先への導入は任意であり、この配布元の必須管理資産とは別である。
+- `scripts/validate-docs.py` と `.github/workflows/validate-docs.yml` は、既存の検証資産として維持する。利用先で設定ファイルが無いことを、この配布元の検証資産の削除理由にしない。
 
 ### 5.4 External Integration and API Design（外部システム連携・API設計方針）
 

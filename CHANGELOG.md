@@ -3,10 +3,10 @@ Program Name: DDT CHANGELOG
 Language: Markdown
 Function: design-document-templates の変更履歴正本
 Created: 2026-10-09
-Last Updated: 2026-10-09
+Last Updated: 2026-10-10
 Author: Takashi Oikawa
 AI: Cursor
-Memo: Document ID DDT-CHANGELOG-001。Version 0.7 / Draft。正式承認ではない
+Memo: Document ID DDT-CHANGELOG-001。Version 0.8 / Draft。正式承認ではない
 -->
 
 # CHANGELOG
@@ -15,10 +15,10 @@ Memo: Document ID DDT-CHANGELOG-001。Version 0.7 / Draft。正式承認では�
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | DDT-CHANGELOG-001 |
-| Version（バージョン） | 0.7 |
+| Version（バージョン） | 0.8 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-10-09 |
-| Last Updated（最終更新日） | 2026-10-09 |
+| Last Updated（最終更新日） | 2026-10-10 |
 | Owner（管理者） | Takashi Oikawa |
 | Related Documents（関連文書） | [README.md](./README.md) / [docs/STUDENT_USAGE_GUIDE.md](./docs/STUDENT_USAGE_GUIDE.md) / [CONSTITUTION.md](./CONSTITUTION.md) / [AGENTS.md](./AGENTS.md) / [docs/design/README.md](./docs/design/README.md) |
 
@@ -58,6 +58,7 @@ Governance 導入 Baseline は、Governance 導入成功後に記録する。
 
 | Version（バージョン） | Date（日付） | Document（文書） | Category（変更分類） | Changes（内容） | Author（作成者） |
 |---|---|---|---|---|---|
+| 0.8 | 2026-10-10 | README.md、docs/STUDENT_USAGE_GUIDE.md、docs/GOVERNED_DEVELOPMENT_GUIDE.md、docs/design/ の7文書、project-notes/CURRENT.md、CHANGELOG.md | Changed | 目的文をSDDとSSOTに合わせ、利用先の設定ファイルを任意とした。手順A・手順B・LEARNINGの利用区分は撤回済みである。正式PurposeはDISTRIBUTIONのまま。更新後の版は、root README 0.5、使用説明書 0.4、参考資料 0.2、管理設計README 0.6、01〜06 は 0.5、CURRENT 0.8、CHANGELOG 0.8、いずれも Draft である。第2版の「リンク0件」不合格とは区別する。本行はcommit前の記録であり、今回のPushとActions成功は含まない。独立レビュー、正式承認、Public化は未実施である。 | Takashi Oikawa |
 | 0.7 | 2026-10-09 | project-notes/CURRENT.md、CHANGELOG.md | Changed | 受領ZIPの設計担当レビューDDT-REVIEW-20261009-005のPASSと、利用者のPush指示を記録した。中央の未同期と履歴未適用を解消し、承認済み3文書を通常pushした中央commit `93a3fce46780cf134ea0ebc4a610c96571040fd2` からの無変換再配布を確認した。本行は配布先commit前の確認記録。Private・Draftを維持し、独立レビュー・正式承認・Public化は未実施である。 | Takashi Oikawa |
 | — | 2026-10-09 | project-notes/CURRENT.md、CHANGELOG.md、templates/design/ | Changed | 最終修正の実測を記録した。配布先 validator は終了コード 0、検査対象 21 件 PASS。`git diff --check` と cached check は終了コード 0、stage は空、HEAD は `c7488965f98149dc73232490e42b62f699207d93` のまま。中央テンプレート README と 04 を作業ツリーで修正し、7文書をバイトコピーした。これは再配布準備である。中央 `CHANGELOG.md` は未適用。中央の Git 反映、実差分レビュー、正式承認、commit / push、公開は未実施。Mermaid はローカル 3 図が RENDER PASS。GitHub 上の表示は未確認。 | Takashi Oikawa |
 | 0.6 | 2026-10-09 | README.md、docs/STUDENT_USAGE_GUIDE.md、docs/GOVERNED_DEVELOPMENT_GUIDE.md、docs/design/、project-notes/CURRENT.md、CHANGELOG.md | Changed | 正本文書レビューに対応して手順A専用説明書へ再構成し、管理ルールの説明を講師用参考資料へ分離した。今期Aのみと初期値を反映し、用語補足・講師表記・現在状態の記録・ローカルパス表記を修正した。今回の実差分レビュー、正式承認、commit / push、公開は未実施。中央原本の修正と再配布の実行結果は別途検証して記録する。 | Takashi Oikawa |

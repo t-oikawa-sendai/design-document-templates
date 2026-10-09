@@ -3,10 +3,10 @@ Program Name: DDT CURRENT
 Language: Markdown
 Function: 目的、確認時点のGit反映状態、現在地点、次作業を記録する
 Created: 2026-10-09
-Last Updated: 2026-10-09
+Last Updated: 2026-10-10
 Author: Takashi Oikawa
 AI: Cursor
-Memo: Document ID DDT-CURRENT-001。Version 0.7 / Draft。正式承認ではない
+Memo: Document ID DDT-CURRENT-001。Version 0.8 / Draft。正式承認ではない
 -->
 
 # CURRENT
@@ -15,16 +15,20 @@ Memo: Document ID DDT-CURRENT-001。Version 0.7 / Draft。正式承認ではな�
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | DDT-CURRENT-001 |
-| Version（バージョン） | 0.7 |
+| Version（バージョン） | 0.8 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-10-09 |
-| Last Updated（最終更新日） | 2026-10-09 |
+| Last Updated（最終更新日） | 2026-10-10 |
 | Owner（管理者） | Takashi Oikawa |
-| Related Documents（関連文書） | [README.md](../README.md) / [生徒向け使用説明書](../docs/STUDENT_USAGE_GUIDE.md) / [講師用参考資料](../docs/GOVERNED_DEVELOPMENT_GUIDE.md) / [CHANGELOG.md](../CHANGELOG.md) / [管理設計](../docs/design/README.md) |
+| Related Documents（関連文書） | [README.md](../README.md) / [生徒向け使用説明書](../docs/STUDENT_USAGE_GUIDE.md) / [7文書管理と設定ファイルの参考資料](../docs/GOVERNED_DEVELOPMENT_GUIDE.md) / [CHANGELOG.md](../CHANGELOG.md) / [管理設計](../docs/design/README.md) |
 
 ## Purpose（目的）
 
-DISTRIBUTION。このリポジトリの目的は、生徒が自身のプロジェクトの設計書を作成するためのテンプレートの配布及び使用方法のガイドラインである。
+DISTRIBUTION。正式 Purpose は変更しない。2026-10-10 の目的文は次のとおりである。
+
+> SDD（仕様駆動開発）で、AIが作成する設計文書を決まった7文書・決まった節へ収め、重複と冗長化を防ぐためのテンプレートを配布する。生徒は自分のリポジトリに配置して使う。
+
+手順Aのみを今期の提供区分とする方針は、現行の確定事項から撤回済みである。経緯は Completed に残す。
 
 ## Completed（完了）
 
@@ -37,7 +41,7 @@ DISTRIBUTION。このリポジトリの目的は、生徒が自身のプロジ�
 - 2026-10-09に新commit `c7488965f98149dc73232490e42b62f699207d93` の通常pushが成功した。Cursorから、fetch後のlocal HEAD・origin/main・GitHub mainの一致、clean、commit前のvalidator・差分検査成功が報告された。設計担当もGitHub mainのcommitを確認した。
 - 同SHAのActions「Validate Documents」はsuccessと報告された。この既存runの成功は、今回の未反映の修正案の検証結果ではない。
 - 既存7テンプレートは中央コミット `16c44976638b48c53ef16399b1d51217c540be0a` の `docs/standards/templates/design/` と全件一致していた。これは修正前の配布版の照合記録である。
-- 講師判断として今期は手順Aのみとする。文書の初期値は既存文書ID、生徒のOwner、初期化日のCreated Date / Last Updated、Version 0.1、Status Draftとする。
+- 講師判断として今期は手順Aのみとする、は 2026-10-10 の指示で撤回済みである。当時の初期値（既存文書ID、自分のOwner、初期化日のCreated Date / Last Updated、Version 0.1、Status Draft）は維持する。配布テンプレートの Version とは区別する。
 - 2026-10-09 に、正本文書レビューの最終修正を両リポジトリの作業ツリーへ適用した。配布先の確認時点のGit反映基準は `c7488965f98149dc73232490e42b62f699207d93`（main、Private）。local HEAD、fetch済み origin/main、GitHub main はこの SHA で一致した。この修正は未commitであり、stage は空である。この SHA を、未commitの修正を含む CURRENT 自身の commit SHA としては扱わない。
 - 中央原本のローカル HEAD は `18f5ed1c06999796f165d121a513afac5d6347a3`。fetch 後の origin/main と GitHub main は確認基準 `16c44976638b48c53ef16399b1d51217c540be0a`。公開範囲は Private。ローカル HEAD はその祖先で 2 commit 遅れ、対象外の未commit差分がその 2 commit の変更ファイルと重なる。HEAD は動かしていない。中央 `CHANGELOG.md` は確認基準の本文と一致せず、`solacom_main.patch` の `git apply --check` は終了コード 1（`CHANGELOG.md`）だった。このファイルは上書きしていない。
 - 中央 `docs/standards/templates/design/README.md` と `04_UI_AND_FLOW_DESIGN.md` は、適用前の SHA-256 が確認基準と一致したため本文案を適用した。他 5 テンプレートは無変更。中央の Git 反映は未実施である。配布先 `templates/design/` の 7 文書は、修正後の中央作業ツリーからバイト単位でコピーした。README と 04 だけが配布先 HEAD からの差分であり、他 5 文書は `c7488965f98149dc73232490e42b62f699207d93` と一致する。これは再配布準備であり、反映済み原本からの再配布完了ではない。
@@ -50,25 +54,28 @@ DISTRIBUTION。このリポジトリの目的は、生徒が自身のプロジ�
 - 利用者はPushまで進めることを明示指示した。正式承認・Public化の指示とは区別する。
 - 中央で旧HEADから確認基準 `16c44976638b48c53ef16399b1d51217c540be0a` へ比較基準を同期し、作業ファイルの内容・削除状態と対象外の変更を保持したことを確認した。承認済み3文書だけをcommitし、通常pushした。中央のlocal HEAD・fetch後のorigin/main・GitHub mainは `93a3fce46780cf134ea0ebc4a610c96571040fd2` で一致した。
 - 配布先7テンプレートは、中央の反映済みcommit `93a3fce46780cf134ea0ebc4a610c96571040fd2` の7文書と全件バイト一致し、原本からの再配布を確認した。配布先の変更対象は従来の14文書のまま。既存保護6資産は変更していない。
+- 2026-10-09 の commit `7e02ccc6305c74ae08e2bf0436cb6f38604a2c75` は、通常 push 済みの過去実績である。2026-10-10 の確認で、local HEAD、fetch 後の origin/main、GitHub main はこの SHA で一致し、作業ツリーは clean、公開範囲は Private だった。同 SHA の Actions「Validate Documents」run `37941377205` は success である。https://github.com/t-oikawa-sendai/design-document-templates/actions/runs/37941377205 この成功は、今回の目的訂正の検証結果ではない。
+- 第2版の「リンク0件」を不合格とした判断は、所有者の最新指示で撤回済みである。今回の目的訂正とは別である。参考資料へのリンクを root README と使用説明書に置く。
+- 2026-10-10 の目的訂正について、commit 前に次を確認した。`python3 scripts/validate-docs.py` は終了コード 0、検査対象 21 件は PASS。`git diff --check` は終了コード 0。差分は指定12文書のみ。`templates/design/` の7文書、`CONSTITUTION.md`、`AGENTS.md`、`docs/standards/`、`docs/NEW_REPOSITORY_SETUP_GUIDE.md`、`scripts/validate-docs.py`、`.github/workflows/validate-docs.yml` の SHA-256 は編集前と一致した。新規 F/O/R-ID は作っていない。変更した構成図はローカルの Chrome headless で表示を確認した。GitHub 上の表示、今回の Push、Actions は未実施である。
 
 ## Current（現在）
 
-Private・Draftの改訂版を、独立レビュアーへ提出する段階。配布先の本文・差分レビューは `DDT-REVIEW-20261009-005` でPASS。正式承認とPublic化は未実施である。
+Private・Draft。正式 Purpose は DISTRIBUTION のまま、目的文を SDD・SSOT と、利用先での設定ファイル任意へ訂正した段階である。この CURRENT は commit 前の記録であり、今回の Push 成功と新しい SHA は記載しない。正式承認、独立レビュー、Public化は未実施である。
 
-中央の反映済み原本は `93a3fce46780cf134ea0ebc4a610c96571040fd2`。配布先の今回の変更基点は `c7488965f98149dc73232490e42b62f699207d93`。この基点は最新HEADを示す値ではない。本記録は配布先commit直前に中央反映・再配布を確認して作成した。配布先の反映状態は、このCURRENTを含むcommitがGitHub mainへ到達しているか、実HEAD・origin/main・GitHub mainが一致するかで確認する。自己commitのSHAを本文へ埋め込むためのamendは行わない。
+変更基点は `7e02ccc6305c74ae08e2bf0436cb6f38604a2c75` である。自己 commit の SHA を本文へ埋め込むための amend は行わない。
 
 ## Next（次）
 
-1. 配布先と中央の反映済みSHAを独立レビュアーへ渡し、PrivateのGitHub上で本文・差分・図をレビューしてもらう。
-2. 独立レビュー結果を確認し、必要な修正を行う。
-3. 正式承認、公開前確認、Public化、生徒の匿名取得確認は、その後の指示で進める。
+1. 明示指示に従い、検証済みの12文書を通常 commit し、通常 push する。拒否や競合を force push で回避しない。
+2. Push 後の SHA、Actions、変更した図の GitHub 表示は、最終報告で確認する。この本文へ追記するための amend はしない。
+3. 独立レビュー、正式承認、公開前確認、Public化は、その後の指示で進める。
 
 ## Blockers（阻害要因）
 
-- 中央の未同期とCHANGELOG未適用は、上記の確認結果により今回のPush工程で解消した。
-- 独立レビュアーの結果、正式承認、GitHub上の図表示、公開前確認、Public化、生徒の匿名取得確認は未完了である。ローカル3図の表示PASSとは区別する。
-- 手順B・LEARNINGは今期対象外。将来の導入経路・権限・AI制御資産の確認は、今期の手順Aの阻害要因にしない。
+- 独立レビュー、正式承認、Public化は未完了である。今回の Push を公開承認とは扱わない。
+- 変更した構成図の GitHub 上の表示は、この記録時点では未確認である。ローカル表示の確認とは区別する。
+- 旧不具合と、撤回済みの手順A・手順B・LEARNINGの提供区分は、現行の阻害要因にしない。
 
 ## Related Decisions（関連Decision）
 
-新しいDecision番号やF/O/R仕様IDは採番しない。今期の手順と初期値は [要求定義](../docs/design/01_REQUEST_DEFINITION.md)、[要件定義](../docs/design/02_REQUIREMENTS_DEFINITION.md)、[生徒向け使用説明書](../docs/STUDENT_USAGE_GUIDE.md) に記録する。
+新しいDecision番号やF/O/R仕様IDは採番しない。目的文、SSOT、設定ファイルの任意性は [要求定義](../docs/design/01_REQUEST_DEFINITION.md)、[要件定義](../docs/design/02_REQUIREMENTS_DEFINITION.md)、[使用説明書](../docs/STUDENT_USAGE_GUIDE.md)、[参考資料](../docs/GOVERNED_DEVELOPMENT_GUIDE.md) に記録する。

@@ -3,10 +3,10 @@ Program Name: DDT Design Index
 Language: Markdown
 Function: design-document-templates 自体の管理用設計書一覧
 Created: 2026-10-09
-Last Updated: 2026-10-09
+Last Updated: 2026-10-10
 Author: Takashi Oikawa
 AI: Cursor
-Memo: Document ID DDT-DESIGN-INDEX-001。Version 0.5 / Draft。正式承認ではない
+Memo: Document ID DDT-DESIGN-INDEX-001。Version 0.6 / Draft。正式承認ではない
 -->
 
 # Design Documents Index（設計書一覧）
@@ -15,12 +15,12 @@ Memo: Document ID DDT-DESIGN-INDEX-001。Version 0.5 / Draft。正式承認で�
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | DDT-DESIGN-INDEX-001 |
-| Version（バージョン） | 0.5 |
+| Version（バージョン） | 0.6 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-10-09 |
-| Last Updated（最終更新日） | 2026-10-09 |
+| Last Updated（最終更新日） | 2026-10-10 |
 | Owner（管理者） | Takashi Oikawa |
-| Related Documents（関連文書） | [CHANGELOG.md](../../CHANGELOG.md) / [README.md](../../README.md) / [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) / [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) / [02_REQUIREMENTS_DEFINITION.md](./02_REQUIREMENTS_DEFINITION.md) / [03_DATA_AND_SECURITY_DESIGN.md](./03_DATA_AND_SECURITY_DESIGN.md) / [04_UI_AND_FLOW_DESIGN.md](./04_UI_AND_FLOW_DESIGN.md) / [05_ARCHITECTURE_DESIGN.md](./05_ARCHITECTURE_DESIGN.md) / [06_OPERATION_AND_HANDOFF.md](./06_OPERATION_AND_HANDOFF.md) |
+| Related Documents（関連文書） | [CHANGELOG.md](../../CHANGELOG.md) / [README.md](../../README.md) / [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) / [../GOVERNED_DEVELOPMENT_GUIDE.md](../GOVERNED_DEVELOPMENT_GUIDE.md) / [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) / [02_REQUIREMENTS_DEFINITION.md](./02_REQUIREMENTS_DEFINITION.md) / [03_DATA_AND_SECURITY_DESIGN.md](./03_DATA_AND_SECURITY_DESIGN.md) / [04_UI_AND_FLOW_DESIGN.md](./04_UI_AND_FLOW_DESIGN.md) / [05_ARCHITECTURE_DESIGN.md](./05_ARCHITECTURE_DESIGN.md) / [06_OPERATION_AND_HANDOFF.md](./06_OPERATION_AND_HANDOFF.md) |
 
 > 詳細な変更履歴はリポジトリルートの [CHANGELOG.md](../../CHANGELOG.md) を参照。
 
@@ -42,7 +42,15 @@ Memo: Document ID DDT-DESIGN-INDEX-001。Version 0.5 / Draft。正式承認で�
 
 ## 1. Project Overview（プロジェクト・機能の概要）
 
-このリポジトリの目的は、生徒が自身のプロジェクトの設計書を作成するためのテンプレートの配布及び使用方法のガイドラインである。専用の非公開 Repository は公開しない。配布する設計テンプレートは、設計書 README と 01〜06、計7文書である。これに加えて、手順Aの7文書の役割、取得と配置、初期化、AIとの記入と確認の説明を [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) で提供する。
+正式 Purpose は DISTRIBUTION である。目的文は次のとおりである。
+
+> SDD（仕様駆動開発）で、AIが作成する設計文書を決まった7文書・決まった節へ収め、重複と冗長化を防ぐためのテンプレートを配布する。生徒は自分のリポジトリに配置して使う。
+
+SDDは、仕様書を先に書き、AIはその仕様に従って実装する進め方である。専用の非公開 Repository は公開しない。基本構成は、利用先の `docs/design/README.md` と 01〜06 の7文書である。同じ仕様の正本は一つにし、他の文書からは参照する（SSOT）。7文書の存在だけでは効果を保証しない。記載先の指定、参照関係の維持、人による確認を運用とする。
+
+利用先の `AGENTS.md` と `CONSTITUTION.md` の導入は任意である。両方がなくても、記入、仕様変更、実装、確認を進められる。設定ファイルが既にある利用先では、その現行ルールを読む。設定の削除や無視を案内しない。配布元自身は既存の管理ルールで運用を続ける。この任意性と、配布元の必須管理資産は別である。
+
+使い方は [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) で配布する。設定ファイルの使用方法は [../GOVERNED_DEVELOPMENT_GUIDE.md](../GOVERNED_DEVELOPMENT_GUIDE.md) で配布し、root README と使用説明書から参照する。
 
 ---
 
@@ -50,12 +58,12 @@ Memo: Document ID DDT-DESIGN-INDEX-001。Version 0.5 / Draft。正式承認で�
 
 | Item（項目） | Summary（概要） | Detail Document（詳細文書） |
 |---|---|---|
-| Current Problems（現在の問題点） | 専用の非公開 Repository を公開せず、生徒へ設計書のテンプレートを渡す。 | [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) |
-| Development Purpose（開発目的） | このリポジトリの目的は、生徒が自身のプロジェクトの設計書を作成するためのテンプレートの配布及び使用方法のガイドラインである。 | [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) |
-| Solution Approach（解決方針） | 7テンプレートを `templates/design/` に置く。使用説明書で、手順Aの7文書の役割、取得と配置、初期化、AIとの記入と確認を説明する。root README から説明書とテンプレートへ案内する。管理用文書と配布物を分ける。 | [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) |
-| System Functions（システム機能） | 設計書 README と 01〜06、計7文書を Markdown で配布する。生徒向け使用説明書で手順Aを案内する。手順B・LEARNINGは今期対象外の講師用参考資料に分離する。独自アプリ機能は提供しない。 | [02_REQUIREMENTS_DEFINITION.md](./02_REQUIREMENTS_DEFINITION.md) |
-| Expected Benefits（期待効果） | 生徒がテンプレートを取得し、自分のプロジェクトの `docs/design/` に置いて記入できる。文書の役割、AIへ渡す資料、再開方法を説明書で確認できる。 | [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) |
-| Completion Criteria（完成判定基準） | 7文書の取得と記入ができること。説明書から読み込み対象、順序、指示文、構成図を確認できること。元の専用 Repository が非公開を維持すること。配布元との内容照合と公開前確認が完了していること。公開前確認は未完了である。 | [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) |
+| Current Problems（現在の問題点） | AI任せにすると、似た設計文書が乱立し、どれが正しい仕様か分からなくなる。専用の非公開 Repository は公開しない。 | [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) |
+| Development Purpose（開発目的） | SDD（仕様駆動開発）で、AIが作成する設計文書を決まった7文書・決まった節へ収め、重複と冗長化を防ぐためのテンプレートを配布する。生徒は自分のリポジトリに配置して使う。 | [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) |
+| Solution Approach（解決方針） | 7テンプレートを `templates/design/` に置く。使用説明書で取得、初期化、記入、仕様変更、実装への接続を説明する。同じ仕様は再掲せず参照する。設定ファイルは利用先で任意とし、詳細は参考資料へ置く。root README から説明書、テンプレート、参考資料へ案内する。管理用文書と配布物を分ける。 | [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) |
+| System Functions（システム機能） | 設計書 README と 01〜06、計7文書を Markdown で配布する。使用説明書と参考資料を配布する。利用先の設定ファイル導入は任意である。独自アプリ機能は提供しない。 | [02_REQUIREMENTS_DEFINITION.md](./02_REQUIREMENTS_DEFINITION.md) |
+| Expected Benefits（期待効果） | 生徒がテンプレートを取得し、自分のプロジェクトの `docs/design/` に置いて記入できる。仕様の記載先が決まり、重複を参照に置き換えられる。設定がなくても指示例で開始できる。 | [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) |
+| Completion Criteria（完成判定基準） | 7文書の取得と記入ができること。設定がなくても記入、仕様変更、実装の指示が説明書で完結すること。参考資料へのリンクを確認できること。元の専用 Repository が非公開を維持すること。配布元との内容照合と公開前確認が完了していること。公開前確認は未完了である。 | [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) |
 
 ---
 
@@ -73,23 +81,26 @@ Memo: Document ID DDT-DESIGN-INDEX-001。Version 0.5 / Draft。正式承認で�
 
 | File（ファイル名） | Document Name（文書名） | Status（ステータス） | Version（バージョン） | Owner（担当者） |
 |---|---|---|---|---|
-| [README.md](./README.md) | Design Documents Index（設計書一覧） | Draft | 0.5 | Takashi Oikawa |
-| [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) | Request Definition（要求定義） | Draft | 0.4 | Takashi Oikawa |
-| [02_REQUIREMENTS_DEFINITION.md](./02_REQUIREMENTS_DEFINITION.md) | Requirements Definition（要件定義） | Draft | 0.4 | Takashi Oikawa |
-| [03_DATA_AND_SECURITY_DESIGN.md](./03_DATA_AND_SECURITY_DESIGN.md) | Data and Security Design（データ・セキュリティ設計） | Draft | 0.4 | Takashi Oikawa |
-| [04_UI_AND_FLOW_DESIGN.md](./04_UI_AND_FLOW_DESIGN.md) | UI and Flow Design（UI・フロー設計） | Draft | 0.4 | Takashi Oikawa |
-| [05_ARCHITECTURE_DESIGN.md](./05_ARCHITECTURE_DESIGN.md) | Architecture Design（アーキテクチャ設計） | Draft | 0.4 | Takashi Oikawa |
-| [06_OPERATION_AND_HANDOFF.md](./06_OPERATION_AND_HANDOFF.md) | Operation and Handoff Design（運用・詳細設計引き継ぎ） | Draft | 0.4 | Takashi Oikawa |
+| [README.md](./README.md) | Design Documents Index（設計書一覧） | Draft | 0.6 | Takashi Oikawa |
+| [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) | Request Definition（要求定義） | Draft | 0.5 | Takashi Oikawa |
+| [02_REQUIREMENTS_DEFINITION.md](./02_REQUIREMENTS_DEFINITION.md) | Requirements Definition（要件定義） | Draft | 0.5 | Takashi Oikawa |
+| [03_DATA_AND_SECURITY_DESIGN.md](./03_DATA_AND_SECURITY_DESIGN.md) | Data and Security Design（データ・セキュリティ設計） | Draft | 0.5 | Takashi Oikawa |
+| [04_UI_AND_FLOW_DESIGN.md](./04_UI_AND_FLOW_DESIGN.md) | UI and Flow Design（UI・フロー設計） | Draft | 0.5 | Takashi Oikawa |
+| [05_ARCHITECTURE_DESIGN.md](./05_ARCHITECTURE_DESIGN.md) | Architecture Design（アーキテクチャ設計） | Draft | 0.5 | Takashi Oikawa |
+| [06_OPERATION_AND_HANDOFF.md](./06_OPERATION_AND_HANDOFF.md) | Operation and Handoff Design（運用・詳細設計引き継ぎ） | Draft | 0.5 | Takashi Oikawa |
 
 ---
 
 ## 5. Overall Design Policy（設計上の全体方針・前提）
 
-- 正式 Purpose は DISTRIBUTION である。テンプレートの配布と使用方法の案内である。
+- 正式 Purpose は DISTRIBUTION である。目的文は §1 と Development Purpose と同一である。Purpose の値は変えない。
 - 管理用設計書は `docs/design/`、生徒向け配布物は `templates/design/` とする。
 - 配布時に本文、日付、Owner、Status、Version、改行、相対リンクを変換しない。
-- 中央管理コピーは独自に編集しない。
-- 使用説明書は `docs/STUDENT_USAGE_GUIDE.md` とする。今期は手順Aのみ提供する。手順B・LEARNINGの説明は `docs/GOVERNED_DEVELOPMENT_GUIDE.md` に分離し、導入経路や権限を確定した提供済み手順と扱わない。
+- 中央管理コピーは独自に編集しない。中央管理コピーの修正は中央原本側の手順であり、今回の配布物の修正範囲に含めない。
+- 使用説明書は `docs/STUDENT_USAGE_GUIDE.md` とする。設定ファイルの参考資料は `docs/GOVERNED_DEVELOPMENT_GUIDE.md` とし、root README と使用説明書から参照する。
+- 手順A・手順B・LEARNINGという利用区分は、この配布物に置かない。これは正式 Purpose の変更ではない。
+- 利用先に設定ファイルが既にある場合は、その現行ルールを読む。削除や無視により任意運用へ移す案内はしない。
+- 配布元自身は既存管理ルールで運用を続ける。利用先で任意であることと、配布元の必須管理資産は別である。
 - この準備工程では、公開範囲は Private を維持する。この工程では Public にしない。元の専用 Repository を非公開のまま保つ。
 
 ---
@@ -99,9 +110,12 @@ Memo: Document ID DDT-DESIGN-INDEX-001。Version 0.5 / Draft。正式承認で�
 | Term / Abbreviation（用語・略語） | Definition（定義） |
 |---|---|
 | DISTRIBUTION | この Repository の正式 Purpose。テンプレートの配布と使用方法の案内。 |
+| SDD（仕様駆動開発） | 仕様書を先に書き、AIはその仕様に従って実装する進め方。 |
+| SSOT | 正しい情報の管理元を一つに定める原則。同じ仕様は正本を一つにし、他からは参照する。 |
 | 管理用設計書 | `docs/design/` の文書。この配布 Repository 自体の設計。 |
 | 配布テンプレート | `templates/design/` の7文書。生徒が取得するテンプレート。 |
 | 中央テンプレ正本 | `solacom_main` の `docs/standards/templates/design/`。 |
+| 参考資料 | `docs/GOVERNED_DEVELOPMENT_GUIDE.md`。7文書の記載先と、任意の設定ファイルの使用方法。 |
 
 ---
 

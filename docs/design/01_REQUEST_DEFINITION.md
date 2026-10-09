@@ -3,10 +3,10 @@ Program Name: DDT Request Definition
 Language: Markdown
 Function: 配布Repositoryの目的、対象、成功条件を定義する
 Created: 2026-10-09
-Last Updated: 2026-10-09
+Last Updated: 2026-10-10
 Author: Takashi Oikawa
 AI: Cursor
-Memo: Document ID DDT-REQ-001。Version 0.4 / Draft。正式承認ではない
+Memo: Document ID DDT-REQ-001。Version 0.5 / Draft。正式承認ではない
 -->
 
 # Request Definition（要求定義）
@@ -15,12 +15,12 @@ Memo: Document ID DDT-REQ-001。Version 0.4 / Draft。正式承認ではない
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | DDT-REQ-001 |
-| Version（バージョン） | 0.4 |
+| Version（バージョン） | 0.5 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-10-09 |
-| Last Updated（最終更新日） | 2026-10-09 |
+| Last Updated（最終更新日） | 2026-10-10 |
 | Owner（管理者） | Takashi Oikawa |
-| Related Documents（関連文書） | README.md / 02_REQUIREMENTS_DEFINITION.md / [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) |
+| Related Documents（関連文書） | README.md / 02_REQUIREMENTS_DEFINITION.md / [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) / [../GOVERNED_DEVELOPMENT_GUIDE.md](../GOVERNED_DEVELOPMENT_GUIDE.md) |
 
 ---
 
@@ -38,13 +38,17 @@ Memo: Document ID DDT-REQ-001。Version 0.4 / Draft。正式承認ではない
 
 ## 1. Purpose（目的）
 
-このリポジトリの目的は、生徒が自身のプロジェクトの設計書を作成するためのテンプレートの配布及び使用方法のガイドラインである。本文書は、文書の役割を定義する。専用の非公開 Repository は公開しない。生徒が、各文書の役割、取得ファイル、保存先、AIへ渡す最新資料、再開方法を理解できることを求める。
+本文書は、配布の目的、対象、成功条件を定義する。正式 Purpose は DISTRIBUTION であり、次の目的文はこの Purpose の変更ではない。
+
+> SDD（仕様駆動開発）で、AIが作成する設計文書を決まった7文書・決まった節へ収め、重複と冗長化を防ぐためのテンプレートを配布する。生徒は自分のリポジトリに配置して使う。
+
+SDDは、仕様書を先に書き、AIはその仕様に従って実装する進め方である。専用の非公開 Repository は公開しない。同じ仕様の正本は一つにし、他の文書からは参照する（SSOT）。利用先の AGENTS.md と CONSTITUTION.md は任意である。両方がなくても記入、仕様変更、実装、確認を進められる。使い方は [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md)、設定ファイルの使用方法は [../GOVERNED_DEVELOPMENT_GUIDE.md](../GOVERNED_DEVELOPMENT_GUIDE.md) で配布し、root README と使用説明書から参照する。
 
 ---
 
 ## 2. Scope（対象範囲）
 
-対象は、この配布 Repository、設計書 README および 01〜06 の7テンプレート、および生徒向け使用説明書 [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) である。
+対象は、この配布 Repository、設計書 README および 01〜06 の7テンプレート、生徒向け使用説明書 [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md)、および参考資料 [../GOVERNED_DEVELOPMENT_GUIDE.md](../GOVERNED_DEVELOPMENT_GUIDE.md) である。
 
 ---
 
@@ -54,14 +58,18 @@ Memo: Document ID DDT-REQ-001。Version 0.4 / Draft。正式承認ではない
 - AI ペルソナ
 - アプリ開発
 - 中央標準の再設計
-- 今期の手順B・LEARNINGの提供
+- 手順A・手順B・LEARNINGという利用区分の提供。正式 Purpose の変更は対象外である
+- 利用先に既にある設定ファイルの削除
+- 中央管理コピーの修正と再配布
 
 ---
 
 ## 4. Assumptions（前提条件）
 
-- 利用者は 2026-10-09 に正式 Purpose を DISTRIBUTION と確定した。
-- 今期は手順Aのみ提供する。初期値は、既存文書ID、生徒のOwner、初期化日のCreated Date / Last Updated、Version 0.1、Status Draftとする。
+- 利用者は 2026-10-09 に正式 Purpose を DISTRIBUTION と確定した。2026-10-10 の目的文の訂正は、この Purpose を変えない。
+- 手順Aのみを今期の提供区分とする方針は、2026-10-10 の指示で撤回済みである。初期値は、既存文書ID、自分のOwner、初期化日のCreated Date / Last Updated、Version 0.1、Status Draftとする。配布テンプレートの Version とは区別する。
+- 設計内容と承認は、利用先リポジトリの持ち主が判断する。AIは未決事項や承認実績を推測しない。
+- 設定ファイルが既にある利用先では、その現行ルールを読む。削除や無視は案内しない。配布元自身は既存管理ルールで運用を続ける。
 - この準備工程では、公開範囲は Private を維持する。元の専用 Repository を非公開のまま保つ。
 - 配布テンプレートの中央正本は `solacom_main` の `docs/standards/templates/design/` である。確認済みコミットは `16c44976638b48c53ef16399b1d51217c540be0a` である。
 
@@ -71,14 +79,18 @@ Memo: Document ID DDT-REQ-001。Version 0.4 / Draft。正式承認ではない
 
 ### 5.1 Background and Purpose（背景・課題・目的）
 
-このリポジトリの目的は、生徒が自身のプロジェクトの設計書を作成するためのテンプレートの配布及び使用方法のガイドラインである。専用の非公開 Repository は公開しない。使用方法の案内は [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) で提供する。生徒は、各文書の役割、取得するファイル、保存先、AIへ渡す最新資料、再開方法を理解できる必要がある。
+開発目的は §1 の目的文と同一である。
+
+> SDD（仕様駆動開発）で、AIが作成する設計文書を決まった7文書・決まった節へ収め、重複と冗長化を防ぐためのテンプレートを配布する。生徒は自分のリポジトリに配置して使う。
+
+専用の非公開 Repository は公開しない。生徒は、各文書の役割、取得するファイル、保存先、設定がなくても使える指示、仕様変更から実装までの接続を理解できる必要がある。7文書の効果は、記載先の指定、参照関係の維持、人による確認を運用して得る。参考資料は、設定の有無に応じた使用方法を説明し、使用説明書の指示例を全文では再掲しない。
 
 ### 5.2 Stakeholders（ステークホルダー一覧と関心事）
 
 | Stakeholder（ステークホルダー） | Interests and Requests（関心事・要求） |
 |---|---|
-| 管理者・講師 Takashi Oikawa | 専用の非公開 Repository を公開せず、生徒へ設計書のテンプレートを渡す。 |
-| 生徒 | テンプレートを取得し、自分のプロジェクトの設計書を記入する。 |
+| 配布元の管理者 Takashi Oikawa | 専用の非公開 Repository を公開せず、テンプレート、使用説明書、参考資料を渡す。配布元の管理ルールは維持する。 |
+| 利用先の持ち主（生徒） | テンプレートを取得し、自分のプロジェクトの設計書を記入する。設計内容と承認を判断する。設定ファイルの導入有無を決める。 |
 | Cursor | 指示範囲で作業する。 |
 
 ### 5.3 User Stories and Use Cases（ユーザーストーリー・ユースケース概要）
@@ -88,7 +100,7 @@ Memo: Document ID DDT-REQ-001。Version 0.4 / Draft。正式承認ではない
 | ID | User Story / Use Case（ユーザーストーリー / ユースケース） |
 |---|---|
 | — | 生徒が、自身のプロジェクトの設計書を作成するために、配布されたテンプレートを取得し、自分の `docs/design/` に置いて記入する。 |
-| — | 生徒が、各文書の役割、取得ファイル、保存先、AIへ渡す最新資料、再開方法を理解する。 |
+| — | 生徒が、各文書の役割、取得ファイル、保存先、設定なしの指示、仕様変更後の実装を理解する。設計内容は持ち主が承認する。 |
 
 ### 5.4 Constraints（制約条件）
 
@@ -108,7 +120,8 @@ Memo: Document ID DDT-REQ-001。Version 0.4 / Draft。正式承認ではない
 | ID | Success Criteria / Acceptance Condition（成功基準・受け入れ条件） |
 |---|---|
 | — | 7文書を取得し、記入できる。 |
-| — | 配布元と自分のプロジェクトを区別し、読み込み対象、順序、指示文、構成図を使用説明書から確認できる。 |
+| — | 配布元の管理用設計と自分のプロジェクトを区別し、設定がなくても記入、仕様変更、実装の指示を使用説明書から確認できる。 |
+| — | 参考資料へのリンクから、記載先、設定の有無、任意導入、デメリットを確認できる。 |
 | — | 元の専用 Repository が非公開を維持する。 |
 | — | 配布元との内容照合と公開前確認が完了している。 |
 

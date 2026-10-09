@@ -3,10 +3,10 @@ Program Name: DDT Requirements Definition
 Language: Markdown
 Function: 配布物、取得と利用の案内、検証要件を定義する
 Created: 2026-10-09
-Last Updated: 2026-10-09
+Last Updated: 2026-10-10
 Author: Takashi Oikawa
 AI: Cursor
-Memo: Document ID DDT-REQS-001。Version 0.4 / Draft。正式承認ではない
+Memo: Document ID DDT-REQS-001。Version 0.5 / Draft。正式承認ではない
 -->
 
 # Requirements Definition（要件定義）
@@ -15,12 +15,12 @@ Memo: Document ID DDT-REQS-001。Version 0.4 / Draft。正式承認ではない
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | DDT-REQS-001 |
-| Version（バージョン） | 0.4 |
+| Version（バージョン） | 0.5 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-10-09 |
-| Last Updated（最終更新日） | 2026-10-09 |
+| Last Updated（最終更新日） | 2026-10-10 |
 | Owner（管理者） | Takashi Oikawa |
-| Related Documents（関連文書） | README.md / 01_REQUEST_DEFINITION.md / 03_DATA_AND_SECURITY_DESIGN.md / 04_UI_AND_FLOW_DESIGN.md / 05_ARCHITECTURE_DESIGN.md / [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) |
+| Related Documents（関連文書） | README.md / 01_REQUEST_DEFINITION.md / 03_DATA_AND_SECURITY_DESIGN.md / 04_UI_AND_FLOW_DESIGN.md / 05_ARCHITECTURE_DESIGN.md / [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) / [../GOVERNED_DEVELOPMENT_GUIDE.md](../GOVERNED_DEVELOPMENT_GUIDE.md) |
 
 ---
 
@@ -38,14 +38,18 @@ Memo: Document ID DDT-REQS-001。Version 0.4 / Draft。正式承認ではない
 
 ## 1. Purpose（目的）
 
-本文書は、配布物、取得と利用の案内、検証要件を定義する。
+本文書は、配布物、取得と利用の案内、検証要件を定義する。配布の目的文は [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) と同一である。
+
+> SDD（仕様駆動開発）で、AIが作成する設計文書を決まった7文書・決まった節へ収め、重複と冗長化を防ぐためのテンプレートを配布する。生徒は自分のリポジトリに配置して使う。
+
+SDDは、仕様書を先に書き、AIはその仕様に従って実装する進め方である。同じ仕様は正本を一つにし、他からは参照する（SSOT）。設定ファイルは利用先で任意であり、不在を導入違反にしない。参考資料 [../GOVERNED_DEVELOPMENT_GUIDE.md](../GOVERNED_DEVELOPMENT_GUIDE.md) に使用方法を記載し、root README と使用説明書から参照する。指示例の全文は使用説明書を正本とし、参考資料へ再掲しない。
 
 ---
 
 ## 2. Scope（対象範囲）
 
-- root README から使用説明書と7テンプレートへ到達できること
-- 文書の説明、AI読込み一覧と順序、指示文、フォルダ図、再開と確認の方法を提供すること
+- root README から使用説明書、7テンプレート、参考資料へ到達できること
+- 文書の説明、設定なしで完結する記入・仕様変更・実装の指示、フォルダ図、確認の方法を提供すること
 - 利用先 `docs/design/` への配置を案内すること
 - 管理用文書と配布物を分けること
 - 元 Repository の具体的な業務情報を配布しないこと
@@ -76,8 +80,8 @@ Memo: Document ID DDT-REQS-001。Version 0.4 / Draft。正式承認ではない
 
 | ID | Feature Name（機能名） | Priority（優先度） | Details（詳細） |
 |---|---|---|---|
-| — | root README から使用説明書と7テンプレートへ到達できる | 指定なし | root READMEは目的、使用説明書へのリンク、取得・初期化・AI記入の3手順の早見に限定する。テンプレート一覧への相対リンクを置く。 |
-| — | 文書の説明、AI読込み、指示文、フォルダ図、再開と確認 | 指定なし | 使用説明書を手順A専用の7章とする。用語ミニ辞典、設計7文書の役割、取得と配置、初期値表、リンクと画像、AIへの渡し方と指示文、FAQを記載する。手順B・LEARNINGは講師用参考資料へ分離し、今期は提供しない。 |
+| — | root README から使用説明書と7テンプレートへ到達できる | 指定なし | root READMEは目的文、使用説明書とテンプレートへのリンク、取得・初期化、設計記入・確認、仕様変更・実装の早見、7文書管理の概要と比較、参考資料へのリンクに限定する。概要を別章で繰り返さない。 |
+| — | 文書の説明、指示文、フォルダ図、確認 | 指定なし | 使用説明書に、同一の目的文、用語ミニ辞典、設計7文書の役割、取得と配置、初期値表、リンクと画像、設定なしで使える3場面の指示例を各1つ記載する。設定ファイルの不在を停止理由にしない。手順A・手順B・LEARNINGの利用区分、授業・課題・演習・今期を前提にした本文、修正済み未公開版の不具合FAQは置かない。任意の設定導入は参考資料へリンクする。 |
 | — | 利用先への配置を案内する | 指定なし | 自分のプロジェクトの `docs/design/` に README と 01〜06 を同じ階層で置く案内をする。 |
 | — | 管理用文書と配布物を分ける | 指定なし | 管理用設計書は `docs/design/`、生徒向け配布物は `templates/design/` とする。 |
 | — | 元 Repository の業務情報を配布しない | 指定なし | 元 Repository の具体的な業務情報を配布しない。 |
@@ -109,7 +113,7 @@ Memo: Document ID DDT-REQS-001。Version 0.4 / Draft。正式承認ではない
 
 | Data Type（データ種別） | Estimated Volume（想定件数・規模） | Notes（備考） |
 |---|---|---|
-| Repository固有の管理・案内文書 | 12文書 | root README、CURRENT、CHANGELOG、管理設計7文書の既存10件と、使用説明書1件と講師用参考資料1件。中央管理コピーや既存作成ガイドはこの件数に含めない |
+| Repository固有の管理・案内文書 | 12文書 | root README、CURRENT、CHANGELOG、管理設計7文書の既存10件と、使用説明書1件と参考資料1件。中央管理コピーや既存作成ガイドはこの件数に含めない |
 | 配布する設計テンプレート | 7文書 | `templates/design/` のREADMEと01〜06。無変更で保持 |
 | 生徒向け使用説明書 | 上記12件に含む1文書 | `docs/STUDENT_USAGE_GUIDE.md`。テンプレート7件とは別の利用資料。同じ文書をRepository全体の件数へ重複加算しない |
 
@@ -122,7 +126,7 @@ Memo: Document ID DDT-REQS-001。Version 0.4 / Draft。正式承認ではない
 | User Story ID（ユーザーストーリー ID） | Functional Requirement ID（対応する機能要件 ID） |
 |---|---|
 | — 。生徒がテンプレートを取得して記入する。 | ID は採番しない。対応する内容は、root README から7テンプレートへ到達できること、および利用先 `docs/design/` への配置を案内すること。 |
-| — 。生徒が使用説明書により AI 読込みと再開を行う。 | ID は採番しない。対応する内容は、使用説明書への入口、文書の説明、AI読込み一覧と順序、指示文、フォルダ図、再開と確認の方法である。 |
+| — 。生徒が使用説明書により記入、仕様変更、実装を行う。 | ID は採番しない。対応する内容は、使用説明書への入口、3場面の指示例、参考資料へのリンクである。設定の不在は停止理由にしない。 |
 
 ---
 
