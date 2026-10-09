@@ -6,7 +6,7 @@ Created: 2026-10-09
 Last Updated: 2026-10-10
 Author: Takashi Oikawa
 AI: Cursor
-Memo: Document ID DDT-GOVERNED-GUIDE-001。Version 0.2 / Draft。正式承認ではない
+Memo: Document ID DDT-GOVERNED-GUIDE-001。Version 0.3 / Draft。正式承認ではない
 -->
 
 # 7文書管理と設定ファイルの参考資料
@@ -15,7 +15,7 @@ Memo: Document ID DDT-GOVERNED-GUIDE-001。Version 0.2 / Draft。正式承認で
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | DDT-GOVERNED-GUIDE-001 |
-| Version（バージョン） | 0.2 |
+| Version（バージョン） | 0.3 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-10-09 |
 | Last Updated（最終更新日） | 2026-10-10 |
@@ -105,3 +105,23 @@ AGENTS.md と CONSTITUTION.md がある場合は、その現行ルールに従�
 - ファイルを置いただけでは、遵守は保証されない。読んだことと、従った結果を確認する。
 
 既存の設定を削除することは、これらの改善手段にしない。
+
+## 8. 使用するAIごとの設定方法と公式情報
+
+確認日：2026-10-10。利用できる機能はアカウント・契約・組織設定・提供状況によって異なります。
+
+Skillsは「繰り返し使う指示を登録する機能」、Projectsは「関連する資料と指示をまとめる機能」です。以下の機能説明は公式情報に基づきます。7文書の登録・版数確認の方法は、本資料が提案する運用です。
+
+| AI・機能 | Web版 | Desktop版 | 7文書を使う方法 | 公式情報 |
+|---|---|---|---|---|
+| Gemini（Skills） | 管理方法をSkillへ登録。必要なSkillを指定でき、関連する依頼では有効なSkillが自動適用される場合もある。 | Mac版もSkillsに対応。Windows版は今回確認した公式案内の対象外。 | 最新7文書を添付するか、Skillの参考ファイルとして登録する。参考ファイルを更新するときはSkill一式の再アップロードが必要。 | [Gemini Skills公式ヘルプ](https://support.google.com/gemini/answer/17094296?co=GENIE.Platform%3DDesktop&hl=en) |
+| ChatGPT（Projects） | プロジェクトの指示へ管理方法を記載し、7文書をソースとして追加する。 | ChatGPTプロジェクトを利用できる。PCのフォルダを接続するローカルプロジェクトは通常のChatGPTプロジェクトとは区別する。 | プロジェクト内の会話で最新7文書を指定して読ませる。更新後は登録資料も最新にする。 | [Projects and chats](https://learn.chatgpt.com/docs/projects) |
+| Claude（Projects／Skills） | プロジェクトの指示と資料を登録する。繰り返し使う作業にはSkillsも利用できる。 | 通常チャットのProjects・Skills・添付機能はWeb版と同様に利用できる。Cowork・Codeのローカル作業は別の利用方法として扱う。 | 最新7文書を登録し、対象文書を指定して読ませる。更新後は登録資料も最新にする。 | [Projectsの公式ヘルプ](https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects)、[Desktop版の公式案内](https://academy.claude.com/tutorials/navigating-the-claude-desktop-app)、[Skillsの公式ヘルプ](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills) |
+
+Gemini Skillsは段階的な提供であり、確認時点の公式案内では個人Googleアカウントを対象としています。機能が表示されない場合は、最新7文書と管理指示を会話へ直接渡してください。
+
+`AGENTS.md`・`CONSTITUTION.md`をリポジトリに置くだけで、上記の通常チャットが自動的に読むとは扱いません。利用する機能へ指示・資料を登録するか、明示的に渡します。設定ファイルの自動読込みと7文書の全件読込みは別に確認します。
+
+登録資料は利用時のコピーです。参照用コピーが古い版のままにならないよう、正本の変更後に更新してください。ローカル連携等による同期が確認できない場合は、自動同期を前提にしません。
+
+開始時には、適用する管理ルールと読めたファイル名・版数、読めなかった文書をAIに示させます。具体的な開始指示とFAQは、[使用説明書§7](./STUDENT_USAGE_GUIDE.md#7-よくある質問)を参照してください。

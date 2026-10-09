@@ -6,7 +6,7 @@ Created: 2026-10-09
 Last Updated: 2026-10-10
 Author: Takashi Oikawa
 AI: Cursor
-Memo: Document ID DDT-CURRENT-001。Version 0.8 / Draft。正式承認ではない
+Memo: Document ID DDT-CURRENT-001。Version 0.9 / Draft。正式承認ではない
 -->
 
 # CURRENT
@@ -15,7 +15,7 @@ Memo: Document ID DDT-CURRENT-001。Version 0.8 / Draft。正式承認ではな�
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | DDT-CURRENT-001 |
-| Version（バージョン） | 0.8 |
+| Version（バージョン） | 0.9 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-10-09 |
 | Last Updated（最終更新日） | 2026-10-10 |
@@ -56,24 +56,24 @@ DISTRIBUTION。正式 Purpose は変更しない。2026-10-10 の目的文は次
 - 配布先7テンプレートは、中央の反映済みcommit `93a3fce46780cf134ea0ebc4a610c96571040fd2` の7文書と全件バイト一致し、原本からの再配布を確認した。配布先の変更対象は従来の14文書のまま。既存保護6資産は変更していない。
 - 2026-10-09 の commit `7e02ccc6305c74ae08e2bf0436cb6f38604a2c75` は、通常 push 済みの過去実績である。2026-10-10 の確認で、local HEAD、fetch 後の origin/main、GitHub main はこの SHA で一致し、作業ツリーは clean、公開範囲は Private だった。同 SHA の Actions「Validate Documents」run `37941377205` は success である。https://github.com/t-oikawa-sendai/design-document-templates/actions/runs/37941377205 この成功は、今回の目的訂正の検証結果ではない。
 - 第2版の「リンク0件」を不合格とした判断は、所有者の最新指示で撤回済みである。今回の目的訂正とは別である。参考資料へのリンクを root README と使用説明書に置く。
-- 2026-10-10 の目的訂正について、commit 前に次を確認した。`python3 scripts/validate-docs.py` は終了コード 0、検査対象 21 件は PASS。`git diff --check` は終了コード 0。差分は指定12文書のみ。`templates/design/` の7文書、`CONSTITUTION.md`、`AGENTS.md`、`docs/standards/`、`docs/NEW_REPOSITORY_SETUP_GUIDE.md`、`scripts/validate-docs.py`、`.github/workflows/validate-docs.yml` の SHA-256 は編集前と一致した。新規 F/O/R-ID は作っていない。変更した構成図はローカルの Chrome headless で表示を確認した。GitHub 上の表示、今回の Push、Actions は未実施である。
+- 2026-10-10 の目的訂正について、commit 前に次を確認した。`python3 scripts/validate-docs.py` は終了コード 0、検査対象 21 件は PASS。`git diff --check` は終了コード 0。差分は指定12文書のみ。`templates/design/` の7文書、`CONSTITUTION.md`、`AGENTS.md`、`docs/standards/`、`docs/NEW_REPOSITORY_SETUP_GUIDE.md`、`scripts/validate-docs.py`、`.github/workflows/validate-docs.yml` の SHA-256 は編集前と一致した。新規 F/O/R-ID は作っていない。変更した構成図はローカルの Chrome headless で表示を確認した。この箇条書きを書いた時点では、その commit の Push と Actions は未実施である。
+- 目的訂正の commit `5270504a9f58470852cb476fe5fcf557e11bb3ae`（親 `7e02ccc6305c74ae08e2bf0436cb6f38604a2c75`）は、その後の通常 push で GitHub main に到達した。2026-10-10 の再確認で、local HEAD、fetch 後の origin/main、GitHub main はこの SHA で一致し、作業ツリーは clean、公開範囲は Private だった。Actions「Validate Documents」run `37999067578` は success、head SHA は同 commit、job `validate-docs` も success である。https://github.com/t-oikawa-sendai/design-document-templates/actions/runs/37999067578 これは目的訂正の過去実績であり、今回の FAQ 更新の検証結果ではない。構成図の GitHub 表示は、未ログインの確認では Private のため開けず、未確認のままである。
+- 2026-10-10 の FAQ 更新について、commit 前に次を確認した。使用説明書の §1〜6 は版数の更新以外変更がなく、FAQ は6問である。参考資料の §1〜7 は版数の更新以外変更がなく、§8 に確認日と公式URL 5件がある。5件の公式URLは指定の完全なURLのまま HTTP 200 で開けた。`python3 scripts/validate-docs.py` は終了コード 0、検査対象 21 件は PASS。`git diff --check` は終了コード 0。差分は使用説明書、参考資料、CURRENT、CHANGELOG の4文書のみ。保護資産と7テンプレートの SHA-256 は編集前と一致した。新規の仕様IDは作っていない。管理設計READMEの索引は管理設計7文書の一覧であり、この版数変更では更新していない。今回の Push と Actions は未実施である。
 
 ## Current（現在）
 
-Private・Draft。正式 Purpose は DISTRIBUTION のまま、目的文を SDD・SSOT と、利用先での設定ファイル任意へ訂正した段階である。この CURRENT は commit 前の記録であり、今回の Push 成功と新しい SHA は記載しない。正式承認、独立レビュー、Public化は未実施である。
-
-変更基点は `7e02ccc6305c74ae08e2bf0436cb6f38604a2c75` である。自己 commit の SHA を本文へ埋め込むための amend は行わない。
+Private・Draft。正式 Purpose は DISTRIBUTION のままである。作業基点は目的訂正の反映済み commit `5270504a9f58470852cb476fe5fcf557e11bb3ae` である。いま行っているのは、使用説明書の FAQ 更新と、参考資料への AI 別公式情報の追記である。この CURRENT は、その commit 前の記録であり、今回の Push 成功と新しい SHA は記載しない。正式承認、独立レビュー、Public化は未実施である。自己 commit の SHA を本文へ埋め込むための amend は行わない。
 
 ## Next（次）
 
-1. 明示指示に従い、検証済みの12文書を通常 commit し、通常 push する。拒否や競合を force push で回避しない。
-2. Push 後の SHA、Actions、変更した図の GitHub 表示は、最終報告で確認する。この本文へ追記するための amend はしない。
+1. 検証が通った4文書を通常 commit し、通常 push する。拒否や競合を force push で回避しない。
+2. Push 後の SHA と Actions は最終報告で確認する。この本文へ追記するための amend はしない。
 3. 独立レビュー、正式承認、公開前確認、Public化は、その後の指示で進める。
 
 ## Blockers（阻害要因）
 
-- 独立レビュー、正式承認、Public化は未完了である。今回の Push を公開承認とは扱わない。
-- 変更した構成図の GitHub 上の表示は、この記録時点では未確認である。ローカル表示の確認とは区別する。
+- 独立レビュー、正式承認、Public化は未完了である。今回の Push を公開承認とは扱わない。旧レビューの PASS は、今回の差分レビューの PASS ではない。
+- 目的訂正で変更した構成図の GitHub 上の表示は未確認である。
 - 旧不具合と、撤回済みの手順A・手順B・LEARNINGの提供区分は、現行の阻害要因にしない。
 
 ## Related Decisions（関連Decision）
