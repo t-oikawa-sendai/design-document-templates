@@ -1,37 +1,37 @@
-# Design Documents Index（設計書一覧）
-
 <!--
-README Writing Policy（README作成方針）
-- README は設計書群の表紙・入口とする
-- 文章は最短にする。詳細は個別 Doc へ誘導する
-- スクリーンショットは最小サイズの代表画像のみ掲載する
-- `screenshots/thumbnail/` は README 用の小さい代表スクリーンショットを配置する
-- `screenshots/full/` は個別 Doc 用の大きいスクリーンショットを配置する
-- README では thumbnail の代表画像のみを使用し、詳細画像は 04_UI_AND_FLOW_DESIGN.md から full を参照する
-- 大きいスクリーンショット・画面項目説明・操作フローは 04_UI_AND_FLOW_DESIGN.md へ分離する
-- 個人情報・機密情報・APIキー・トークンが写る画像は使用禁止
-- 相対リンクは最終Runtime配置 docs/design/ を基準とする
+Program Name: DDT Design Index
+Language: Markdown
+Function: design-document-templates 自体の管理用設計書一覧
+Created: 2026-10-09
+Last Updated: 2026-10-09
+Author: Takashi Oikawa
+AI: Cursor
+Memo: Document ID DDT-DESIGN-INDEX-001。Version 0.4 / Draft。正式承認ではない
 -->
+
+# Design Documents Index（設計書一覧）
 
 <!-- Document Info（文書情報） -->
 | Item（項目） | Value（値） |
 |---|---|
-| Document ID（文書ID） | README-001 |
+| Document ID（文書ID） | DDT-DESIGN-INDEX-001 |
 | Version（バージョン） | 0.4 |
 | Status（ステータス） | Draft |
-| Created Date（作成日） | 2026-06-21 |
-| Last Updated（最終更新日） | 2026-09-11 |
+| Created Date（作成日） | 2026-10-09 |
+| Last Updated（最終更新日） | 2026-10-09 |
 | Owner（管理者） | Takashi Oikawa |
-| Related Documents（関連文書） | docs/standards/DESIGN_DOCUMENT_STANDARD.md / [CHANGELOG.md](../../CHANGELOG.md)（リポジトリルート） |
+| Related Documents（関連文書） | [CHANGELOG.md](../../CHANGELOG.md) / [README.md](../../README.md) / [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) / [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) / [02_REQUIREMENTS_DEFINITION.md](./02_REQUIREMENTS_DEFINITION.md) / [03_DATA_AND_SECURITY_DESIGN.md](./03_DATA_AND_SECURITY_DESIGN.md) / [04_UI_AND_FLOW_DESIGN.md](./04_UI_AND_FLOW_DESIGN.md) / [05_ARCHITECTURE_DESIGN.md](./05_ARCHITECTURE_DESIGN.md) / [06_OPERATION_AND_HANDOFF.md](./06_OPERATION_AND_HANDOFF.md) |
 
 > 詳細な変更履歴はリポジトリルートの [CHANGELOG.md](../../CHANGELOG.md) を参照。
+
+この文書は、配布 Repository 自体の管理用設計書の入口である。生徒向け配布テンプレートの一覧は、root の [README.md](../../README.md) にあり、配置先は `templates/design/` である。
 
 ---
 
 ## Table of Contents（目次）
 
 1. [Project Overview（プロジェクト・機能の概要）](#1-project-overviewプロジェクト機能の概要)
-2. [Problem / Solution / Benefit Summary（問題・解決・効果の概要）](#2-problem-solution-benefit-summary問題解決効果の概要)
+2. [Problem / Solution / Benefit Summary（問題・解決・効果の概要）](#2-problem--solution--benefit-summary問題解決効果の概要)
 3. [Screen Overview（画面概要）](#3-screen-overview画面概要)
 4. [Design Documents Index（設計書一覧）](#4-design-documents-index設計書一覧)
 5. [Overall Design Policy（設計上の全体方針・前提）](#5-overall-design-policy設計上の全体方針前提)
@@ -42,69 +42,66 @@ README Writing Policy（README作成方針）
 
 ## 1. Project Overview（プロジェクト・機能の概要）
 
-<!-- このプロジェクト・機能が何を目的としているかを1〜3文で記述する -->
-
-（記入欄）
+このリポジトリの目的は、生徒が自身のプロジェクトの設計書を作成するためのテンプレートの配布及び使用方法のガイドラインである。専用の非公開 Repository は公開しない。配布する設計テンプレートは、設計書 README と 01〜06、計7文書である。これに加えて、文書の役割、AI読込み、フォルダ構成、初回と再開の説明を [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) で提供する。使用説明書は第8の設計書ではない。
 
 ---
 
 ## 2. Problem / Solution / Benefit Summary（問題・解決・効果の概要）
 
-<!-- 各項目は1〜2文の概要のみ。詳細は下記 Doc へ誘導する -->
-
 | Item（項目） | Summary（概要） | Detail Document（詳細文書） |
 |---|---|---|
-| Current Problems（現在の問題点） | （記入欄） | [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) |
-| Development Purpose（開発目的） | （記入欄） | [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) |
-| Solution Approach（解決方針） | （記入欄） | [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) |
-| System Functions（システム機能） | （記入欄） | [02_REQUIREMENTS_DEFINITION.md](./02_REQUIREMENTS_DEFINITION.md) |
-| Expected Benefits（期待効果） | （記入欄） | [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) |
-| Completion Criteria（完成判定基準） | （記入欄） | [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) |
+| Current Problems（現在の問題点） | 専用の非公開 Repository を公開せず、生徒へ設計書のテンプレートを渡す。 | [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) |
+| Development Purpose（開発目的） | このリポジトリの目的は、生徒が自身のプロジェクトの設計書を作成するためのテンプレートの配布及び使用方法のガイドラインである。 | [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) |
+| Solution Approach（解決方針） | 7テンプレートを `templates/design/` に置く。使用説明書で、文書の役割、AI読込み、フォルダ構成、初回と再開を説明する。root README から説明書とテンプレートへ案内する。管理用文書と配布物を分ける。 | [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) |
+| System Functions（システム機能） | 設計書 README と 01〜06、計7文書を Markdown で配布する。使用説明書1文書で利用方法を案内する。独自アプリ機能は提供しない。 | [02_REQUIREMENTS_DEFINITION.md](./02_REQUIREMENTS_DEFINITION.md) |
+| Expected Benefits（期待効果） | 生徒がテンプレートを取得し、自分のプロジェクトの `docs/design/` に置いて記入できる。文書の役割、AIへ渡す資料、再開方法を説明書で確認できる。 | [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) |
+| Completion Criteria（完成判定基準） | 7文書の取得と記入ができること。説明書から読み込み対象、順序、指示文、構成図を確認できること。元の専用 Repository が非公開を維持すること。配布元との内容照合と公開前確認が完了していること。公開前確認は未完了である。 | [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) |
 
 ---
 
 ## 3. Screen Overview（画面概要）
 
-<!-- 代表画面のみ thumbnail で掲載。full の詳細画像・画面項目・操作フローは 04 へ分離 -->
+本文書では対象外。理由: 独自アプリの画面は提供しない。画像は新規作成しない。配布テンプレートにある画像パスは記入例であり、この Repository の完成済み画像ではない。
 
-（代表画面名）
-
-![（代表画面の説明）](./screenshots/thumbnail/main-screen.png)
-
-詳細（画面一覧・項目定義・操作フロー・full 画像）: [04_UI_AND_FLOW_DESIGN.md](./04_UI_AND_FLOW_DESIGN.md)
+詳細の対象外理由: [04_UI_AND_FLOW_DESIGN.md](./04_UI_AND_FLOW_DESIGN.md)
 
 ---
 
 ## 4. Design Documents Index（設計書一覧）
 
+この表は管理用設計書の索引である。配布テンプレートの版数とは別である。01〜06 の Version / Status は、各文書の Document Info と一致させる。
+
 | File（ファイル名） | Document Name（文書名） | Status（ステータス） | Version（バージョン） | Owner（担当者） |
 |---|---|---|---|---|
-| [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) | Request Definition（要求定義） | Draft | 0.1 | （記入欄） |
-| [02_REQUIREMENTS_DEFINITION.md](./02_REQUIREMENTS_DEFINITION.md) | Requirements Definition（要件定義） | Draft | 0.1 | （記入欄） |
-| [03_DATA_AND_SECURITY_DESIGN.md](./03_DATA_AND_SECURITY_DESIGN.md) | Data and Security Design（データ・セキュリティ設計） | Draft | 0.1 | （記入欄） |
-| [04_UI_AND_FLOW_DESIGN.md](./04_UI_AND_FLOW_DESIGN.md) | UI and Flow Design（UI・フロー設計） | Draft | 0.1 | （記入欄） |
-| [05_ARCHITECTURE_DESIGN.md](./05_ARCHITECTURE_DESIGN.md) | Architecture Design（アーキテクチャ設計） | Draft | 0.1 | （記入欄） |
-| [06_OPERATION_AND_HANDOFF.md](./06_OPERATION_AND_HANDOFF.md) | Operation and Handoff Design（運用・詳細設計引き継ぎ） | Draft | 0.1 | （記入欄） |
+| [README.md](./README.md) | Design Documents Index（設計書一覧） | Draft | 0.4 | Takashi Oikawa |
+| [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) | Request Definition（要求定義） | Draft | 0.3 | Takashi Oikawa |
+| [02_REQUIREMENTS_DEFINITION.md](./02_REQUIREMENTS_DEFINITION.md) | Requirements Definition（要件定義） | Draft | 0.3 | Takashi Oikawa |
+| [03_DATA_AND_SECURITY_DESIGN.md](./03_DATA_AND_SECURITY_DESIGN.md) | Data and Security Design（データ・セキュリティ設計） | Draft | 0.3 | Takashi Oikawa |
+| [04_UI_AND_FLOW_DESIGN.md](./04_UI_AND_FLOW_DESIGN.md) | UI and Flow Design（UI・フロー設計） | Draft | 0.3 | Takashi Oikawa |
+| [05_ARCHITECTURE_DESIGN.md](./05_ARCHITECTURE_DESIGN.md) | Architecture Design（アーキテクチャ設計） | Draft | 0.3 | Takashi Oikawa |
+| [06_OPERATION_AND_HANDOFF.md](./06_OPERATION_AND_HANDOFF.md) | Operation and Handoff Design（運用・詳細設計引き継ぎ） | Draft | 0.3 | Takashi Oikawa |
 
 ---
 
 ## 5. Overall Design Policy（設計上の全体方針・前提）
 
-<!-- 設計全体を通じて共有すべき方針・制約・前提を記述する -->
-<!-- 個別文書に繰り返し書く必要のある共通事項をここにまとめる -->
-
-（記入欄）
+- 正式 Purpose は DISTRIBUTION である。テンプレートの配布と使用方法の案内である。
+- 管理用設計書は `docs/design/`、生徒向け配布物は `templates/design/` とする。
+- 配布時に本文、日付、Owner、Status、Version、改行、相対リンクを変換しない。
+- 中央管理コピーは独自に編集しない。
+- 使用説明書は `docs/STUDENT_USAGE_GUIDE.md` とする。設計書一覧の第8行にはしない。
+- この準備工程では、公開範囲は Private を維持する。この工程では Public にしない。元の専用 Repository を非公開のまま保つ。
 
 ---
 
 ## 6. Glossary（用語集・略語定義）
 
-<!-- この設計書群で使用するプロジェクト固有の用語・略語を定義する -->
-<!-- 汎用的な IT 用語は記載不要 -->
-
 | Term / Abbreviation（用語・略語） | Definition（定義） |
 |---|---|
-| （記入欄） | （記入欄） |
+| DISTRIBUTION | この Repository の正式 Purpose。テンプレートの配布と使用方法の案内。 |
+| 管理用設計書 | `docs/design/` の文書。この配布 Repository 自体の設計。 |
+| 配布テンプレート | `templates/design/` の7文書。生徒が取得するテンプレート。 |
+| 中央テンプレ正本 | `solacom_main` の `docs/standards/templates/design/`。 |
 
 ---
 
@@ -112,5 +109,5 @@ README Writing Policy（README作成方針）
 
 | Role（役割） | Name（氏名） | Assigned Documents（担当文書） |
 |---|---|---|
-| Document Owner（文書管理者） | （記入欄） | All Documents（全文書） |
-| Reviewer（レビュアー） | （記入欄） | （記入欄） |
+| Document Owner（文書管理者） | Takashi Oikawa | All Documents（全文書） |
+| Reviewer（レビュアー） | 未指定 | 差分レビューは設計担当が行う。氏名の追加指定はない。 |

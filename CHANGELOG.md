@@ -1,12 +1,12 @@
 <!--
-Program Name: Repository CHANGELOG
+Program Name: DDT CHANGELOG
 Language: Markdown
-Function: Governance適用Repositoryの変更履歴正本（Canonical Template）
-Created: 2026-09-11
-Last Updated: 2026-09-11
+Function: design-document-templates の変更履歴正本
+Created: 2026-10-09
+Last Updated: 2026-10-09
 Author: Takashi Oikawa
-AI: Cursor Grok 4.6
-Memo: Distribution Template Artifact. 初期状態はTemplateである。過去Repository履歴を含めない。推測履歴を記載しない。Runtime側に CHANGELOG_TEMPLATE.md は作成しない。
+AI: Cursor
+Memo: Document ID DDT-CHANGELOG-001。Version 0.5 / Draft。正式承認ではない
 -->
 
 # CHANGELOG
@@ -14,22 +14,21 @@ Memo: Distribution Template Artifact. 初期状態はTemplateである。過去R
 <!-- Document Info（文書情報） -->
 | Item（項目） | Value（値） |
 |---|---|
-| Document ID（文書ID） | CHANGELOG-001 |
-| Version（バージョン） | 0.1 |
+| Document ID（文書ID） | DDT-CHANGELOG-001 |
+| Version（バージョン） | 0.5 |
 | Status（ステータス） | Draft |
-| Created Date（作成日） | 2026-09-11 |
-| Last Updated（最終更新日） | 2026-09-11 |
+| Created Date（作成日） | 2026-10-09 |
+| Last Updated（最終更新日） | 2026-10-09 |
 | Owner（管理者） | Takashi Oikawa |
-| Related Documents（関連文書） | /CONSTITUTION.md / /AGENTS.md / /docs/design/README.md |
+| Related Documents（関連文書） | [README.md](./README.md) / [docs/STUDENT_USAGE_GUIDE.md](./docs/STUDENT_USAGE_GUIDE.md) / [CONSTITUTION.md](./CONSTITUTION.md) / [AGENTS.md](./AGENTS.md) / [docs/design/README.md](./docs/design/README.md) |
 
 ---
 
 ## Purpose（目的）
 
-本ファイルは、本Repositoryの変更履歴正本である。
+本ファイルは、design-document-templates の変更履歴正本である。
 
-本ファイルの初期状態は Canonical Template からの配布物である。
-過去Repository履歴は含まない。推測履歴は記載しない。
+この Repository で確認した事実と、この Repository で実施した事実だけを記録する。他 Repository の過去履歴は転記しない。過去履歴は独自に復元しない。
 
 ## What to Record（記録対象）
 
@@ -38,7 +37,7 @@ Memo: Distribution Template Artifact. 初期状態はTemplateである。過去R
 
 ## Category Definitions（変更分類）
 
-| Category | 日本語 | 用途 |
+| Category（変更分類） | Japanese（日本語） | Usage（用途） |
 |---|---|---|
 | Added | 追加 | 新しい機能、章、文書、運用項目 |
 | Changed | 変更 | 既存仕様、構成、手順の変更 |
@@ -52,8 +51,19 @@ Git 履歴は差分確認の補助として利用する。CHANGELOG の代替と
 
 新しい履歴を上、古い履歴を下に記載する。
 
-Governance導入Baselineは、Governance導入成功後に記録する。
+Governance 導入 Baseline は、Governance 導入成功後に記録する。
 導入前に成功した事実として記録しない。
 
-| Version | Date | Document | Category | Changes | Author |
+原本の Version 相違が未解消である間は、整合確認完了、正式公開完了とは記録しない。正式承認、commit、push、生徒向け公開の完了とは区別する。
+
+| Version（バージョン） | Date（日付） | Document（文書） | Category（変更分類） | Changes（内容） | Author（作成者） |
 |---|---|---|---|---|---|
+| 0.5 | 2026-10-09 | project-notes/CURRENT.md、CHANGELOG.md | Changed | 用語・目的文変更後のレビュー DDT-REVIEW-20261009-004 の PASS と、Private・Draft の準備状態に対する Git 反映指示を CURRENT へ記録し、現在地点と後続工程を更新した。両文書は Version 0.5 / Draft。正式承認・公開承認ではない。 | Takashi Oikawa |
+| 0.4 | 2026-10-09 | README.md、docs/design/ の7文書、docs/STUDENT_USAGE_GUIDE.md、project-notes/CURRENT.md、CHANGELOG.md | Changed | 管理・案内11文書の用語を「テンプレート」へ統一し、指定の目的文を配置した。更新後の版は、root README 0.3 / Draft、管理設計 README 0.4 / Draft、01〜06 は 0.3 / Draft、使用説明書 0.2 / Draft、CURRENT 0.4 / Draft、CHANGELOG 0.4 / Draft である。用語・目的文変更後のレビュー PASS、正式承認、commit、push、公開は未実施である。 | Takashi Oikawa |
+| 0.3 | 2026-10-09 | docs/design/README.md、project-notes/CURRENT.md、CHANGELOG.md | Fixed | 管理用設計 README の目次第2項目のリンク先を、見出しに対応する `#2-problem--solution--benefit-summary問題解決効果の概要` へ修正した。レビュー判定と実施状態の記録を更新した。3文書は Version 0.3 / Draft である。設計担当レビュー PASS、正式承認、commit、push、公開は未実施である。 | Takashi Oikawa |
+| 0.1 | 2026-10-09 | docs/STUDENT_USAGE_GUIDE.md | Added | 生徒向け使用説明書の初版 Version 0.1 / Draft を追加した。設計テンプレート7文書とは別の案内文書である。正式承認、commit、push、生徒向け公開は未実施である。 | Takashi Oikawa |
+| 0.2 | 2026-10-09 | README.md、project-notes/CURRENT.md、docs/design/ の7文書 | Changed | 使用説明書への案内、文書の役割、AI読込み、フォルダ構成、利用手順を更新し、Version 0.2 / Draft とした。この準備工程では Private を維持する。正式承認ではない。 | Takashi Oikawa |
+| 0.2 | 2026-10-09 | CHANGELOG.md、docs/design/02_REQUIREMENTS_DEFINITION.md、docs/design/03_DATA_AND_SECURITY_DESIGN.md | Fixed | 変更分類を Added / Changed / Fixed / Removed / Security の5値へ戻した。確定した文書数と、未指定の人数・業務データ件数を区別した。CHANGELOG は Version 0.2 / Draft である。原本の Version 相違は未解消である。 | Takashi Oikawa |
+| 0.1 | 2026-10-09 | README.md、project-notes/CURRENT.md、CHANGELOG.md、docs/design/ の7文書 | Added | Repository 固有文書10件を、新しい文書 ID の初版 Version 0.1 / Draft として作成した。旧 Template の Approved と過去日付は、この文書 ID の承認実績として引き継いでいない。 | Takashi Oikawa |
+| 0.4 / 0.2 | 2026-10-09 | templates/design/ の7文書 | Added | 基準 SHA `0aa4e9e3af77688c6485035eb23b98061cd740d0` の `docs/design/` 7文書を、`templates/design/` へ無変更で追加した。Git Blob SHA は指示書の照合値、および `solacom_main` コミット `16c44976638b48c53ef16399b1d51217c540be0a` の `docs/standards/templates/design/` と全件一致した。README の文書 Version は 0.4、01〜06 は 0.2 のままである。原本 README 一覧の Version 0.1 と各設計書 Version 0.2 の相違は残っている。 | Takashi Oikawa |
+| — | 2026-10-09 12:04:28 +0900 | Repository 初期コミット | Added | Initial commit。親コミットはない。この日時は、後続の確認日・検証日とは別である。Git の作成者名は `oikawa@sendai` である。 | oikawa@sendai |

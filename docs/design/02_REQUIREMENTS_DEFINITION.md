@@ -1,15 +1,26 @@
+<!--
+Program Name: DDT Requirements Definition
+Language: Markdown
+Function: 配布物、取得と利用の案内、検証要件を定義する
+Created: 2026-10-09
+Last Updated: 2026-10-09
+Author: Takashi Oikawa
+AI: Cursor
+Memo: Document ID DDT-REQS-001。Version 0.3 / Draft。正式承認ではない
+-->
+
 # Requirements Definition（要件定義）
 
 <!-- Document Info（文書情報） -->
 | Item（項目） | Value（値） |
 |---|---|
-| Document ID（文書ID） | REQS-001 |
-| Version（バージョン） | 0.2 |
+| Document ID（文書ID） | DDT-REQS-001 |
+| Version（バージョン） | 0.3 |
 | Status（ステータス） | Draft |
-| Created Date（作成日） | 2026-06-21 |
-| Last Updated（最終更新日） | 2026-07-15 |
+| Created Date（作成日） | 2026-10-09 |
+| Last Updated（最終更新日） | 2026-10-09 |
 | Owner（管理者） | Takashi Oikawa |
-| Related Documents（関連文書） | README.md / 01_REQUEST_DEFINITION.md / 03_DATA_AND_SECURITY_DESIGN.md / 04_UI_AND_FLOW_DESIGN.md / 05_ARCHITECTURE_DESIGN.md |
+| Related Documents（関連文書） | README.md / 01_REQUEST_DEFINITION.md / 03_DATA_AND_SECURITY_DESIGN.md / 04_UI_AND_FLOW_DESIGN.md / 05_ARCHITECTURE_DESIGN.md / [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) |
 
 ---
 
@@ -27,36 +38,33 @@
 
 ## 1. Purpose（目的）
 
-<!-- この文書が何を定義し、誰に向けて書かれているかを記述する -->
-<!-- 例: 本文書は、○○機能においてシステムが満たすべき機能要件・非機能要件を定義し、
-        各種設計書の基準とすることを目的とする -->
-
-（記入欄）
+本文書は、配布物、取得と利用の案内、検証要件を定義する。
 
 ---
 
 ## 2. Scope（対象範囲）
 
-<!-- この文書がカバーする機能・システム・フェーズを記述する -->
-
-（記入欄）
+- root README から使用説明書と7テンプレートへ到達できること
+- 文書の説明、AI読込み一覧と順序、指示文、フォルダ図、再開と確認の方法を提供すること
+- 利用先 `docs/design/` への配置を案内すること
+- 管理用文書と配布物を分けること
+- 元 Repository の具体的な業務情報を配布しないこと
+- コピー照合、validator、差分レビューを行うこと
 
 ---
 
 ## 3. Out of Scope（対象外範囲）
 
-<!-- 明示的にスコープ外とするものを記述する -->
-<!-- 該当内容がない場合: 「本文書では対象外。理由: ○○」と記載する -->
-
-（記入欄）
+- 独自 GUI
+- 独自 API
+- DB
+- 生徒向け配布ZIP生成、ダウンロード自動化、GitHub Template 設定。これらは本指示の範囲に含めない。Repository 外へレビュー資料を出力する作業とは区別する
 
 ---
 
 ## 4. Assumptions（前提条件）
 
-<!-- この文書の内容が成立するために必要な前提を記述する -->
-
-（記入欄）
+配布形式は、この工程では Markdown ファイルである。
 
 ---
 
@@ -64,75 +72,70 @@
 
 ### 5.1 Functional Requirements（機能要件一覧）
 
-<!-- システムが提供すべき機能を記述する -->
-<!-- ID・優先度（High / Medium / Low）・詳細を記載する -->
+仕様 ID は採番しない。優先度の固定値は作らない。
 
 | ID | Feature Name（機能名） | Priority（優先度） | Details（詳細） |
 |---|---|---|---|
-| FR-001 | （記入欄） | High | （記入欄） |
+| — | root README から使用説明書と7テンプレートへ到達できる | 指定なし | root README に使用説明書と `templates/design/` の7文書への相対リンクを置く。 |
+| — | 文書の説明、AI読込み、指示文、フォルダ図、再開と確認 | 指定なし | 使用説明書に、文書の説明、AI読込み一覧と順序、指示文、フォルダ図、再開と確認の方法を記載する。 |
+| — | 利用先への配置を案内する | 指定なし | 自分のプロジェクトの `docs/design/` に README と 01〜06 を同じ階層で置く案内をする。 |
+| — | 管理用文書と配布物を分ける | 指定なし | 管理用設計書は `docs/design/`、生徒向け配布物は `templates/design/` とする。 |
+| — | 元 Repository の業務情報を配布しない | 指定なし | 元 Repository の具体的な業務情報を配布しない。 |
+| — | コピー照合、validator、差分レビュー | 指定なし | 配布コピーの内容照合、validator、差分レビューを行う。 |
 
 ### 5.2 Non-Functional Requirements（非機能要件）
 
-<!-- セキュリティ要求レベルはここに記載する -->
-<!-- セキュリティの設計仕様（認証・認可・通信・保存・個人情報保護の実装方針）は 03_DATA_AND_SECURITY_DESIGN.md に記載する -->
-
 | Type（種別） | Requirement（要件内容） |
 |---|---|
-| Performance（性能） | （記入欄） |
-| Availability（可用性） | （記入欄） |
-| Security Requirement Level（セキュリティ要求レベル） | （記入欄） |
-| Maintainability（保守性） | （記入欄） |
-| Other（その他） | （記入欄） |
+| Performance（性能） | 未指定。固定値は作らない。 |
+| Availability（可用性） | 未指定。固定値は作らない。 |
+| Security Requirement Level（セキュリティ要求レベル） | 元 Repository の具体的な業務情報を配布しない。資格情報を載せない。 |
+| Maintainability（保守性） | コピー照合、validator、差分レビューを行う。 |
+| Other（その他） | 配布形式は Markdown ファイルである。生徒向け配布ZIP生成、ダウンロード自動化、GitHub Template 設定は本指示の範囲に含めない。Repository 外へレビュー資料を出力する作業とは区別する。 |
 
 ### 5.3 Screen List（画面一覧）
 
-<!-- 画面名・利用目的の概要まで記載する -->
-<!-- 画面項目・レイアウト・操作・遷移の詳細は 04_UI_AND_FLOW_DESIGN.md に記載する -->
-
 | Screen ID（画面ID） | Screen Name（画面名） | Purpose / Overview（利用目的・概要） |
 |---|---|---|
-| SCR-001 | （記入欄） | （記入欄） |
+| — | 独自画面は提供しない | 対象外。理由: 独自 GUI は提供しない。閲覧は GitHub の README とファイル閲覧を使う。詳細は [04_UI_AND_FLOW_DESIGN.md](./04_UI_AND_FLOW_DESIGN.md)。 |
 
 ### 5.4 API Overview（API一覧の概要）
 
-<!-- 外部公開・内部利用 API の概要を記載する -->
-<!-- API 詳細仕様は 05_ARCHITECTURE_DESIGN.md に記載する -->
-
 | API ID | API Name / Endpoint Overview（API名 / エンドポイント概要） | Purpose（用途） |
 |---|---|---|
-| API-001 | （記入欄） | （記入欄） |
+| — | 独自 API は提供しない | 対象外。理由: 独自 API は提供しない。 |
 
 ### 5.5 Data Overview（データ種別・件数規模の概要）
 
-<!-- 扱うデータの種別・想定件数・規模感を記述する -->
-<!-- 詳細なデータ設計は 03_DATA_AND_SECURITY_DESIGN.md に記載する -->
-
 | Data Type（データ種別） | Estimated Volume（想定件数・規模） | Notes（備考） |
 |---|---|---|
-| （記入欄） | （記入欄） | （記入欄） |
+| Repository固有の管理・案内文書 | 11文書 | root README、CURRENT、CHANGELOG、管理設計7文書の既存10件と、使用説明書1件。中央管理コピーや既存作成ガイドはこの件数に含めない |
+| 配布する設計テンプレート | 7文書 | `templates/design/` のREADMEと01〜06。無変更で保持 |
+| 生徒向け使用説明書 | 上記11件に含む1文書 | `docs/STUDENT_USAGE_GUIDE.md`。テンプレート7件とは別の利用資料。同じ文書をRepository全体の件数へ重複加算しない |
+
+この11文書と、必須 Governance 文書10件は別の分類である。必須 Governance 文書10件と検証資産2件の分類・件数は変えない。未指定の人数と業務データ件数は作らない。
 
 ### 5.6 Mapping to Request Definition（要求定義との対応マッピング）
 
-<!-- 01_REQUEST_DEFINITION.md のユーザーストーリー ID と機能要件 ID を対応付ける -->
-<!-- 例: US-001 → FR-001, FR-002 -->
+仕様 ID は採番しない。
 
 | User Story ID（ユーザーストーリー ID） | Functional Requirement ID（対応する機能要件 ID） |
 |---|---|
-| （記入欄） | （記入欄） |
+| — 。生徒がテンプレートを取得して記入する。 | ID は採番しない。対応する内容は、root README から7テンプレートへ到達できること、および利用先 `docs/design/` への配置を案内すること。 |
+| — 。生徒が使用説明書により AI 読込みと再開を行う。 | ID は採番しない。対応する内容は、使用説明書への入口、文書の説明、AI読込み一覧と順序、指示文、フォルダ図、再開と確認の方法である。 |
 
 ---
 
 ## 6. Open Issues（未決事項）
 
+本文書の範囲に未決仕様はない。理由: 本指示で指定した事項は確定事項として本文に記載した。性能、可用性、優先度が未指定であることは、固定値を作らない確定事項であり、未決仕様ではない。テンプレートの空の TBD 行は、本 Repository の未決事項ではない。
+
 | ID | Open Issue（未決事項） | Owner（担当者） | Due Date（期限） | Status（ステータス） |
 |---|---|---|---|---|
-| TBD-001 | （記入欄） | （記入欄） | （記入欄） | Open |
+| — | 未決仕様はない。理由は本節本文のとおり。 | — | — | — |
 
 ---
 
 ## 7. Handoff to Detail Design（詳細設計への引き継ぎ）
 
-<!-- 実装フェーズに伝えるべき設計意図・判断経緯・注意事項を記述する -->
-<!-- 該当内容がない場合: 「本文書では対象外。理由: ○○」と記載する -->
-
-（記入欄）
+アプリ実装への引き継ぎは対象外。理由: 独自 GUI、独自 API、DB は提供しない。情報の扱いの続きは [03_DATA_AND_SECURITY_DESIGN.md](./03_DATA_AND_SECURITY_DESIGN.md)、閲覧と記入の流れは [04_UI_AND_FLOW_DESIGN.md](./04_UI_AND_FLOW_DESIGN.md)、配置は [05_ARCHITECTURE_DESIGN.md](./05_ARCHITECTURE_DESIGN.md) に記載する。
