@@ -6,21 +6,26 @@ Created: 2026-10-09
 Last Updated: 2026-10-10
 Author: Takashi Oikawa
 AI: Cursor
-Memo: Document ID DDT-STUDENT-GUIDE-001。Version 0.7 / Draft。正式承認ではない
+Memo: Document ID DDT-STUDENT-GUIDE-001。Version 0.8 / Draft。正式承認ではない
 -->
 
 # Student Usage Guide（生徒向け使用説明書）
+
+<details>
+<summary>Document Info（文書情報）</summary>
 
 <!-- Document Info（文書情報） -->
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | DDT-STUDENT-GUIDE-001 |
-| Version（バージョン） | 0.7 |
+| Version（バージョン） | 0.8 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-10-09 |
 | Last Updated（最終更新日） | 2026-10-10 |
 | Owner（管理者） | Takashi Oikawa |
 | Related Documents（関連文書） | [README.md](../README.md) / [設計テンプレート一覧](../templates/design/README.md) / [7文書管理と設定ファイルの参考資料](./GOVERNED_DEVELOPMENT_GUIDE.md) / [CHANGELOG.md](../CHANGELOG.md) |
+
+</details>
 
 ## 1. このガイドでできること
 

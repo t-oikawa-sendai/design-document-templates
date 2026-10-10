@@ -6,7 +6,7 @@ Created: 2026-10-09
 Last Updated: 2026-10-10
 Author: Takashi Oikawa
 AI: Cursor
-Memo: Document ID DDT-REQS-001。Version 0.8 / Draft。正式承認ではない
+Memo: Document ID DDT-REQS-001。Version 0.9 / Draft。正式承認ではない
 -->
 
 # Requirements Definition（要件定義）
@@ -15,7 +15,7 @@ Memo: Document ID DDT-REQS-001。Version 0.8 / Draft。正式承認ではない
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | DDT-REQS-001 |
-| Version（バージョン） | 0.8 |
+| Version（バージョン） | 0.9 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-10-09 |
 | Last Updated（最終更新日） | 2026-10-10 |
@@ -84,6 +84,7 @@ SDDは、仕様書を先に書き、AIはその仕様に従って実装する進
 | — | 管理用文書と配布物を分ける | 指定なし | 管理用設計書は `docs/design/`、生徒向け配布物は `templates/design/` とする。 |
 | — | 元 Repository の業務情報を配布しない | 指定なし | 元 Repository の具体的な業務情報を配布しない。 |
 | — | コピー照合、validator、差分レビュー | 指定なし | 配布コピーの内容照合、validator、差分レビューを行う。 |
+| — | 案内文書3件の文書情報表 | 指定なし | 案内文書3件（root README、使用説明書、参考資料）の文書情報表は、現在の位置を維持し、初期状態で閉じた折りたたみ表示とする。表示名は「Document Info（文書情報）」とする。 |
 
 #### Root README Content（ルートREADMEの掲載内容）
 

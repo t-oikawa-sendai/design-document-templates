@@ -6,21 +6,26 @@ Created: 2026-10-09
 Last Updated: 2026-10-10
 Author: Takashi Oikawa
 AI: Cursor
-Memo: Document ID DDT-GOVERNED-GUIDE-001。Version 0.5 / Draft。正式承認ではない
+Memo: Document ID DDT-GOVERNED-GUIDE-001。Version 0.6 / Draft。正式承認ではない
 -->
 
 # 7文書管理と設定ファイルの参考資料
+
+<details>
+<summary>Document Info（文書情報）</summary>
 
 <!-- Document Info（文書情報） -->
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | DDT-GOVERNED-GUIDE-001 |
-| Version（バージョン） | 0.5 |
+| Version（バージョン） | 0.6 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-10-09 |
 | Last Updated（最終更新日） | 2026-10-10 |
 | Owner（管理者） | Takashi Oikawa |
 | Related Documents（関連文書） | [使用説明書](./STUDENT_USAGE_GUIDE.md) / [README.md](../README.md) / [管理設計](./design/README.md) / [CHANGELOG.md](../CHANGELOG.md) |
+
+</details>
 
 本書は、7文書の記載先と、同じ管理方式を設定の有無でAIへ適用する方法を説明する参考資料です。削除したり別の場所へ移したりせず、この配布物の一部として置きます。基本の記入・仕様変更・実装は [使用説明書](./STUDENT_USAGE_GUIDE.md) だけで始められます。非公開の原本を読めなくても、その基本の運用は成立します。
 

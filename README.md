@@ -6,23 +6,28 @@ Created: 2026-10-09
 Last Updated: 2026-10-10
 Author: Takashi Oikawa
 AI: Cursor
-Memo: Document ID DDT-README-001。Version 0.8 / Draft。正式承認ではない
+Memo: Document ID DDT-README-001。Version 0.9 / Draft。正式承認ではない
 -->
 
 # design-document-templates（SDD設計文書テンプレート集）
 
 > 及川Styleの設計文書管理方式に基づく、7文書構成のテンプレート集です。
 
+<details>
+<summary>Document Info（文書情報）</summary>
+
 <!-- Document Info（文書情報） -->
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | DDT-README-001 |
-| Version（バージョン） | 0.8 |
+| Version（バージョン） | 0.9 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-10-09 |
 | Last Updated（最終更新日） | 2026-10-10 |
 | Owner（管理者） | Takashi Oikawa |
 | Related Documents（関連文書） | [CHANGELOG.md](./CHANGELOG.md) / [使用説明書](./docs/STUDENT_USAGE_GUIDE.md) / [設計テンプレート](./templates/design/README.md) / [7文書管理と設定ファイルの参考資料](./docs/GOVERNED_DEVELOPMENT_GUIDE.md) |
+
+</details>
 
 ## 1. Project Overview（概要）
 
