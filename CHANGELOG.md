@@ -6,7 +6,7 @@ Created: 2026-10-09
 Last Updated: 2026-10-10
 Author: Takashi Oikawa
 AI: Cursor
-Memo: Document ID DDT-CHANGELOG-001。Version 0.9 / Draft。正式承認ではない
+Memo: Document ID DDT-CHANGELOG-001。Version 0.10 / Draft。正式承認ではない
 -->
 
 # CHANGELOG
@@ -15,7 +15,7 @@ Memo: Document ID DDT-CHANGELOG-001。Version 0.9 / Draft。正式承認では�
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | DDT-CHANGELOG-001 |
-| Version（バージョン） | 0.9 |
+| Version（バージョン） | 0.10 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-10-09 |
 | Last Updated（最終更新日） | 2026-10-10 |
@@ -58,6 +58,7 @@ Governance 導入 Baseline は、Governance 導入成功後に記録する。
 
 | Version（バージョン） | Date（日付） | Document（文書） | Category（変更分類） | Changes（内容） | Author（作成者） |
 |---|---|---|---|---|---|
+| 0.10 | 2026-10-10 | README.md、docs/design/02_REQUIREMENTS_DEFINITION.md、docs/design/06_OPERATION_AND_HANDOFF.md、docs/design/README.md、project-notes/CURRENT.md、CHANGELOG.md | Changed | ルート README の不足を補い、使用説明書と参考資料との重複を整理した。02 に掲載内容と重複の扱いを定義し、06 に受け入れ条件を追加した。7文書の名称と役割を README に掲載し、使用説明書 §3 の文書 ID・記載例・説明全文は転載しない。版は README 0.6、02 と 06 は 0.6、管理設計 README 0.7、CURRENT 0.10、CHANGELOG 0.10、いずれも Draft。Status は Draft のままなので、使用説明書が初回承認版とする 1.0 にはしていない。本行は commit 前の記録であり、今回の Push と Actions 成功は含まない。基点 `f76360bdd91bbfca6ae53be3e666e88bab160104`。正式承認と Public 化は未実施である。 | Takashi Oikawa |
 | 0.9 | 2026-10-10 | docs/STUDENT_USAGE_GUIDE.md、docs/GOVERNED_DEVELOPMENT_GUIDE.md、project-notes/CURRENT.md、CHANGELOG.md | Changed | 使用説明書のFAQを、既存設計の移行と設定なしの開始を含む6問へ更新した。参考資料へ、使用するAIごとのWeb版・Desktop版の比較と公式URLを追記した。版は使用説明書 0.5、参考資料 0.3、CURRENT 0.9、CHANGELOG 0.9、いずれも Draft。管理設計7文書の版数は変更しない。本行はcommit前の記録であり、今回のPushとActions成功は含まない。基点 `5270504a9f58470852cb476fe5fcf557e11bb3ae` の過去Pushとは区別する。独立レビュー、正式承認、Public化は未実施である。 | Takashi Oikawa |
 | 0.8 | 2026-10-10 | README.md、docs/STUDENT_USAGE_GUIDE.md、docs/GOVERNED_DEVELOPMENT_GUIDE.md、docs/design/ の7文書、project-notes/CURRENT.md、CHANGELOG.md | Changed | 目的文をSDDとSSOTに合わせ、利用先の設定ファイルを任意とした。手順A・手順B・LEARNINGの利用区分は撤回済みである。正式PurposeはDISTRIBUTIONのまま。更新後の版は、root README 0.5、使用説明書 0.4、参考資料 0.2、管理設計README 0.6、01〜06 は 0.5、CURRENT 0.8、CHANGELOG 0.8、いずれも Draft である。第2版の「リンク0件」不合格とは区別する。本行はcommit前の記録であり、今回のPushとActions成功は含まない。独立レビュー、正式承認、Public化は未実施である。 | Takashi Oikawa |
 | 0.7 | 2026-10-09 | project-notes/CURRENT.md、CHANGELOG.md | Changed | 受領ZIPの設計担当レビューDDT-REVIEW-20261009-005のPASSと、利用者のPush指示を記録した。中央の未同期と履歴未適用を解消し、承認済み3文書を通常pushした中央commit `93a3fce46780cf134ea0ebc4a610c96571040fd2` からの無変換再配布を確認した。本行は配布先commit前の確認記録。Private・Draftを維持し、独立レビュー・正式承認・Public化は未実施である。 | Takashi Oikawa |
