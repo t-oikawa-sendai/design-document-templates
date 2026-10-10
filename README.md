@@ -6,7 +6,7 @@ Created: 2026-10-09
 Last Updated: 2026-10-10
 Author: Takashi Oikawa
 AI: Cursor
-Memo: Document ID DDT-README-001。Version 0.9 / Draft。正式承認ではない
+Memo: Document ID DDT-README-001。Version 0.10 / Draft。正式承認ではない
 -->
 
 # design-document-templates（SDD設計文書テンプレート集）
@@ -20,7 +20,7 @@ Memo: Document ID DDT-README-001。Version 0.9 / Draft。正式承認ではな�
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | DDT-README-001 |
-| Version（バージョン） | 0.9 |
+| Version（バージョン） | 0.10 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-10-09 |
 | Last Updated（最終更新日） | 2026-10-10 |
@@ -55,15 +55,15 @@ SDD（Spec-Driven Development／仕様駆動開発）は、先に仕様を定め
 
 設計テンプレートは、設計書READMEと01〜06の7文書です。
 
-| Document（文書名） | Role（役割） |
-|---|---|
-| 設計書README | 設計全体の概要と各文書への入口 |
-| 01 要求定義 | 背景、解決したい問題、開発目的、成功基準 |
-| 02 要件定義 | 実現する機能、品質条件、制約 |
-| 03 データ・セキュリティ設計 | データ構造、操作権限、情報の保護 |
-| 04 UI・フロー設計 | 画面、操作、処理の流れ |
-| 05 アーキテクチャ設計 | システム構成と各部分の責務 |
-| 06 運用・詳細設計引き継ぎ | 実装への引き継ぎ、テスト、運用 |
+| Document（文書） | File（ファイル） | Role（役割） |
+|---|---|---|
+| 設計書README | [`README.md`](templates/design/README.md) | 設計全体の概要と各文書への入口 |
+| 01 要求定義 | [`01_REQUEST_DEFINITION.md`](templates/design/01_REQUEST_DEFINITION.md) | 背景、解決したい問題、開発目的、成功基準 |
+| 02 要件定義 | [`02_REQUIREMENTS_DEFINITION.md`](templates/design/02_REQUIREMENTS_DEFINITION.md) | 実現する機能、品質条件、制約 |
+| 03 データ・セキュリティ設計 | [`03_DATA_AND_SECURITY_DESIGN.md`](templates/design/03_DATA_AND_SECURITY_DESIGN.md) | データ構造、操作権限、情報の保護 |
+| 04 UI・フロー設計 | [`04_UI_AND_FLOW_DESIGN.md`](templates/design/04_UI_AND_FLOW_DESIGN.md) | 画面、操作、処理の流れ |
+| 05 アーキテクチャ設計 | [`05_ARCHITECTURE_DESIGN.md`](templates/design/05_ARCHITECTURE_DESIGN.md) | システム構成と各部分の責務 |
+| 06 運用・詳細設計引き継ぎ | [`06_OPERATION_AND_HANDOFF.md`](templates/design/06_OPERATION_AND_HANDOFF.md) | 実装への引き継ぎ、テスト、運用 |
 
 - テンプレート：[templates/design/](./templates/design/README.md)
 - 記入・使用方法：[使用説明書](./docs/STUDENT_USAGE_GUIDE.md)
@@ -80,14 +80,14 @@ SDD（Spec-Driven Development／仕様駆動開発）は、先に仕様を定め
 
 ## 5. Optional Configuration Files（任意の設定ファイル）
 
-AGENTS.md・CONSTITUTION.mdの導入は任意です。設定ファイルがなくても7文書で運用できます。
+AGENTS.md はAIへの作業指示、CONSTITUTION.md はプロジェクトの管理規則を記載するファイルです。利用は任意ですが、設定ファイルの有無にかかわらず、同じ7文書管理方式を適用します。
 
 | Configuration（構成） | Benefits（メリット） | Considerations（注意点） |
 |---|---|---|
 | 7文書 | 仕様の記載先が決まり、文書の乱立・重複を抑えられます。 | 作業時に管理方法をAIへ伝え、文書間の整合を確認する必要があります。 |
 | 7文書＋設定ファイル | 共通ルールをまとめ、毎回の指示を短くし、引き継ぎを行いやすくします。 | 設定の理解・更新と、AIへの適用確認が必要です。 |
 
-同じ管理方式を設定の有無でどうAIへ適用するかは、[参考資料の共通前提](./docs/GOVERNED_DEVELOPMENT_GUIDE.md#管理方式の共通前提)を参照してください。役割、使用方法、製品別の対応、公式情報も、その参考資料にあります。
+AIへの適用方法、役割、使用方法、製品別の対応、公式情報は、[参考資料の共通前提](./docs/GOVERNED_DEVELOPMENT_GUIDE.md#管理方式の共通前提)を参照してください。
 
 ## 6. Review and Approval（確認・承認）
 
