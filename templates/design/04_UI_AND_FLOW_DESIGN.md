@@ -4,10 +4,10 @@
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | UI-001 |
-| Version（バージョン） | 0.3 |
+| Version（バージョン） | 0.4 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-06-21 |
-| Last Updated（最終更新日） | 2026-10-09 |
+| Last Updated（最終更新日） | 2026-10-10 |
 | Owner（管理者） | Takashi Oikawa |
 | Related Documents（関連文書） | README.md / 02_REQUIREMENTS_DEFINITION.md / 05_ARCHITECTURE_DESIGN.md |
 
@@ -111,6 +111,9 @@
 ---
 
 ## 6. Open Issues（未決事項）
+
+<!-- 未決事項は、この文書の Document ID とローカル ID の組で識別する。例: UI-001:TBD-001 -->
+<!-- 課題管理の台帳を別に使っている場合は、同じ課題の既存 ID を参照し、新しく採番しない。台帳の導入は 7文書運用の必須条件にしない -->
 
 | ID | Open Issue（未決事項） | Owner（担当者） | Due Date（期限） | Status（ステータス） |
 |---|---|---|---|---|

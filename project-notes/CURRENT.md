@@ -6,7 +6,7 @@ Created: 2026-10-09
 Last Updated: 2026-10-10
 Author: Takashi Oikawa
 AI: Cursor
-Memo: Document ID DDT-CURRENT-001。Version 0.10 / Draft。正式承認ではない
+Memo: Document ID DDT-CURRENT-001。Version 0.11 / Draft。正式承認ではない
 -->
 
 # CURRENT
@@ -15,7 +15,7 @@ Memo: Document ID DDT-CURRENT-001。Version 0.10 / Draft。正式承認ではな
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | DDT-CURRENT-001 |
-| Version（バージョン） | 0.10 |
+| Version（バージョン） | 0.11 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-10-09 |
 | Last Updated（最終更新日） | 2026-10-10 |
@@ -24,9 +24,7 @@ Memo: Document ID DDT-CURRENT-001。Version 0.10 / Draft。正式承認ではな
 
 ## Purpose（目的）
 
-DISTRIBUTION。正式 Purpose は変更しない。2026-10-10 の目的文は次のとおりである。
-
-> SDD（仕様駆動開発）で、AIが作成する設計文書を決まった7文書・決まった節へ収め、重複と冗長化を防ぐためのテンプレートを配布する。生徒は自分のリポジトリに配置して使う。
+DISTRIBUTION。正式 Purpose は変更しない。開発目的の正本は [要求定義](../docs/design/01_REQUEST_DEFINITION.md) §5.1 である。
 
 手順Aのみを今期の提供区分とする方針は、現行の確定事項から撤回済みである。経緯は Completed に残す。
 
@@ -60,22 +58,25 @@ DISTRIBUTION。正式 Purpose は変更しない。2026-10-10 の目的文は次
 - 目的訂正の commit `5270504a9f58470852cb476fe5fcf557e11bb3ae`（親 `7e02ccc6305c74ae08e2bf0436cb6f38604a2c75`）は、その後の通常 push で GitHub main に到達した。2026-10-10 の再確認で、local HEAD、fetch 後の origin/main、GitHub main はこの SHA で一致し、作業ツリーは clean、公開範囲は Private だった。Actions「Validate Documents」run `37999067578` は success、head SHA は同 commit、job `validate-docs` も success である。https://github.com/t-oikawa-sendai/design-document-templates/actions/runs/37999067578 これは目的訂正の過去実績であり、今回の FAQ 更新の検証結果ではない。構成図の GitHub 表示は、未ログインの確認では Private のため開けず、未確認のままである。
 - 2026-10-10 の FAQ 更新について、commit 前に次を確認した。使用説明書の §1〜6 は版数の更新以外変更がなく、FAQ は6問である。参考資料の §1〜7 は版数の更新以外変更がなく、§8 に確認日と公式URL 5件がある。5件の公式URLは指定の完全なURLのまま HTTP 200 で開けた。`python3 scripts/validate-docs.py` は終了コード 0、検査対象 21 件は PASS。`git diff --check` は終了コード 0。差分は使用説明書、参考資料、CURRENT、CHANGELOG の4文書のみ。保護資産と7テンプレートの SHA-256 は編集前と一致した。新規の仕様IDは作っていない。管理設計READMEの索引は管理設計7文書の一覧であり、この版数変更では更新していない。この箇条書きを書いた時点では、その Push と Actions は未実施である。
 - FAQ 更新の commit `f76360bdd91bbfca6ae53be3e666e88bab160104`（メッセージ `docs: explain design migration and AI reading setup`）は、その後 GitHub main に到達した。2026-10-10 の README 構成見直しの開始前に、local HEAD、fetch 後の origin/main、GitHub main はこの SHA で一致し、作業ツリーは clean、公開範囲は Private だった。Actions「Validate Documents」run `38001977735` は success である。https://github.com/t-oikawa-sendai/design-document-templates/actions/runs/38001977735 これは FAQ 更新の過去実績であり、README 構成見直しの検証結果ではない。CURRENT に残っていた `5270504a9f58470852cb476fe5fcf557e11bb3ae` は目的訂正の過去 SHA であり、この HEAD ではない。
+- README 構成見直しの commit `79b46f4b2477e42ff128c1632c99b1523d5663cb` は、通常 push 済みの過去実績である。紹介文は「及川Styleの設計文書管理方式に基づく、7文書構成のテンプレート集です。」である。Actions「Validate Documents」run `38020494067` は success、job `validate-docs` も success である。https://github.com/t-oikawa-sendai/design-document-templates/actions/runs/38020494067 これは README 構成見直しの過去実績であり、今回の再配布と案内修正の検証結果ではない。
+- 中央 `solacom_main` の commit `fd82491fcc6314138033796d12f3f16449242c68`（親 `93a3fce46780cf134ea0ebc4a610c96571040fd2`）は、PASS 済みテンプレート7文書と CHANGELOG、および project-bootstrap の7文書を通常 push した。local HEAD、fetch 後の origin/main、GitHub main はこの SHA で一致した。対象外の dirty 差分は残している。このリポジトリに Actions の workflow はなく、同 SHA の run は 0 件である。https://github.com/t-oikawa-sendai/solacom_main/commit/fd82491fcc6314138033796d12f3f16449242c68 これは中央同期の実績であり、配布先の今回の commit 結果ではない。
 
 ## Current（現在）
 
-Private・Draft。正式 Purpose は DISTRIBUTION のままである。作業基点は FAQ 更新の反映済み commit `f76360bdd91bbfca6ae53be3e666e88bab160104` である。いま行っているのは、ルート README の構成見直しである。掲載内容と重複の扱いは要件定義、受け入れ条件は運用・引き継ぎに定義し、README はそれに合わせる。この CURRENT は、その commit 前の記録である。設計担当の実差分レビュー PASS の前には commit しない。PASS 後の通常 commit と通常 push は、利用者の明示許可がある。その SHA、Push 成功、Actions 成功は、この本文へ追記するための amend をしない。正式承認、独立レビュー、Public化は未実施である。
+Private・Draft。正式 Purpose は DISTRIBUTION のままである。作業基点は README 構成見直しの反映済み commit `79b46f4b2477e42ff128c1632c99b1523d5663cb` である。いま行っているのは、中央 `fd82491fcc6314138033796d12f3f16449242c68` からの7テンプレート再配布と、FAQ・取得方法・承認前確認・製品表の参照整理である。この CURRENT は、その配布先 commit 前の記録である。設計担当の実差分レビュー PASS の前には commit しない。PASS 後の通常 commit と通常 push は、利用者の明示許可がある。その SHA、Push 成功、Actions 成功は、この本文へ追記するための amend をしない。正式承認、独立レビュー、Public化は未実施である。
 
 ## Next（次）
 
-1. 設計担当の実差分レビューを受ける。自己検証を PASS として扱わない。
+1. 配布先の設計担当の実差分レビューを受ける。自己検証を PASS として扱わない。
 2. PASS 後、承認対象パスだけを通常 commit し、通常 push する。拒否や競合を force push で回避しない。
 3. Push 後の SHA と Actions は最終報告で確認する。この本文へ追記するための amend はしない。
-4. 独立レビュー、正式承認、公開前確認、Public化は、その後の指示で進める。
+4. 独立レビュー、正式承認、公開前確認、Public化は、その後の指示で進める。中央の対象外 dirty 差分は、この作業で commit しない。
 
 ## Blockers（阻害要因）
 
-- 独立レビュー、正式承認、Public化は未完了である。今回の Push を公開承認とは扱わない。旧レビューの PASS は、今回の README 差分レビューの PASS ではない。
-- 目的訂正で変更した構成図の GitHub 上の表示は未確認である。
+- 独立レビュー、正式承認、Public化は未完了である。今回の Push を公開承認とは扱わない。旧レビューの PASS は、今回の再配布と案内修正の PASS ではない。
+- 目的訂正で変更した構成図の GitHub 上の表示は、この commit の前は未確認である。
+- 中央 AI 制御資産の既知の参照問題は未修正のまま保持する。この作業では変更しない。
 - 旧不具合と、撤回済みの手順A・手順B・LEARNINGの提供区分は、現行の阻害要因にしない。
 
 ## Related Decisions（関連Decision）

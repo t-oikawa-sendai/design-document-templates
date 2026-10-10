@@ -6,7 +6,7 @@ Created: 2026-10-09
 Last Updated: 2026-10-10
 Author: Takashi Oikawa
 AI: Cursor
-Memo: Document ID DDT-README-001。Version 0.6 / Draft。正式承認ではない
+Memo: Document ID DDT-README-001。Version 0.7 / Draft。正式承認ではない
 -->
 
 # design-document-templates（SDD設計文書テンプレート集）
@@ -17,7 +17,7 @@ Memo: Document ID DDT-README-001。Version 0.6 / Draft。正式承認ではな�
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | DDT-README-001 |
-| Version（バージョン） | 0.6 |
+| Version（バージョン） | 0.7 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-10-09 |
 | Last Updated（最終更新日） | 2026-10-10 |
@@ -71,7 +71,7 @@ SDD（Spec-Driven Development／仕様駆動開発）は、先に仕様を定め
 
 具体的な方法は、使用説明書の[§4「取得と配置」](./docs/STUDENT_USAGE_GUIDE.md#4-取得と配置)と[§5「自分の文書にする」](./docs/STUDENT_USAGE_GUIDE.md#5-自分の文書にする)を参照してください。
 
-配置後の進め方は、[よくある質問のQ1](./docs/STUDENT_USAGE_GUIDE.md#一番最初に何をしますか)を参照してください。
+配置後の進め方は、[よくある質問のQ1](./docs/STUDENT_USAGE_GUIDE.md#q1-how-do-i-start既存の設計書がある場合これから設計する場合はどう始めますか)を参照してください。
 
 ## 5. Optional Configuration Files（任意の設定ファイル）
 

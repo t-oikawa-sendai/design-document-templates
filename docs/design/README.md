@@ -6,7 +6,7 @@ Created: 2026-10-09
 Last Updated: 2026-10-10
 Author: Takashi Oikawa
 AI: Cursor
-Memo: Document ID DDT-DESIGN-INDEX-001。Version 0.7 / Draft。正式承認ではない
+Memo: Document ID DDT-DESIGN-INDEX-001。Version 0.8 / Draft。正式承認ではない
 -->
 
 # Design Documents Index（設計書一覧）
@@ -15,7 +15,7 @@ Memo: Document ID DDT-DESIGN-INDEX-001。Version 0.7 / Draft。正式承認で�
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | DDT-DESIGN-INDEX-001 |
-| Version（バージョン） | 0.7 |
+| Version（バージョン） | 0.8 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-10-09 |
 | Last Updated（最終更新日） | 2026-10-10 |
@@ -42,9 +42,7 @@ Memo: Document ID DDT-DESIGN-INDEX-001。Version 0.7 / Draft。正式承認で�
 
 ## 1. Project Overview（プロジェクト・機能の概要）
 
-正式 Purpose は DISTRIBUTION である。目的文は次のとおりである。
-
-> SDD（仕様駆動開発）で、AIが作成する設計文書を決まった7文書・決まった節へ収め、重複と冗長化を防ぐためのテンプレートを配布する。生徒は自分のリポジトリに配置して使う。
+正式 Purpose は DISTRIBUTION である。開発目的の正本は [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) §5.1 である。
 
 SDDは、仕様書を先に書き、AIはその仕様に従って実装する進め方である。専用の非公開 Repository は公開しない。基本構成は、利用先の `docs/design/README.md` と 01〜06 の7文書である。同じ仕様の正本は一つにし、他の文書からは参照する（SSOT）。7文書の存在だけでは効果を保証しない。記載先の指定、参照関係の維持、人による確認を運用とする。
 
@@ -59,7 +57,7 @@ SDDは、仕様書を先に書き、AIはその仕様に従って実装する進
 | Item（項目） | Summary（概要） | Detail Document（詳細文書） |
 |---|---|---|
 | Current Problems（現在の問題点） | AI任せにすると、似た設計文書が乱立し、どれが正しい仕様か分からなくなる。専用の非公開 Repository は公開しない。 | [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) |
-| Development Purpose（開発目的） | SDD（仕様駆動開発）で、AIが作成する設計文書を決まった7文書・決まった節へ収め、重複と冗長化を防ぐためのテンプレートを配布する。生徒は自分のリポジトリに配置して使う。 | [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) |
+| Development Purpose（開発目的） | 正本は 01 §5.1。全文はそこを参照する。 | [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) |
 | Solution Approach（解決方針） | 7テンプレートを `templates/design/` に置く。使用説明書で取得、初期化、記入、仕様変更、実装への接続を説明する。同じ仕様は再掲せず参照する。設定ファイルは利用先で任意とし、詳細は参考資料へ置く。root README から説明書、テンプレート、参考資料へ案内する。管理用文書と配布物を分ける。 | [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) |
 | System Functions（システム機能） | 設計書 README と 01〜06、計7文書を Markdown で配布する。使用説明書と参考資料を配布する。利用先の設定ファイル導入は任意である。独自アプリ機能は提供しない。 | [02_REQUIREMENTS_DEFINITION.md](./02_REQUIREMENTS_DEFINITION.md) |
 | Expected Benefits（期待効果） | 生徒がテンプレートを取得し、自分のプロジェクトの `docs/design/` に置いて記入できる。仕様の記載先が決まり、重複を参照に置き換えられる。設定がなくても指示例で開始できる。 | [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) |
@@ -81,19 +79,19 @@ SDDは、仕様書を先に書き、AIはその仕様に従って実装する進
 
 | File（ファイル名） | Document Name（文書名） | Status（ステータス） | Version（バージョン） | Owner（担当者） |
 |---|---|---|---|---|
-| [README.md](./README.md) | Design Documents Index（設計書一覧） | Draft | 0.7 | Takashi Oikawa |
-| [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) | Request Definition（要求定義） | Draft | 0.5 | Takashi Oikawa |
-| [02_REQUIREMENTS_DEFINITION.md](./02_REQUIREMENTS_DEFINITION.md) | Requirements Definition（要件定義） | Draft | 0.6 | Takashi Oikawa |
+| [README.md](./README.md) | Design Documents Index（設計書一覧） | Draft | 0.8 | Takashi Oikawa |
+| [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) | Request Definition（要求定義） | Draft | 0.6 | Takashi Oikawa |
+| [02_REQUIREMENTS_DEFINITION.md](./02_REQUIREMENTS_DEFINITION.md) | Requirements Definition（要件定義） | Draft | 0.7 | Takashi Oikawa |
 | [03_DATA_AND_SECURITY_DESIGN.md](./03_DATA_AND_SECURITY_DESIGN.md) | Data and Security Design（データ・セキュリティ設計） | Draft | 0.5 | Takashi Oikawa |
 | [04_UI_AND_FLOW_DESIGN.md](./04_UI_AND_FLOW_DESIGN.md) | UI and Flow Design（UI・フロー設計） | Draft | 0.5 | Takashi Oikawa |
 | [05_ARCHITECTURE_DESIGN.md](./05_ARCHITECTURE_DESIGN.md) | Architecture Design（アーキテクチャ設計） | Draft | 0.5 | Takashi Oikawa |
-| [06_OPERATION_AND_HANDOFF.md](./06_OPERATION_AND_HANDOFF.md) | Operation and Handoff Design（運用・詳細設計引き継ぎ） | Draft | 0.6 | Takashi Oikawa |
+| [06_OPERATION_AND_HANDOFF.md](./06_OPERATION_AND_HANDOFF.md) | Operation and Handoff Design（運用・詳細設計引き継ぎ） | Draft | 0.7 | Takashi Oikawa |
 
 ---
 
 ## 5. Overall Design Policy（設計上の全体方針・前提）
 
-- 正式 Purpose は DISTRIBUTION である。目的文は §1 と Development Purpose と同一である。Purpose の値は変えない。
+- 正式 Purpose は DISTRIBUTION である。開発目的の正本は 01 §5.1 である。Purpose の値は変えない。
 - 管理用設計書は `docs/design/`、生徒向け配布物は `templates/design/` とする。
 - 配布時に本文、日付、Owner、Status、Version、改行、相対リンクを変換しない。
 - 中央管理コピーは独自に編集しない。中央管理コピーの修正は中央原本側の手順であり、今回の配布物の修正範囲に含めない。

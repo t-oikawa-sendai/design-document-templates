@@ -17,14 +17,16 @@ README Writing Policy（README作成方針）
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | README-001 |
-| Version（バージョン） | 0.5 |
+| Version（バージョン） | 0.6 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-06-21 |
-| Last Updated（最終更新日） | 2026-10-09 |
+| Last Updated（最終更新日） | 2026-10-10 |
 | Owner（管理者） | Takashi Oikawa |
-| Related Documents（関連文書） | docs/standards/DESIGN_DOCUMENT_STANDARD.md / [CHANGELOG.md](../../CHANGELOG.md)（リポジトリルート） |
+| Related Documents（関連文書） | [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) / [02_REQUIREMENTS_DEFINITION.md](./02_REQUIREMENTS_DEFINITION.md) / [03_DATA_AND_SECURITY_DESIGN.md](./03_DATA_AND_SECURITY_DESIGN.md) / [04_UI_AND_FLOW_DESIGN.md](./04_UI_AND_FLOW_DESIGN.md) / [05_ARCHITECTURE_DESIGN.md](./05_ARCHITECTURE_DESIGN.md) / [06_OPERATION_AND_HANDOFF.md](./06_OPERATION_AND_HANDOFF.md) / [CHANGELOG.md](../../CHANGELOG.md)（利用先リポジトリルート） |
 
-> 詳細な変更履歴はリポジトリルートの [CHANGELOG.md](../../CHANGELOG.md) を参照。
+<!-- 関連文書は、利用先の docs/design/ に存在する設計文書と、利用先リポジトリルートの CHANGELOG.md を参照する。中央リポジトリに原本があることと、利用先から中央パスを参照できることは別である。 -->
+
+> 詳細な変更履歴は、利用先リポジトリルートの [CHANGELOG.md](../../CHANGELOG.md) を参照する。
 
 ---
 
@@ -42,7 +44,7 @@ README Writing Policy（README作成方針）
 
 ## 1. Project Overview（プロジェクト・機能の概要）
 
-<!-- このプロジェクト・機能が何を目的としているかを1〜3文で記述する -->
+<!-- このプロジェクト・機能の概要を1〜3文で記述する。開発目的の正本は 01_REQUEST_DEFINITION.md §5.1 であり、ここは概要またはその参照を書く -->
 
 （記入欄）
 
@@ -51,6 +53,7 @@ README Writing Policy（README作成方針）
 ## 2. Problem / Solution / Benefit Summary（問題・解決・効果の概要）
 
 <!-- 各項目は1〜2文の概要のみ。詳細は下記 Doc へ誘導する -->
+<!-- Development Purpose（開発目的）の正本は 01_REQUEST_DEFINITION.md §5.1 である。この表は概要と参照先を書く -->
 
 | Item（項目） | Summary（概要） | Detail Document（詳細文書） |
 |---|---|---|
@@ -79,12 +82,12 @@ README Writing Policy（README作成方針）
 
 | File（ファイル名） | Document Name（文書名） | Status（ステータス） | Version（バージョン） | Owner（担当者） |
 |---|---|---|---|---|
-| [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) | Request Definition（要求定義） | Draft | 0.2 | （記入欄） |
-| [02_REQUIREMENTS_DEFINITION.md](./02_REQUIREMENTS_DEFINITION.md) | Requirements Definition（要件定義） | Draft | 0.2 | （記入欄） |
-| [03_DATA_AND_SECURITY_DESIGN.md](./03_DATA_AND_SECURITY_DESIGN.md) | Data and Security Design（データ・セキュリティ設計） | Draft | 0.2 | （記入欄） |
-| [04_UI_AND_FLOW_DESIGN.md](./04_UI_AND_FLOW_DESIGN.md) | UI and Flow Design（UI・フロー設計） | Draft | 0.3 | （記入欄） |
-| [05_ARCHITECTURE_DESIGN.md](./05_ARCHITECTURE_DESIGN.md) | Architecture Design（アーキテクチャ設計） | Draft | 0.2 | （記入欄） |
-| [06_OPERATION_AND_HANDOFF.md](./06_OPERATION_AND_HANDOFF.md) | Operation and Handoff Design（運用・詳細設計引き継ぎ） | Draft | 0.2 | （記入欄） |
+| [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) | Request Definition（要求定義） | Draft | 0.3 | （記入欄） |
+| [02_REQUIREMENTS_DEFINITION.md](./02_REQUIREMENTS_DEFINITION.md) | Requirements Definition（要件定義） | Draft | 0.3 | （記入欄） |
+| [03_DATA_AND_SECURITY_DESIGN.md](./03_DATA_AND_SECURITY_DESIGN.md) | Data and Security Design（データ・セキュリティ設計） | Draft | 0.3 | （記入欄） |
+| [04_UI_AND_FLOW_DESIGN.md](./04_UI_AND_FLOW_DESIGN.md) | UI and Flow Design（UI・フロー設計） | Draft | 0.4 | （記入欄） |
+| [05_ARCHITECTURE_DESIGN.md](./05_ARCHITECTURE_DESIGN.md) | Architecture Design（アーキテクチャ設計） | Draft | 0.3 | （記入欄） |
+| [06_OPERATION_AND_HANDOFF.md](./06_OPERATION_AND_HANDOFF.md) | Operation and Handoff Design（運用・詳細設計引き継ぎ） | Draft | 0.3 | （記入欄） |
 
 ---
 

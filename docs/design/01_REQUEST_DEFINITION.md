@@ -6,7 +6,7 @@ Created: 2026-10-09
 Last Updated: 2026-10-10
 Author: Takashi Oikawa
 AI: Cursor
-Memo: Document ID DDT-REQ-001。Version 0.5 / Draft。正式承認ではない
+Memo: Document ID DDT-REQ-001。Version 0.6 / Draft。正式承認ではない
 -->
 
 # Request Definition（要求定義）
@@ -15,7 +15,7 @@ Memo: Document ID DDT-REQ-001。Version 0.5 / Draft。正式承認ではない
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | DDT-REQ-001 |
-| Version（バージョン） | 0.5 |
+| Version（バージョン） | 0.6 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-10-09 |
 | Last Updated（最終更新日） | 2026-10-10 |
@@ -38,9 +38,7 @@ Memo: Document ID DDT-REQ-001。Version 0.5 / Draft。正式承認ではない
 
 ## 1. Purpose（目的）
 
-本文書は、配布の目的、対象、成功条件を定義する。正式 Purpose は DISTRIBUTION であり、次の目的文はこの Purpose の変更ではない。
-
-> SDD（仕様駆動開発）で、AIが作成する設計文書を決まった7文書・決まった節へ収め、重複と冗長化を防ぐためのテンプレートを配布する。生徒は自分のリポジトリに配置して使う。
+本文書は、配布の目的、対象、成功条件を定義する。正式 Purpose は DISTRIBUTION であり、開発目的の全文はこの Purpose の変更ではない。開発目的の正本は §5.1 である。
 
 SDDは、仕様書を先に書き、AIはその仕様に従って実装する進め方である。専用の非公開 Repository は公開しない。同じ仕様の正本は一つにし、他の文書からは参照する（SSOT）。利用先の AGENTS.md と CONSTITUTION.md は任意である。両方がなくても記入、仕様変更、実装、確認を進められる。使い方は [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md)、設定ファイルの使用方法は [../GOVERNED_DEVELOPMENT_GUIDE.md](../GOVERNED_DEVELOPMENT_GUIDE.md) で配布し、root README と使用説明書から参照する。
 
