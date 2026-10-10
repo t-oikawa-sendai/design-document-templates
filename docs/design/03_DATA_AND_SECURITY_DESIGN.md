@@ -6,7 +6,7 @@ Created: 2026-10-09
 Last Updated: 2026-10-10
 Author: Takashi Oikawa
 AI: Cursor
-Memo: Document ID DDT-DATA-001。Version 0.5 / Draft。正式承認ではない
+Memo: Document ID DDT-DATA-001。Version 0.6 / Draft。正式承認ではない
 -->
 
 # Data and Security Design（データ・セキュリティ設計）
@@ -15,7 +15,7 @@ Memo: Document ID DDT-DATA-001。Version 0.5 / Draft。正式承認ではない
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | DDT-DATA-001 |
-| Version（バージョン） | 0.5 |
+| Version（バージョン） | 0.6 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-10-09 |
 | Last Updated（最終更新日） | 2026-10-10 |
@@ -105,7 +105,7 @@ Repository 固有の管理・案内12文書と配布テンプレート7文書の
 
 資格情報、認証情報、個別案件の管理実績、内部案件情報は載せない。元 Repository の具体的な業務情報は配布しない。
 
-生徒が AI へ渡すのは、自分の最新の設計7文書と、今回の作業範囲である。配布元の履歴、`project-notes/CURRENT.md`、記入済みの管理用設計を、自分の実績として使わない。この案内は [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) に記載する。設定ファイルの有無の扱いは [../GOVERNED_DEVELOPMENT_GUIDE.md](../GOVERNED_DEVELOPMENT_GUIDE.md) に記載する。
+生徒が AI へ渡す仕様の正本は、自分の最新の設計7文書である。今回の作業範囲は、その正本と一緒に渡す対象であり、仕様の正本ではない。設定ファイルがある場合は、その現行ルールも読む対象に含める。設定が無いことは、渡す対象の不足として扱わない。配布元の履歴、`project-notes/CURRENT.md`、記入済みの管理用設計を、自分の実績として使わない。この案内は [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) に記載する。設定の有無による構成と AI への適用は [../GOVERNED_DEVELOPMENT_GUIDE.md](../GOVERNED_DEVELOPMENT_GUIDE.md) の共通前提に記載する。
 
 ### 5.5 Encryption, Masking, and Logging Policy（暗号化・マスキング・ログ取得方針）
 

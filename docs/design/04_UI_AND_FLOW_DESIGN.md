@@ -6,7 +6,7 @@ Created: 2026-10-09
 Last Updated: 2026-10-10
 Author: Takashi Oikawa
 AI: Cursor
-Memo: Document ID DDT-UI-001。Version 0.5 / Draft。正式承認ではない
+Memo: Document ID DDT-UI-001。Version 0.6 / Draft。正式承認ではない
 -->
 
 # UI and Flow Design（UI・フロー設計）
@@ -15,7 +15,7 @@ Memo: Document ID DDT-UI-001。Version 0.5 / Draft。正式承認ではない
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | DDT-UI-001 |
-| Version（バージョン） | 0.5 |
+| Version（バージョン） | 0.6 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-10-09 |
 | Last Updated（最終更新日） | 2026-10-10 |
@@ -44,7 +44,7 @@ Memo: Document ID DDT-UI-001。Version 0.5 / Draft。正式承認ではない
 
 ## 2. Scope（対象範囲）
 
-生徒の流れは、ルート README から使用説明書を読むこと、初期値の確認、7テンプレートの取得と自分の `docs/design/` への配置、最新の7文書と作業範囲を AI へ渡すこと、読めた資料と未読資料の確認、設計書の記入または承認後の実装、一覧・参照・図の確認、決定済み・未決・次回の記録である。設定ファイルが無いことはこの流れの停止理由にしない。フォルダ構成図と指示文の詳細は [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) を参照する。設定の有無は [../GOVERNED_DEVELOPMENT_GUIDE.md](../GOVERNED_DEVELOPMENT_GUIDE.md) を参照する。閲覧は GitHub の README とファイル閲覧を使う。独自 GUI は提供しない。
+生徒の流れは、ルート README から使用説明書を読むこと、初期値の確認、7テンプレートの取得と自分の `docs/design/` への配置、最新の7文書と作業範囲を AI へ渡すこと、読めた資料と未読資料の確認、設計書の記入または承認後の実装、一覧・参照・図の確認、決定済み・未決・次回の記録である。設定ファイルが無いことはこの流れの停止理由にしない。フォルダ構成図と指示文の詳細は [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) を参照する。設定の有無による構成と AI への適用は [../GOVERNED_DEVELOPMENT_GUIDE.md](../GOVERNED_DEVELOPMENT_GUIDE.md) の共通前提を参照する。閲覧は GitHub の README とファイル閲覧を使う。独自 GUI は提供しない。
 
 ---
 

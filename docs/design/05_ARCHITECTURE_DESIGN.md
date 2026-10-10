@@ -6,7 +6,7 @@ Created: 2026-10-09
 Last Updated: 2026-10-10
 Author: Takashi Oikawa
 AI: Cursor
-Memo: Document ID DDT-ARCH-001。Version 0.5 / Draft。正式承認ではない
+Memo: Document ID DDT-ARCH-001。Version 0.6 / Draft。正式承認ではない
 -->
 
 # Architecture Design（アーキテクチャ設計）
@@ -15,7 +15,7 @@ Memo: Document ID DDT-ARCH-001。Version 0.5 / Draft。正式承認ではない
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | DDT-ARCH-001 |
-| Version（バージョン） | 0.5 |
+| Version（バージョン） | 0.6 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-10-09 |
 | Last Updated（最終更新日） | 2026-10-10 |
@@ -69,7 +69,7 @@ Memo: Document ID DDT-ARCH-001。Version 0.5 / Draft。正式承認ではない
 
 ### 5.1 System Architecture Diagram（システム構成図）
 
-追加後の配布元の主要なフォルダ構成は次のとおりである。管理用 `docs/design/` と配布用 `templates/design/` を区別する。使用説明書では利用先の7文書配置だけを示す。本図は管理側で配布元の構成を示す。
+追加後の配布元の主要なフォルダ構成は次のとおりである。管理用 `docs/design/` と配布用 `templates/design/` を区別する。使用説明書では利用先の7文書配置だけを示す。本図は管理側で配布元の構成を示す。利用先で設定ファイルがある場合とない場合の構成は [../GOVERNED_DEVELOPMENT_GUIDE.md](../GOVERNED_DEVELOPMENT_GUIDE.md) の共通前提に示す。本節の図は、その利用先の構成図ではない。
 
 ```mermaid
 flowchart TD

@@ -6,7 +6,7 @@ Created: 2026-10-09
 Last Updated: 2026-10-10
 Author: Takashi Oikawa
 AI: Cursor
-Memo: Document ID DDT-STUDENT-GUIDE-001。Version 0.6 / Draft。正式承認ではない
+Memo: Document ID DDT-STUDENT-GUIDE-001。Version 0.7 / Draft。正式承認ではない
 -->
 
 # Student Usage Guide（生徒向け使用説明書）
@@ -15,7 +15,7 @@ Memo: Document ID DDT-STUDENT-GUIDE-001。Version 0.6 / Draft。正式承認で�
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | DDT-STUDENT-GUIDE-001 |
-| Version（バージョン） | 0.6 |
+| Version（バージョン） | 0.7 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-10-09 |
 | Last Updated（最終更新日） | 2026-10-10 |
@@ -162,7 +162,7 @@ flowchart TD
 
 ## 6. AIへの指示
 
-AGENTS.md と CONSTITUTION.md がなくても、次の指示で開始できます。使用するAIへ対象ファイルを指定し、読めた文書と版を確認します。新しい会話や別のAIへ切り替えるときも、最新の7文書と今回の対象を渡します。任意の設定導入は [7文書管理と設定ファイルの参考資料](./GOVERNED_DEVELOPMENT_GUIDE.md) を参照してください。
+管理方式は、設定ファイルの有無で変わりません。仕様の正本は設計7文書です。AGENTS.md と CONSTITUTION.md がなくても、次の指示で開始できます。設定がある場合は、その現行ルールも読み、7文書を省きません。構成と適用方法は [参考資料の共通前提](./GOVERNED_DEVELOPMENT_GUIDE.md#管理方式の共通前提) を参照してください。使用するAIへ対象ファイルを指定し、読めた文書と版を確認します。新しい会話や別のAIへ切り替えるときも、最新のファイルと今回の対象を渡します。任意の設定導入は [7文書管理と設定ファイルの参考資料](./GOVERNED_DEVELOPMENT_GUIDE.md) を参照してください。
 
 `<...>` を自分の情報へ置き換えて使います。
 
@@ -257,7 +257,8 @@ AGENTS.md と CONSTITUTION.md がなくても、次の指示で開始できま�
 
 **A.** 必須ではなく、7文書だけでも運用できます。
 
-設定ファイルを追加する場合のメリット、デメリット、導入方法は、[参考資料§2以降](./GOVERNED_DEVELOPMENT_GUIDE.md#2-設定なしの使用方法)を参照してください。
+同じ管理方式を設定の有無でAIへ適用する方法は、[参考資料の共通前提](./GOVERNED_DEVELOPMENT_GUIDE.md#管理方式の共通前提)を参照してください。
+メリット、デメリット、導入方法は、[参考資料§2以降](./GOVERNED_DEVELOPMENT_GUIDE.md#2-設定なしの使用方法)を参照してください。
 
 ### Q3. What Happens Without Configuration Files?（設定ファイルがない場合はどう動きますか？）
 

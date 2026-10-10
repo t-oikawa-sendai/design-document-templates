@@ -6,7 +6,7 @@ Created: 2026-10-09
 Last Updated: 2026-10-10
 Author: Takashi Oikawa
 AI: Cursor
-Memo: Document ID DDT-CURRENT-001。Version 0.11 / Draft。正式承認ではない
+Memo: Document ID DDT-CURRENT-001。Version 0.12 / Draft。正式承認ではない
 -->
 
 # CURRENT
@@ -15,7 +15,7 @@ Memo: Document ID DDT-CURRENT-001。Version 0.11 / Draft。正式承認ではな
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | DDT-CURRENT-001 |
-| Version（バージョン） | 0.11 |
+| Version（バージョン） | 0.12 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-10-09 |
 | Last Updated（最終更新日） | 2026-10-10 |
@@ -60,23 +60,26 @@ DISTRIBUTION。正式 Purpose は変更しない。開発目的の正本は [要
 - FAQ 更新の commit `f76360bdd91bbfca6ae53be3e666e88bab160104`（メッセージ `docs: explain design migration and AI reading setup`）は、その後 GitHub main に到達した。2026-10-10 の README 構成見直しの開始前に、local HEAD、fetch 後の origin/main、GitHub main はこの SHA で一致し、作業ツリーは clean、公開範囲は Private だった。Actions「Validate Documents」run `38001977735` は success である。https://github.com/t-oikawa-sendai/design-document-templates/actions/runs/38001977735 これは FAQ 更新の過去実績であり、README 構成見直しの検証結果ではない。CURRENT に残っていた `5270504a9f58470852cb476fe5fcf557e11bb3ae` は目的訂正の過去 SHA であり、この HEAD ではない。
 - README 構成見直しの commit `79b46f4b2477e42ff128c1632c99b1523d5663cb` は、通常 push 済みの過去実績である。紹介文は「及川Styleの設計文書管理方式に基づく、7文書構成のテンプレート集です。」である。Actions「Validate Documents」run `38020494067` は success、job `validate-docs` も success である。https://github.com/t-oikawa-sendai/design-document-templates/actions/runs/38020494067 これは README 構成見直しの過去実績であり、今回の再配布と案内修正の検証結果ではない。
 - 中央 `solacom_main` の commit `fd82491fcc6314138033796d12f3f16449242c68`（親 `93a3fce46780cf134ea0ebc4a610c96571040fd2`）は、PASS 済みテンプレート7文書と CHANGELOG、および project-bootstrap の7文書を通常 push した。local HEAD、fetch 後の origin/main、GitHub main はこの SHA で一致した。対象外の dirty 差分は残している。このリポジトリに Actions の workflow はなく、同 SHA の run は 0 件である。https://github.com/t-oikawa-sendai/solacom_main/commit/fd82491fcc6314138033796d12f3f16449242c68 これは中央同期の実績であり、配布先の今回の commit 結果ではない。
+- 2026-10-10 の説明追加の開始時に、配布先の local HEAD と origin/main は `5595eaa2ebf777064b370cc3043160bc3cb727d3` で一致し、作業ツリーは clean だった。commit メッセージは `docs: redistribute design templates and align the usage guides`。この SHA を、再配布と案内修正の反映済み基点として扱う。直前の CURRENT 本文は、その commit 前の記録のままだった。この追記は、その本文を実状態へ合わせるものであり、差分内容の再レビュー結果ではない。
+- 同じ開始時に、中央 local HEAD は `fd82491fcc6314138033796d12f3f16449242c68` だった。対象外の dirty 差分は残っていた。この作業では中央を変更していない。
 
 ## Current（現在）
 
-Private・Draft。正式 Purpose は DISTRIBUTION のままである。作業基点は README 構成見直しの反映済み commit `79b46f4b2477e42ff128c1632c99b1523d5663cb` である。いま行っているのは、中央 `fd82491fcc6314138033796d12f3f16449242c68` からの7テンプレート再配布と、FAQ・取得方法・承認前確認・製品表の参照整理である。この CURRENT は、その配布先 commit 前の記録である。設計担当の実差分レビュー PASS の前には commit しない。PASS 後の通常 commit と通常 push は、利用者の明示許可がある。その SHA、Push 成功、Actions 成功は、この本文へ追記するための amend をしない。正式承認、独立レビュー、Public化は未実施である。
+Private・Draft。正式 Purpose は DISTRIBUTION のままである。作業基点は配布先 `5595eaa2ebf777064b370cc3043160bc3cb727d3` である。中央の反映済み基点は `fd82491fcc6314138033796d12f3f16449242c68` である。中央同期、テンプレート再配布、前回の案内修正は完了済みとして扱い、今回の対象外である。いま行っているのは、同じ管理方式を設定の有無で AI へ適用する説明の追加である。この CURRENT は、その配布先 commit 前の記録である。前回の実差分レビュー PASS は、この追加変更には適用しない。設計担当の実差分レビュー PASS の前には commit しない。PASS 後の通常 commit と通常 push は、利用者の明示許可がある。その SHA、Push 成功、Actions 成功は、この本文へ追記するための amend をしない。正式承認、独立レビュー、Public化は未実施である。
 
 ## Next（次）
 
-1. 配布先の設計担当の実差分レビューを受ける。自己検証を PASS として扱わない。
+1. 今回の追加変更について、配布先の設計担当の実差分レビューを受ける。自己検証を PASS として扱わない。
 2. PASS 後、承認対象パスだけを通常 commit し、通常 push する。拒否や競合を force push で回避しない。
 3. Push 後の SHA と Actions は最終報告で確認する。この本文へ追記するための amend はしない。
-4. 独立レビュー、正式承認、公開前確認、Public化は、その後の指示で進める。中央の対象外 dirty 差分は、この作業で commit しない。
+4. 独立レビュー、正式承認、公開前確認、Public化は、その後の指示で進める。中央の対象外 dirty 差分と、既知の中央 AI 制御資産の参照問題は、この作業で変更しない。
 
 ## Blockers（阻害要因）
 
-- 独立レビュー、正式承認、Public化は未完了である。今回の Push を公開承認とは扱わない。旧レビューの PASS は、今回の再配布と案内修正の PASS ではない。
-- 目的訂正で変更した構成図の GitHub 上の表示は、この commit の前は未確認である。
+- 独立レビュー、正式承認、Public化は未完了である。今回の Push を公開承認とは扱わない。前回の再配布と案内修正の PASS は、今回の追加変更の PASS ではない。
+- 今回追加する構成図の GitHub 上の表示は、この commit の前は未確認である。
 - 中央 AI 制御資産の既知の参照問題は未修正のまま保持する。この作業では変更しない。
+- 中央の対象外 dirty 差分は、この作業で commit しない。
 - 旧不具合と、撤回済みの手順A・手順B・LEARNINGの提供区分は、現行の阻害要因にしない。
 
 ## Related Decisions（関連Decision）
