@@ -6,7 +6,7 @@ Created: 2026-10-09
 Last Updated: 2026-10-10
 Author: Takashi Oikawa
 AI: Cursor
-Memo: Document ID DDT-CHANGELOG-001。Version 0.14 / Draft。正式承認ではない
+Memo: Document ID DDT-CHANGELOG-001。Version 0.16 / Draft。正式承認ではない
 -->
 
 # CHANGELOG
@@ -15,7 +15,7 @@ Memo: Document ID DDT-CHANGELOG-001。Version 0.14 / Draft。正式承認では�
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | DDT-CHANGELOG-001 |
-| Version（バージョン） | 0.14 |
+| Version（バージョン） | 0.16 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-10-09 |
 | Last Updated（最終更新日） | 2026-10-10 |
@@ -58,6 +58,8 @@ Governance 導入 Baseline は、Governance 導入成功後に記録する。
 
 | Version（バージョン） | Date（日付） | Document（文書） | Category（変更分類） | Changes（内容） | Author（作成者） |
 |---|---|---|---|---|---|
+| 0.16 | 2026-10-10 | project-notes/CURRENT.md、CHANGELOG.md | Fixed | 今回のcommit・push許可に関する誤記を訂正した。今回の作業ではcommit・pushを行わない。設計担当レビュー後、利用者の明示指示を待つ。レビューPASSをcommit・pushの許可とは扱わない。版は CURRENT 0.16、CHANGELOG 0.16、いずれも Draft。他の9文書は変更していない。本行は commit 前の記録であり、今回の Push と Actions 成功は含まない。基点は配布先 `fb56e5c8daf269bc89a8973c7a61dd497f154e40`。自己検証は設計担当レビュー PASS ではない。正式承認、独立レビュー、Public化は未実施である。 | Takashi Oikawa |
+| 0.15 | 2026-10-10 | README.md、docs/STUDENT_USAGE_GUIDE.md、docs/GOVERNED_DEVELOPMENT_GUIDE.md、docs/design/README.md、docs/design/01_REQUEST_DEFINITION.md、docs/design/02_REQUIREMENTS_DEFINITION.md、docs/design/03_DATA_AND_SECURITY_DESIGN.md、docs/design/04_UI_AND_FLOW_DESIGN.md、docs/design/06_OPERATION_AND_HANDOFF.md、project-notes/CURRENT.md、CHANGELOG.md | Changed | 案内の共通前提を参考資料§1へ集約し、使用説明書とルートREADMEの重複説明を参照へ置き換えた。管理用02 §5.5を12文書の内訳の記載先とし、03の内訳再掲、04 §5.4の同一手順、06の長い受け入れセルと旧§8を、参照と§5.7へ整理した。CURRENTの過去工程は、CHANGELOGと編集前のGit履歴への参照へ置き換えた。版は README 0.11、使用説明書 0.9、参考資料 0.7、管理設計 README 0.12、01 は 0.8、02 は 0.11、03 と 04 は 0.7、06 は 0.10、CURRENT 0.15、CHANGELOG 0.15、いずれも Draft。05 は 0.6 のままである。本行は commit 前の記録であり、今回の Push と Actions 成功は含まない。基点は配布先 `fb56e5c8daf269bc89a8973c7a61dd497f154e40`。同 SHA の Actions 成功は、この整理の検証結果ではない。前回の README 修正のレビュー PASS は、この修正の PASS ではない。正式承認、独立レビュー、Public化は未実施である。 | Takashi Oikawa |
 | 0.14 | 2026-10-10 | README.md、docs/design/02_REQUIREMENTS_DEFINITION.md、docs/design/README.md、project-notes/CURRENT.md、CHANGELOG.md | Changed | ルート README の7文書の名称・役割表に、実ファイル名の列を追加した。各ファイル名は `templates/design/` の該当ファイルへの相対リンクである。設定ファイルの導入説明を、AGENTS.md と CONSTITUTION.md の役割、利用の任意、設定の有無にかかわらず同じ7文書管理方式を適用する文章へ置き換えた。メリット・デメリットと参考資料へのリンクは維持し、配布元の設定ファイルを利用先へコピーする案内は加えていない。版は README 0.10、02 は 0.10、管理設計 README 0.11、CURRENT 0.14、CHANGELOG 0.14、いずれも Draft。本行は commit 前の記録であり、今回の Push と Actions 成功は含まない。基点は配布先 `515f859b1368c09a47fde730bd64f9e92225be6b`。前回の文書情報表の折りたたみのレビュー PASS は、この修正の PASS ではない。正式承認、独立レビュー、Public化は未実施である。 | Takashi Oikawa |
 | 0.13 | 2026-10-10 | README.md、docs/STUDENT_USAGE_GUIDE.md、docs/GOVERNED_DEVELOPMENT_GUIDE.md、docs/design/02_REQUIREMENTS_DEFINITION.md、docs/design/06_OPERATION_AND_HANDOFF.md、docs/design/README.md、project-notes/CURRENT.md、CHANGELOG.md | Changed | 案内文書3件の文書情報表を、現在の位置のまま、初期状態で閉じた折りたたみ表示にした。表示名は「Document Info（文書情報）」である。管理用文書の文書情報表は折りたたんでいない。テンプレートの値を記入欄へ変える提案は不採用であり、この変更に含めていない。版は README 0.9、使用説明書 0.8、参考資料 0.6、02 と 06 は 0.9、管理設計 README 0.10、CURRENT 0.13、CHANGELOG 0.13、いずれも Draft。本行は commit 前の記録であり、今回の Push と Actions 成功は含まない。基点は配布先 `d36d04960e2fb3f1a2fb2747b71da3ebda550e52`。前回の説明追加のレビュー PASS は、この表示変更の PASS ではない。中央同期とテンプレート再配布は対象外である。正式承認、独立レビュー、Public化は未実施である。 | Takashi Oikawa |
 | 0.12 | 2026-10-10 | README.md、docs/STUDENT_USAGE_GUIDE.md、docs/GOVERNED_DEVELOPMENT_GUIDE.md、docs/design/ の7文書、project-notes/CURRENT.md、CHANGELOG.md | Changed | 同じ管理方式を、設定がある場合とない場合でAIへ適用する方法を追加した。参考資料に共通前提、利用先の構成図、適用方法を置き、使用説明書§6の指示例全文は再掲していない。案内と管理設計は、その記載先を参照する。版は README 0.8、使用説明書 0.7、参考資料 0.5、管理設計 README 0.9、01 は 0.7、02 と 06 は 0.8、03〜05 は 0.6、CURRENT 0.12、CHANGELOG 0.12、いずれも Draft。本行は commit 前の記録であり、今回の Push と Actions 成功は含まない。基点は配布先 `5595eaa2ebf777064b370cc3043160bc3cb727d3`。前回の再配布と案内修正のレビュー PASS は、この追加変更の PASS ではない。中央同期とテンプレート再配布は対象外である。正式承認、独立レビュー、Public化は未実施である。 | Takashi Oikawa |

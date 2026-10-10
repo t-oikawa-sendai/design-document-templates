@@ -6,7 +6,7 @@ Created: 2026-10-09
 Last Updated: 2026-10-10
 Author: Takashi Oikawa
 AI: Cursor
-Memo: Document ID DDT-REQS-001。Version 0.10 / Draft。正式承認ではない
+Memo: Document ID DDT-REQS-001。Version 0.11 / Draft。正式承認ではない
 -->
 
 # Requirements Definition（要件定義）
@@ -15,12 +15,12 @@ Memo: Document ID DDT-REQS-001。Version 0.10 / Draft。正式承認ではない
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | DDT-REQS-001 |
-| Version（バージョン） | 0.10 |
+| Version（バージョン） | 0.11 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-10-09 |
 | Last Updated（最終更新日） | 2026-10-10 |
 | Owner（管理者） | Takashi Oikawa |
-| Related Documents（関連文書） | README.md / 01_REQUEST_DEFINITION.md / 03_DATA_AND_SECURITY_DESIGN.md / 04_UI_AND_FLOW_DESIGN.md / 05_ARCHITECTURE_DESIGN.md / [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) / [../GOVERNED_DEVELOPMENT_GUIDE.md](../GOVERNED_DEVELOPMENT_GUIDE.md) |
+| Related Documents（関連文書） | [README.md](./README.md) / [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) / [03_DATA_AND_SECURITY_DESIGN.md](./03_DATA_AND_SECURITY_DESIGN.md) / [04_UI_AND_FLOW_DESIGN.md](./04_UI_AND_FLOW_DESIGN.md) / [05_ARCHITECTURE_DESIGN.md](./05_ARCHITECTURE_DESIGN.md) / [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) / [../GOVERNED_DEVELOPMENT_GUIDE.md](../GOVERNED_DEVELOPMENT_GUIDE.md) |
 
 ---
 
@@ -40,7 +40,7 @@ Memo: Document ID DDT-REQS-001。Version 0.10 / Draft。正式承認ではない
 
 本文書は、配布物、取得と利用の案内、検証要件を定義する。開発目的の正本は [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) §5.1 である。全文の現行配置は、その正本と、root README および使用説明書の明示引用の2箇所である。
 
-SDDは、仕様書を先に書き、AIはその仕様に従って実装する進め方である。同じ仕様は正本を一つにし、他からは参照する（SSOT）。設定ファイルは利用先で任意であり、不在を導入違反にしない。管理方式は設定の有無で変えない。参考資料 [../GOVERNED_DEVELOPMENT_GUIDE.md](../GOVERNED_DEVELOPMENT_GUIDE.md) に、共通前提、設定の有無による構成、AIへの適用方法を記載し、root README と使用説明書から参照する。指示例の全文は使用説明書を正本とし、参考資料へ再掲しない。
+SDDの定義は [使用説明書§2](../STUDENT_USAGE_GUIDE.md#2-用語ミニ辞典) を参照する。同じ仕様は正本を一つにし、他からは参照する（SSOT）。設定ファイルは利用先で任意であり、不在を導入違反にしない。管理方式は設定の有無で変えない。参考資料 [§1](../GOVERNED_DEVELOPMENT_GUIDE.md#1-管理方式の共通前提) に、共通前提、設定の有無による構成、AIへの適用方法を記載し、root README と使用説明書から参照する。指示例の全文は使用説明書を正本とし、参考資料へ再掲しない。
 
 ---
 
@@ -158,6 +158,8 @@ README には、所有者の確定判断として7文書の名称、実ファイ
 | — | 独自 API は提供しない | 対象外。理由: 独自 API は提供しない。 |
 
 ### 5.5 Data Overview（データ種別・件数規模の概要）
+
+12文書の内訳の記載先は本節である。他文書は本節を参照し、内訳を再掲しない。
 
 | Data Type（データ種別） | Estimated Volume（想定件数・規模） | Notes（備考） |
 |---|---|---|

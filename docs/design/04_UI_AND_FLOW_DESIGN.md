@@ -6,7 +6,7 @@ Created: 2026-10-09
 Last Updated: 2026-10-10
 Author: Takashi Oikawa
 AI: Cursor
-Memo: Document ID DDT-UI-001。Version 0.6 / Draft。正式承認ではない
+Memo: Document ID DDT-UI-001。Version 0.7 / Draft。正式承認ではない
 -->
 
 # UI and Flow Design（UI・フロー設計）
@@ -15,12 +15,12 @@ Memo: Document ID DDT-UI-001。Version 0.6 / Draft。正式承認ではない
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | DDT-UI-001 |
-| Version（バージョン） | 0.6 |
+| Version（バージョン） | 0.7 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-10-09 |
 | Last Updated（最終更新日） | 2026-10-10 |
 | Owner（管理者） | Takashi Oikawa |
-| Related Documents（関連文書） | README.md / 02_REQUIREMENTS_DEFINITION.md / 05_ARCHITECTURE_DESIGN.md / [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) / [../GOVERNED_DEVELOPMENT_GUIDE.md](../GOVERNED_DEVELOPMENT_GUIDE.md) |
+| Related Documents（関連文書） | [README.md](./README.md) / [02_REQUIREMENTS_DEFINITION.md](./02_REQUIREMENTS_DEFINITION.md) / [05_ARCHITECTURE_DESIGN.md](./05_ARCHITECTURE_DESIGN.md) / [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) / [../GOVERNED_DEVELOPMENT_GUIDE.md](../GOVERNED_DEVELOPMENT_GUIDE.md) |
 
 ---
 
@@ -44,7 +44,7 @@ Memo: Document ID DDT-UI-001。Version 0.6 / Draft。正式承認ではない
 
 ## 2. Scope（対象範囲）
 
-生徒の流れは、ルート README から使用説明書を読むこと、初期値の確認、7テンプレートの取得と自分の `docs/design/` への配置、最新の7文書と作業範囲を AI へ渡すこと、読めた資料と未読資料の確認、設計書の記入または承認後の実装、一覧・参照・図の確認、決定済み・未決・次回の記録である。設定ファイルが無いことはこの流れの停止理由にしない。フォルダ構成図と指示文の詳細は [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) を参照する。設定の有無による構成と AI への適用は [../GOVERNED_DEVELOPMENT_GUIDE.md](../GOVERNED_DEVELOPMENT_GUIDE.md) の共通前提を参照する。閲覧は GitHub の README とファイル閲覧を使う。独自 GUI は提供しない。
+生徒の流れは、ルート README から使用説明書を読むこと、初期値の確認、7テンプレートの取得と自分の `docs/design/` への配置、最新の7文書と作業範囲を AI へ渡すこと、読めた資料と未読資料の確認、設計書の記入または承認後の実装、一覧・参照・図の確認、決定済み・未決・次回の記録である。設定ファイルが無いことはこの流れの停止理由にしない。フォルダ構成図と指示文の詳細は [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) を参照する。設定の有無による構成と AI への適用は [参考資料§1](../GOVERNED_DEVELOPMENT_GUIDE.md#1-管理方式の共通前提) を参照する。閲覧は GitHub の README とファイル閲覧を使う。独自 GUI は提供しない。
 
 ---
 
@@ -98,7 +98,7 @@ Memo: Document ID DDT-UI-001。Version 0.6 / Draft。正式承認ではない
 
 | Scenario ID（シナリオID） | Operation Name（操作名） | Steps（操作手順） |
 |---|---|---|
-| — | 説明書を使ってテンプレートを記入し、承認後に実装へ接続する | 1. ルートREADMEから使用説明書を読む。2. 初期値を確認する。3. 7テンプレートを取得し、自分の `docs/design/` へ配置する。4. 最新の7文書と、記入、仕様変更、実装のいずれか一つの指示をAIへ渡す。5. 読めた資料・未読資料を確認して、指定範囲を記入するか、承認済みの仕様に従って実装する。6. 一覧・参照・図と、変更差分・検証結果を確認する。7. 決定済み・未決・次回を記録して、次のAIへ渡す。 |
+| — | 説明書を使ってテンプレートを記入し、承認後に実装へ接続する | [§5.2](#52-screen-transition-and-business-flow画面遷移図業務フロー) の7段階に従う。 |
 
 ### 5.5 Validation and Error Handling Policy（バリデーション・エラーハンドリング方針 / UI層）
 

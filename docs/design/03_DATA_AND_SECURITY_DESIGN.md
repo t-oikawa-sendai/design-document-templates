@@ -6,7 +6,7 @@ Created: 2026-10-09
 Last Updated: 2026-10-10
 Author: Takashi Oikawa
 AI: Cursor
-Memo: Document ID DDT-DATA-001。Version 0.6 / Draft。正式承認ではない
+Memo: Document ID DDT-DATA-001。Version 0.7 / Draft。正式承認ではない
 -->
 
 # Data and Security Design（データ・セキュリティ設計）
@@ -15,12 +15,12 @@ Memo: Document ID DDT-DATA-001。Version 0.6 / Draft。正式承認ではない
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | DDT-DATA-001 |
-| Version（バージョン） | 0.6 |
+| Version（バージョン） | 0.7 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-10-09 |
 | Last Updated（最終更新日） | 2026-10-10 |
 | Owner（管理者） | Takashi Oikawa |
-| Related Documents（関連文書） | README.md / 02_REQUIREMENTS_DEFINITION.md / 05_ARCHITECTURE_DESIGN.md / [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) / [../GOVERNED_DEVELOPMENT_GUIDE.md](../GOVERNED_DEVELOPMENT_GUIDE.md) |
+| Related Documents（関連文書） | [README.md](./README.md) / [02_REQUIREMENTS_DEFINITION.md](./02_REQUIREMENTS_DEFINITION.md) / [05_ARCHITECTURE_DESIGN.md](./05_ARCHITECTURE_DESIGN.md) / [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) / [../GOVERNED_DEVELOPMENT_GUIDE.md](../GOVERNED_DEVELOPMENT_GUIDE.md) |
 
 ---
 
@@ -44,7 +44,7 @@ Memo: Document ID DDT-DATA-001。Version 0.6 / Draft。正式承認ではない
 
 ## 2. Scope（対象範囲）
 
-Repository 固有の管理・案内12文書と配布テンプレート7文書の情報構成、Document Info、配布元コミットと内容照合を対象とする。12文書の内訳は、root README、`project-notes/CURRENT.md`、`CHANGELOG.md`、`docs/design/` の7文書、使用説明書 `docs/STUDENT_USAGE_GUIDE.md` と参考資料 `docs/GOVERNED_DEVELOPMENT_GUIDE.md` である。この内訳は [02_REQUIREMENTS_DEFINITION.md](./02_REQUIREMENTS_DEFINITION.md) と一致する。
+Repository 固有の管理・案内12文書と配布テンプレート7文書の情報構成、Document Info、配布元コミットと内容照合を対象とする。12文書の内訳は [02 §5.5](./02_REQUIREMENTS_DEFINITION.md#55-data-overviewデータ種別件数規模の概要) を参照する。
 
 ---
 
@@ -72,7 +72,7 @@ Repository 固有の管理・案内12文書と配布テンプレート7文書の
 
 | Entity Name（エンティティ名） | Description（説明） |
 |---|---|
-| Repository固有の管理・案内12文書 | root README、`project-notes/CURRENT.md`、`CHANGELOG.md`、`docs/design/` の7文書、使用説明書 `docs/STUDENT_USAGE_GUIDE.md` 1件、参考資料 `docs/GOVERNED_DEVELOPMENT_GUIDE.md` 1件である。使用説明書と参考資料は Repository 固有の案内文書であり、中央管理コピーでも無変更の配布テンプレートでもない。中央管理コピーや既存作成ガイドはこの件数に含めない。各文書は Document Info を持つ。 |
+| Repository固有の管理・案内12文書 | 内訳は [02 §5.5](./02_REQUIREMENTS_DEFINITION.md#55-data-overviewデータ種別件数規模の概要) を参照する。使用説明書と参考資料は Repository 固有の案内文書であり、中央管理コピーでも無変更の配布テンプレートでもない。各文書は Document Info を持つ。 |
 | 配布テンプレート7文書 | `templates/design/` の README と 01〜06。中央正本 `solacom_main` の `docs/standards/templates/design/`から無変更で配置し、Git Blob SHA で内容を照合する。従来の確認基準はコミット `16c44976638b48c53ef16399b1d51217c540be0a`。今回の原本修正後の確認値と再配布状態はCURRENTに記録する。 |
 
 #### ER Diagram（ER図）
@@ -105,7 +105,7 @@ Repository 固有の管理・案内12文書と配布テンプレート7文書の
 
 資格情報、認証情報、個別案件の管理実績、内部案件情報は載せない。元 Repository の具体的な業務情報は配布しない。
 
-生徒が AI へ渡す仕様の正本は、自分の最新の設計7文書である。今回の作業範囲は、その正本と一緒に渡す対象であり、仕様の正本ではない。設定ファイルがある場合は、その現行ルールも読む対象に含める。設定が無いことは、渡す対象の不足として扱わない。配布元の履歴、`project-notes/CURRENT.md`、記入済みの管理用設計を、自分の実績として使わない。この案内は [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) に記載する。設定の有無による構成と AI への適用は [../GOVERNED_DEVELOPMENT_GUIDE.md](../GOVERNED_DEVELOPMENT_GUIDE.md) の共通前提に記載する。
+生徒が AI へ渡す仕様の正本は、自分の最新の設計7文書である。今回の作業範囲は、その正本と一緒に渡す対象であり、仕様の正本ではない。設定ファイルがある場合は、その現行ルールも読む対象に含める。設定が無いことは、渡す対象の不足として扱わない。配布元の履歴、`project-notes/CURRENT.md`、記入済みの管理用設計を、自分の実績として使わない。この案内は [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) に記載する。設定の有無による構成と AI への適用は [参考資料§1](../GOVERNED_DEVELOPMENT_GUIDE.md#1-管理方式の共通前提) に記載する。
 
 ### 5.5 Encryption, Masking, and Logging Policy（暗号化・マスキング・ログ取得方針）
 

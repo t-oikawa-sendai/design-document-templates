@@ -6,7 +6,7 @@ Created: 2026-10-09
 Last Updated: 2026-10-10
 Author: Takashi Oikawa
 AI: Cursor
-Memo: Document ID DDT-REQ-001。Version 0.7 / Draft。正式承認ではない
+Memo: Document ID DDT-REQ-001。Version 0.8 / Draft。正式承認ではない
 -->
 
 # Request Definition（要求定義）
@@ -15,12 +15,12 @@ Memo: Document ID DDT-REQ-001。Version 0.7 / Draft。正式承認ではない
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | DDT-REQ-001 |
-| Version（バージョン） | 0.7 |
+| Version（バージョン） | 0.8 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-10-09 |
 | Last Updated（最終更新日） | 2026-10-10 |
 | Owner（管理者） | Takashi Oikawa |
-| Related Documents（関連文書） | README.md / 02_REQUIREMENTS_DEFINITION.md / [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) / [../GOVERNED_DEVELOPMENT_GUIDE.md](../GOVERNED_DEVELOPMENT_GUIDE.md) |
+| Related Documents（関連文書） | [README.md](./README.md) / [02_REQUIREMENTS_DEFINITION.md](./02_REQUIREMENTS_DEFINITION.md) / [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) / [../GOVERNED_DEVELOPMENT_GUIDE.md](../GOVERNED_DEVELOPMENT_GUIDE.md) |
 
 ---
 
@@ -40,7 +40,7 @@ Memo: Document ID DDT-REQ-001。Version 0.7 / Draft。正式承認ではない
 
 本文書は、配布の目的、対象、成功条件を定義する。正式 Purpose は DISTRIBUTION であり、開発目的の全文はこの Purpose の変更ではない。開発目的の正本は §5.1 である。
 
-SDDは、仕様書を先に書き、AIはその仕様に従って実装する進め方である。専用の非公開 Repository は公開しない。同じ仕様の正本は一つにし、他の文書からは参照する（SSOT）。利用先の AGENTS.md と CONSTITUTION.md は任意である。両方がなくても記入、仕様変更、実装、確認を進められる。使い方は [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md)、設定ファイルの使用方法は [../GOVERNED_DEVELOPMENT_GUIDE.md](../GOVERNED_DEVELOPMENT_GUIDE.md) で配布し、root README と使用説明書から参照する。
+SDDの定義は [使用説明書§2](../STUDENT_USAGE_GUIDE.md#2-用語ミニ辞典) を参照する。専用の非公開 Repository は公開しない。同じ仕様の正本は一つにし、他の文書からは参照する（SSOT）。利用先の AGENTS.md と CONSTITUTION.md は任意である。両方がなくても記入、仕様変更、実装、確認を進められる。使い方は [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md)、設定ファイルの使用方法は [参考資料§1](../GOVERNED_DEVELOPMENT_GUIDE.md#1-管理方式の共通前提) で配布し、root README と使用説明書から参照する。
 
 ---
 
@@ -81,7 +81,7 @@ SDDは、仕様書を先に書き、AIはその仕様に従って実装する進
 
 > SDD（仕様駆動開発）で、AIが作成する設計文書を決まった7文書・決まった節へ収め、重複と冗長化を防ぐためのテンプレートを配布する。生徒は自分のリポジトリに配置して使う。
 
-専用の非公開 Repository は公開しない。生徒は、各文書の役割、取得するファイル、保存先、設定がなくても使える指示、仕様変更から実装までの接続を理解できる必要がある。7文書の効果は、記載先の指定、参照関係の維持、人による確認を運用して得る。参考資料は、管理方式の共通前提、設定の有無による構成、AIへの適用方法を説明し、使用説明書の指示例を全文では再掲しない。
+専用の非公開 Repository は公開しない。生徒は、各文書の役割、取得するファイル、保存先、設定がなくても使える指示、仕様変更から実装までの接続を理解できる必要がある。7文書の効果は、記載先の指定、参照関係の維持、人による確認を運用して得る。参考資料の [§1](../GOVERNED_DEVELOPMENT_GUIDE.md#1-管理方式の共通前提) は、管理方式の共通前提、設定の有無による構成、AIへの適用方法を説明し、使用説明書の指示例を全文では再掲しない。
 
 ### 5.2 Stakeholders（ステークホルダー一覧と関心事）
 

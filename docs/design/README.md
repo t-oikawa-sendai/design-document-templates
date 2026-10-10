@@ -6,7 +6,7 @@ Created: 2026-10-09
 Last Updated: 2026-10-10
 Author: Takashi Oikawa
 AI: Cursor
-Memo: Document ID DDT-DESIGN-INDEX-001。Version 0.11 / Draft。正式承認ではない
+Memo: Document ID DDT-DESIGN-INDEX-001。Version 0.12 / Draft。正式承認ではない
 -->
 
 # Design Documents Index（設計書一覧）
@@ -15,7 +15,7 @@ Memo: Document ID DDT-DESIGN-INDEX-001。Version 0.11 / Draft。正式承認で�
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | DDT-DESIGN-INDEX-001 |
-| Version（バージョン） | 0.11 |
+| Version（バージョン） | 0.12 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-10-09 |
 | Last Updated（最終更新日） | 2026-10-10 |
@@ -44,11 +44,11 @@ Memo: Document ID DDT-DESIGN-INDEX-001。Version 0.11 / Draft。正式承認で�
 
 正式 Purpose は DISTRIBUTION である。開発目的の正本は [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) §5.1 である。
 
-SDDは、仕様書を先に書き、AIはその仕様に従って実装する進め方である。専用の非公開 Repository は公開しない。基本構成は、利用先の `docs/design/README.md` と 01〜06 の7文書である。同じ仕様の正本は一つにし、他の文書からは参照する（SSOT）。7文書の存在だけでは効果を保証しない。記載先の指定、参照関係の維持、人による確認を運用とする。
+SDDの定義は [使用説明書§2](../STUDENT_USAGE_GUIDE.md#2-用語ミニ辞典) を参照する。専用の非公開 Repository は公開しない。基本構成は、利用先の `docs/design/README.md` と 01〜06 の7文書である。同じ仕様の正本は一つにし、他の文書からは参照する（SSOT）。7文書の存在だけでは効果を保証しない。記載先の指定、参照関係の維持、人による確認を運用とする。
 
 利用先の `AGENTS.md` と `CONSTITUTION.md` の導入は任意である。両方がなくても、記入、仕様変更、実装、確認を進められる。設定ファイルが既にある利用先では、その現行ルールを読む。設定の削除や無視を案内しない。配布元自身は既存の管理ルールで運用を続ける。この任意性と、配布元の必須管理資産は別である。
 
-使い方は [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) で配布する。管理方式の共通前提、設定の有無による構成、AIへの適用方法は [../GOVERNED_DEVELOPMENT_GUIDE.md](../GOVERNED_DEVELOPMENT_GUIDE.md) で配布し、root README と使用説明書から参照する。本文は参考資料に置き、この一覧へ再掲しない。
+使い方は [../STUDENT_USAGE_GUIDE.md](../STUDENT_USAGE_GUIDE.md) で配布する。管理方式の共通前提、設定の有無による構成、AIへの適用方法は [参考資料§1](../GOVERNED_DEVELOPMENT_GUIDE.md#1-管理方式の共通前提) で配布し、root README と使用説明書から参照する。本文は参考資料に置き、この一覧へ再掲しない。
 
 ---
 
@@ -79,13 +79,13 @@ SDDは、仕様書を先に書き、AIはその仕様に従って実装する進
 
 | File（ファイル名） | Document Name（文書名） | Status（ステータス） | Version（バージョン） | Owner（担当者） |
 |---|---|---|---|---|
-| [README.md](./README.md) | Design Documents Index（設計書一覧） | Draft | 0.11 | Takashi Oikawa |
-| [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) | Request Definition（要求定義） | Draft | 0.7 | Takashi Oikawa |
-| [02_REQUIREMENTS_DEFINITION.md](./02_REQUIREMENTS_DEFINITION.md) | Requirements Definition（要件定義） | Draft | 0.10 | Takashi Oikawa |
-| [03_DATA_AND_SECURITY_DESIGN.md](./03_DATA_AND_SECURITY_DESIGN.md) | Data and Security Design（データ・セキュリティ設計） | Draft | 0.6 | Takashi Oikawa |
-| [04_UI_AND_FLOW_DESIGN.md](./04_UI_AND_FLOW_DESIGN.md) | UI and Flow Design（UI・フロー設計） | Draft | 0.6 | Takashi Oikawa |
+| [README.md](./README.md) | Design Documents Index（設計書一覧） | Draft | 0.12 | Takashi Oikawa |
+| [01_REQUEST_DEFINITION.md](./01_REQUEST_DEFINITION.md) | Request Definition（要求定義） | Draft | 0.8 | Takashi Oikawa |
+| [02_REQUIREMENTS_DEFINITION.md](./02_REQUIREMENTS_DEFINITION.md) | Requirements Definition（要件定義） | Draft | 0.11 | Takashi Oikawa |
+| [03_DATA_AND_SECURITY_DESIGN.md](./03_DATA_AND_SECURITY_DESIGN.md) | Data and Security Design（データ・セキュリティ設計） | Draft | 0.7 | Takashi Oikawa |
+| [04_UI_AND_FLOW_DESIGN.md](./04_UI_AND_FLOW_DESIGN.md) | UI and Flow Design（UI・フロー設計） | Draft | 0.7 | Takashi Oikawa |
 | [05_ARCHITECTURE_DESIGN.md](./05_ARCHITECTURE_DESIGN.md) | Architecture Design（アーキテクチャ設計） | Draft | 0.6 | Takashi Oikawa |
-| [06_OPERATION_AND_HANDOFF.md](./06_OPERATION_AND_HANDOFF.md) | Operation and Handoff Design（運用・詳細設計引き継ぎ） | Draft | 0.9 | Takashi Oikawa |
+| [06_OPERATION_AND_HANDOFF.md](./06_OPERATION_AND_HANDOFF.md) | Operation and Handoff Design（運用・詳細設計引き継ぎ） | Draft | 0.10 | Takashi Oikawa |
 
 ---
 
@@ -97,7 +97,7 @@ SDDは、仕様書を先に書き、AIはその仕様に従って実装する進
 - 中央管理コピーは独自に編集しない。中央管理コピーの修正は中央原本側の手順であり、今回の配布物の修正範囲に含めない。
 - 使用説明書は `docs/STUDENT_USAGE_GUIDE.md` とする。設定ファイルの参考資料は `docs/GOVERNED_DEVELOPMENT_GUIDE.md` とし、root README と使用説明書から参照する。
 - 手順A・手順B・LEARNINGという利用区分は、この配布物に置かない。これは正式 Purpose の変更ではない。
-- 利用先に設定ファイルが既にある場合は、その現行ルールを読む。削除や無視により任意運用へ移す案内はしない。管理方式は設定の有無で変えない。共通前提、構成、AIへの適用の本文は参考資料に置く。
+- 利用先に設定ファイルが既にある場合は、その現行ルールを読む。削除や無視により任意運用へ移す案内はしない。管理方式は設定の有無で変えない。共通前提、構成、AIへの適用の本文は参考資料 §1 に置く。
 - 配布元自身は既存管理ルールで運用を続ける。利用先で任意であることと、配布元の必須管理資産は別である。
 - この準備工程では、公開範囲は Private を維持する。この工程では Public にしない。元の専用 Repository を非公開のまま保つ。
 
@@ -108,12 +108,12 @@ SDDは、仕様書を先に書き、AIはその仕様に従って実装する進
 | Term / Abbreviation（用語・略語） | Definition（定義） |
 |---|---|
 | DISTRIBUTION | この Repository の正式 Purpose。テンプレートの配布と使用方法の案内。 |
-| SDD（仕様駆動開発） | 仕様書を先に書き、AIはその仕様に従って実装する進め方。 |
+| SDD（仕様駆動開発） | [使用説明書§2](../STUDENT_USAGE_GUIDE.md#2-用語ミニ辞典) を参照する。 |
 | SSOT | 正しい情報の管理元を一つに定める原則。同じ仕様は正本を一つにし、他からは参照する。 |
 | 管理用設計書 | `docs/design/` の文書。この配布 Repository 自体の設計。 |
 | 配布テンプレート | `templates/design/` の7文書。生徒が取得するテンプレート。 |
 | 中央テンプレ正本 | `solacom_main` の `docs/standards/templates/design/`。 |
-| 参考資料 | `docs/GOVERNED_DEVELOPMENT_GUIDE.md`。7文書の記載先、管理方式の共通前提、設定の有無による構成、AIへの適用方法。 |
+| 参考資料 | `docs/GOVERNED_DEVELOPMENT_GUIDE.md`。§1 に、7文書の記載先、管理方式の共通前提、設定の有無による構成、AIへの適用方法を置く。 |
 
 ---
 

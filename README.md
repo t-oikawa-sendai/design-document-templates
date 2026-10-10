@@ -6,7 +6,7 @@ Created: 2026-10-09
 Last Updated: 2026-10-10
 Author: Takashi Oikawa
 AI: Cursor
-Memo: Document ID DDT-README-001。Version 0.10 / Draft。正式承認ではない
+Memo: Document ID DDT-README-001。Version 0.11 / Draft。正式承認ではない
 -->
 
 # design-document-templates（SDD設計文書テンプレート集）
@@ -20,7 +20,7 @@ Memo: Document ID DDT-README-001。Version 0.10 / Draft。正式承認ではな�
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | DDT-README-001 |
-| Version（バージョン） | 0.10 |
+| Version（バージョン） | 0.11 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-10-09 |
 | Last Updated（最終更新日） | 2026-10-10 |
@@ -87,7 +87,7 @@ AGENTS.md はAIへの作業指示、CONSTITUTION.md はプロジェクトの管�
 | 7文書 | 仕様の記載先が決まり、文書の乱立・重複を抑えられます。 | 作業時に管理方法をAIへ伝え、文書間の整合を確認する必要があります。 |
 | 7文書＋設定ファイル | 共通ルールをまとめ、毎回の指示を短くし、引き継ぎを行いやすくします。 | 設定の理解・更新と、AIへの適用確認が必要です。 |
 
-AIへの適用方法、役割、使用方法、製品別の対応、公式情報は、[参考資料の共通前提](./docs/GOVERNED_DEVELOPMENT_GUIDE.md#管理方式の共通前提)を参照してください。
+共通前提は、[参考資料§1 管理方式の共通前提](./docs/GOVERNED_DEVELOPMENT_GUIDE.md#1-管理方式の共通前提)を参照してください。製品別の対応と公式情報は、[参考資料§8](./docs/GOVERNED_DEVELOPMENT_GUIDE.md#8-使用するaiごとの設定方法と公式情報)を参照してください。
 
 ## 6. Review and Approval（確認・承認）
 
