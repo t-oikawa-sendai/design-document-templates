@@ -6,7 +6,7 @@ Created: 2026-10-09
 Last Updated: 2026-10-11
 Author: Takashi Oikawa
 AI: Cursor
-Memo: Document ID DDT-CHANGELOG-001。Version 0.18 / Draft。正式承認ではない
+Memo: Document ID DDT-CHANGELOG-001。Version 0.19 / Draft。正式承認ではない
 -->
 
 # CHANGELOG
@@ -15,7 +15,7 @@ Memo: Document ID DDT-CHANGELOG-001。Version 0.18 / Draft。正式承認では�
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | DDT-CHANGELOG-001 |
-| Version（バージョン） | 0.18 |
+| Version（バージョン） | 0.19 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-10-09 |
 | Last Updated（最終更新日） | 2026-10-11 |
@@ -58,6 +58,7 @@ Governance 導入 Baseline は、Governance 導入成功後に記録する。
 
 | Version（バージョン） | Date（日付） | Document（文書） | Category（変更分類） | Changes（内容） | Author（作成者） |
 |---|---|---|---|---|---|
+| 0.19 | 2026-10-11 | project-notes/CURRENT.md、CHANGELOG.md | Fixed | 再配布 commit `4edcddc501ce099b2d9dd8152400c53503c3bc39`（メッセージ `docs: redistribute governance standards`）の後に残っていた CURRENT の現況を訂正した。対象版は CURRENT 0.19、CHANGELOG 0.19、いずれも Draft。再配布はその commit で commit し、`main` へ通常 push 済みである。記録作成時点の local HEAD、origin/main、GitHub main は同 SHA で一致した。この SHA は再配布 commit および記録作成時点の確認値である。同 SHA の Actions「Validate Documents」run `38140991881` は success、job `validate-docs` も success である。https://github.com/t-oikawa-sendai/design-document-templates/actions/runs/38140991881 この Actions 成功は再配布 commit の検証結果である。独立レビューは、中央原本と DDT の制御2文書（AGENTS.md、CONSTITUTION.md）が合格、総合は条件付き合格であり、S-1 対応結果の確認が残る。repository-governance のレビュー担当の確認は未完了であり、再配布 commit `ffa743eb1f0ae1db39864c579641c17c36791134` への追加レビューが必要である。Persona導入と公開の完了は記録しない。保留中のテンプレート7件、管理設計文書、0.17 履歴は、この履歴に含めていない。過去行の未commitは当時の記録として維持する。本行は、この訂正の commit SHA、push 結果、再レビュー完了を含まない。 | Takashi Oikawa |
 | 0.18 | 2026-10-11 | AGENTS.md、CONSTITUTION.md、project-notes/CURRENT.md、CHANGELOG.md | Changed | 中央原本 `solacom_main` の commit `d5564ccdcfecdb485b079ec952813c31b4145822` から、`docs/standards/project-bootstrap/AGENTS_SOURCE.md` を `/AGENTS.md` へ、`docs/standards/project-bootstrap/CONSTITUTION.md` を `/CONSTITUTION.md` へ無変換でコピーした。AGENTS は Version 1.6、blob `655831c74eb62c1d072ae3e7eea6104847703c43`。CONSTITUTION は STANDARD_VERSION 1.8、blob `481017bc141ff22668b616a668866815af0ee4aa`。バイト一致を確認した。この候補に含む文書は AGENTS.md、CONSTITUTION.md、CHANGELOG.md、project-notes/CURRENT.md の4件である。版は CURRENT 0.18、CHANGELOG 0.18、いずれも Draft。記録時点の実 HEAD は `fa8a5a48608131edd2e16e283de73cf93f23b1c7` であり、この候補の親である。この候補自身は未commitである。commit・push、更新後 SHA の Actions、独立レビュー、Persona導入は未実施である。作業ツリーに残る別作業は保留中であり、この候補の反映内容ではない。未commitの 0.17 履歴は、反映済み履歴としてこの候補に入れていない。テンプレート7件と管理設計文書の更新は、この候補に含めていない。候補4ファイルを基点コミットのツリーへ重ねた検証用ツリーの local validator は PASS である。この結果は、作業ツリー上の別作業の検証結果ではない。 | Takashi Oikawa |
 | 0.16 | 2026-10-10 | project-notes/CURRENT.md、CHANGELOG.md | Fixed | 今回のcommit・push許可に関する誤記を訂正した。今回の作業ではcommit・pushを行わない。設計担当レビュー後、利用者の明示指示を待つ。レビューPASSをcommit・pushの許可とは扱わない。版は CURRENT 0.16、CHANGELOG 0.16、いずれも Draft。他の9文書は変更していない。本行は commit 前の記録であり、今回の Push と Actions 成功は含まない。基点は配布先 `fb56e5c8daf269bc89a8973c7a61dd497f154e40`。自己検証は設計担当レビュー PASS ではない。正式承認、独立レビュー、Public化は未実施である。 | Takashi Oikawa |
 | 0.15 | 2026-10-10 | README.md、docs/STUDENT_USAGE_GUIDE.md、docs/GOVERNED_DEVELOPMENT_GUIDE.md、docs/design/README.md、docs/design/01_REQUEST_DEFINITION.md、docs/design/02_REQUIREMENTS_DEFINITION.md、docs/design/03_DATA_AND_SECURITY_DESIGN.md、docs/design/04_UI_AND_FLOW_DESIGN.md、docs/design/06_OPERATION_AND_HANDOFF.md、project-notes/CURRENT.md、CHANGELOG.md | Changed | 案内の共通前提を参考資料§1へ集約し、使用説明書とルートREADMEの重複説明を参照へ置き換えた。管理用02 §5.5を12文書の内訳の記載先とし、03の内訳再掲、04 §5.4の同一手順、06の長い受け入れセルと旧§8を、参照と§5.7へ整理した。CURRENTの過去工程は、CHANGELOGと編集前のGit履歴への参照へ置き換えた。版は README 0.11、使用説明書 0.9、参考資料 0.7、管理設計 README 0.12、01 は 0.8、02 は 0.11、03 と 04 は 0.7、06 は 0.10、CURRENT 0.15、CHANGELOG 0.15、いずれも Draft。05 は 0.6 のままである。本行は commit 前の記録であり、今回の Push と Actions 成功は含まない。基点は配布先 `fb56e5c8daf269bc89a8973c7a61dd497f154e40`。同 SHA の Actions 成功は、この整理の検証結果ではない。前回の README 修正のレビュー PASS は、この修正の PASS ではない。正式承認、独立レビュー、Public化は未実施である。 | Takashi Oikawa |
