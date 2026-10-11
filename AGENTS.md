@@ -1,6 +1,6 @@
 <!--
 STANDARD_ID: SCAO-AI-GOVERNANCE-AGENTS
-STANDARD_VERSION: 1.5
+STANDARD_VERSION: 1.6
 SOURCE: solacom_main/docs/standards/project-bootstrap/AGENTS_SOURCE.md
 DISTRIBUTION_MODE: COPY_FROM_CENTRAL_SSOT
 LOCAL_EDIT_POLICY: PROHIBITED
@@ -8,16 +8,22 @@ LOCAL_EDIT_POLICY: PROHIBITED
 
 # Agent Operating Procedures（エージェント運用手順）
 
+<details>
+<summary>Document Info（文書情報）｜SCAO-AI-GOVERNANCE-AGENTS｜1.6｜Approved</summary>
+
 <!-- Document Info（文書情報） -->
+
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | SCAO-AI-GOVERNANCE-AGENTS |
-| Version（バージョン） | 1.5 |
+| Version（バージョン） | 1.6 |
 | Status（ステータス） | Approved |
 | Created Date（作成日） | 2026-09-10 |
-| Last Updated（最終更新日） | 2026-09-24 |
+| Last Updated（最終更新日） | 2026-10-11 |
 | Owner（管理者） | Takashi Oikawa |
 | Related Documents（関連文書） | CONSTITUTION.md / ../DOCUMENT_GOVERNANCE_STANDARD.md / project-notes/CURRENT_TEMPLATE.md |
+
+</details>
 
 ## Repository Purpose（リポジトリ目的）
 
@@ -113,7 +119,17 @@ LEARNING における意味は、存在し、かつ必要時のみ読むこと�
 11. 関連コード
 12. 関連テスト
 
-存在しない文書がある場合、標準導入ゲート違反として停止する。
+1〜8は、現行 Profile における必読文書として維持する。欠落を、今回の対象外として回避しない。
+
+9〜12は、利用者の依頼、承認済み仕様・作業指示、確認した Repository 構成に基づき、今回の作業への適用有無を項目ごとに判断する。
+
+適用する項目は、対象を明示して読み込む。作業に必要なのに存在しない場合、または読めない場合は、理由を報告して該当作業を停止する。
+
+適用しない項目は、対象外である理由を報告して続行できる。文書のみを扱い、コード・テストが関係しない作業では、番号を埋めるためのコード・テストを作成しない。
+
+存在しないことだけを理由に、対象外と判断しない。適用有無を判断できず、その判断が今回の結果・変更範囲・実行権限に影響する場合は、その判断を利用者へ確認する。
+
+10の承認済み作業指示は、対象と内容が明確な利用者の提示本文・添付指示書も含む。承認済み指示があるのに、Repository 内に同名ファイルがないことだけで欠落扱いにしない。
 
 ## Required Governance Document Presence Check（必須Governance文書の存在確認）
 
@@ -186,7 +202,7 @@ Latest Explicit User Instruction（ユーザーの最新明示指示）
 
 文書間に矛盾がある場合、実装担当 AI が独自に優先順位を適用して変更してはならない。
 
-矛盾箇所を報告し停止する。
+停止範囲は、CONSTITUTION.md §5.6 に従って判断する。
 
 ## Two-Phase Procedure for Specification Editing（仕様書編集の2段階手順）
 
@@ -253,7 +269,8 @@ Report Format（報告形式）:
 ## Pre-commit Review（commit前レビュー）
 
 - 実装完了を理由に、実装担当 AI が自動的に commit / push してはならない
-- commit / push は、利用者または設計担当から明示指示がある場合のみ実施できる
+- commit / push は、利用者の明示指示がある場合のみ実施できる
+- 設計担当の承認、レビュー合格、作業完了は、commit / push の許可にならない
 - 明示指示前に、設計担当による git diff、F/O/R照合、対象外差分非接触のレビューを必須とする
 - レビューで1件でもFAILがある場合はcommit不可
 

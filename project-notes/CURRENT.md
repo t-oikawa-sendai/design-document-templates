@@ -3,10 +3,10 @@ Program Name: DDT CURRENT
 Language: Markdown
 Function: 目的、確認時点のGit反映状態、現在地点、次作業を記録する
 Created: 2026-10-09
-Last Updated: 2026-10-10
+Last Updated: 2026-10-11
 Author: Takashi Oikawa
 AI: Cursor
-Memo: Document ID DDT-CURRENT-001。Version 0.16 / Draft。正式承認ではない
+Memo: Document ID DDT-CURRENT-001。Version 0.18 / Draft。正式承認ではない
 -->
 
 # CURRENT
@@ -15,10 +15,10 @@ Memo: Document ID DDT-CURRENT-001。Version 0.16 / Draft。正式承認ではな
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | DDT-CURRENT-001 |
-| Version（バージョン） | 0.16 |
+| Version（バージョン） | 0.18 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-10-09 |
-| Last Updated（最終更新日） | 2026-10-10 |
+| Last Updated（最終更新日） | 2026-10-11 |
 | Owner（管理者） | Takashi Oikawa |
 | Related Documents（関連文書） | [README.md](../README.md) / [生徒向け使用説明書](../docs/STUDENT_USAGE_GUIDE.md) / [7文書管理と設定ファイルの参考資料](../docs/GOVERNED_DEVELOPMENT_GUIDE.md) / [CHANGELOG.md](../CHANGELOG.md) / [管理設計](../docs/design/README.md) |
 
@@ -30,28 +30,40 @@ DISTRIBUTION。正式 Purpose は変更しない。開発目的の正本は [要
 
 ## Completed（完了）
 
-直近の GitHub 確認済み工程は、README 修正の commit `fb56e5c8daf269bc89a8973c7a61dd497f154e40`（メッセージ `docs: link each template file and state the shared method`）と、同 SHA の Actions「Validate Documents」run `38027589329` の success である。job `validate-docs` も success である。https://github.com/t-oikawa-sendai/design-document-templates/actions/runs/38027589329 この成功は、今回の重複整理の検証結果ではない。
+直近の Git 反映済み HEAD は `fa8a5a48608131edd2e16e283de73cf93f23b1c7`（メッセージ `docs: consolidate shared guidance and document references`）である。branch は `main` で、確認時点の `origin/main` も同じ SHA である。この SHA は、この候補の親である。この候補自身の commit SHA ではない。
 
-過去工程のレビュー資料名、ハッシュ、工程結果は、[CHANGELOG.md](../CHANGELOG.md) と、commit `fb56e5c8daf269bc89a8973c7a61dd497f154e40` の `project-notes/CURRENT.md` で確認する。版数不一致の解消済み実績は、CHANGELOG の 2026-10-10 の記録（公開阻害条件から外した件）で確認する。編集前の詳細文は、同じ commit の `docs/design/06_OPERATION_AND_HANDOFF.md` §5.1 にある。
+過去工程のレビュー資料名、ハッシュ、工程結果は、[CHANGELOG.md](../CHANGELOG.md) と、この HEAD の履歴で確認する。
 
 ## Current（現在）
 
-Private・Draft。正式 Purpose は DISTRIBUTION のままである。2026-10-10 の作業開始時に実測した配布先は、branch `main`、local HEAD と fetch 後の origin/main が `fb56e5c8daf269bc89a8973c7a61dd497f154e40` で一致し、作業ツリーは clean だった。公開範囲は Private である。HEAD はその後動かしていない。この整理は未commitであり、stage には載せていない。
+Private・Draft。正式 Purpose は DISTRIBUTION のままである。公開範囲は Private である。
 
-いま行っているのは、レビューに基づく案内と管理用設計書の重複・参照の整理である。この CURRENT は、その commit 前の記録である。設計担当の実差分レビュー PASS の前には commit しない。自己検証を PASS として扱わない。今回の作業ではcommit・pushを行わない。設計担当レビュー後、利用者の明示指示を待つ。その SHA、Push 成功、Actions 成功は、この本文へ追記するための amend をしない。正式承認、独立レビュー、Public化は未実施である。
+この候補に含むファイルは次の4件である。
+
+- `AGENTS.md` Version 1.6、blob `655831c74eb62c1d072ae3e7eea6104847703c43`
+- `CONSTITUTION.md` STANDARD_VERSION 1.8、blob `481017bc141ff22668b616a668866815af0ee4aa`
+- `CHANGELOG.md` Version 0.18 / Draft
+- `project-notes/CURRENT.md` Version 0.18 / Draft
+
+`AGENTS.md` と `CONSTITUTION.md` は、中央原本 `solacom_main` の commit `d5564ccdcfecdb485b079ec952813c31b4145822` から無変換でコピーする。バイト一致を確認した。
+
+この候補は未commitである。commit・push、更新後 SHA の Actions、独立レビュー、Persona導入は未実施である。
+
+作業ツリーに残っている別作業は保留中であり、この候補の内容ではない。テンプレート7件と管理設計文書の更新は、この候補に含めていない。未commitの 0.17 履歴は、反映済み履歴としてこの候補に入れていない。
+
+候補4ファイルを基点コミットのツリーへ重ねた検証用ツリーの local validator は PASS である。この結果は、作業ツリー上の別作業の検証結果ではない。
 
 ## Next（次）
 
-1. 今回の重複整理について、配布先の設計担当の実差分レビューを受ける。自己検証を PASS として扱わない。
-2. 設計担当レビュー後、利用者の明示指示を待つ。レビューPASSをcommit・pushの許可とは扱わない。
-3. Push 後の SHA と Actions は最終報告で確認する。この本文へ追記するための amend はしない。
-4. 独立レビュー、正式承認、公開前確認、Public化は、その後の指示で進める。
+1. この候補の差分を確認する。
+2. 作業ツリーを上書きせず、この候補の4ファイルだけを stage する手順は、別指示の後に実行する。
+3. commit・push は、その後の明示指示を待つ。
+4. 独立レビュー、正式承認、公開前確認、Public化は未完了である。
 
 ## Blockers（阻害要因）
 
-- 独立レビュー、正式承認、Public化は未完了である。今回の作業を公開承認とは扱わない。commit `fb56e5c8daf269bc89a8973c7a61dd497f154e40` の Actions 成功は、今回の重複整理の PASS ではない。
-- 今回の整理の GitHub 上の表示は未確認である。
-- 自己検証は、設計担当レビュー PASS ではない。
+- この候補の commit・push、更新後 SHA の Actions、独立レビュー、Persona導入は未実施である。候補の作成は、これらの完了ではない。
+- 作業ツリー上の別作業は保留中である。この候補は、その別作業の完了記録ではない。
 
 ## Related Decisions（関連Decision）
 

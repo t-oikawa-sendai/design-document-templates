@@ -1,6 +1,6 @@
 <!--
 STANDARD_ID: SCAO-AI-GOVERNANCE-CONSTITUTION
-STANDARD_VERSION: 1.7
+STANDARD_VERSION: 1.8
 SOURCE: solacom_main/docs/standards/project-bootstrap/CONSTITUTION.md
 DISTRIBUTION_MODE: COPY_FROM_CENTRAL_SSOT
 LOCAL_EDIT_POLICY: PROHIBITED
@@ -53,7 +53,9 @@ LOCAL_EDIT_POLICY: PROHIBITED
 
 - 承認済み指示の範囲だけを編集・実装する
 - 仕様分類を独自に変更しない
-- 矛盾または不足を発見した場合は停止して報告する
+- 矛盾を発見した場合は、§5.6 に従って処理する
+- 作業に必要な仕様、指示、必須文書等の不足を発見した場合は、停止して報告する
+- 対象外項目は、AGENTS の適用判定に従う
 - 自ら仕様を再設計、再評価、一般化しない
 
 ## 4. Canonical Source Management（正本管理）
@@ -86,7 +88,7 @@ solacom_main/docs/standards/project-bootstrap/project-notes/CURRENT_TEMPLATE.md
 - Governance / Distribution Source 側の変更履歴正本は `solacom_main/CHANGELOG.md` とする
 - ファイルごとの配置先を AI または作業者が判断してはならない
 - 機能固有仕様の正本は、作業指示書で指定された `SPECIFICATION.md` のみとする
-- 複数の正本が存在する場合、実装担当 AI は編集を停止し報告する
+- 複数の正本が存在する場合、実装担当 AI は §5.6 に従って停止範囲を判断する
 
 ## 5. Specification Classification Preservation（仕様分類保全）
 
@@ -145,7 +147,17 @@ solacom_main/docs/standards/project-bootstrap/project-notes/CURRENT_TEMPLATE.md
 - 複数の正本が存在する
 - 既存実装が確定仕様と異なる
 
-必ず編集を停止し、矛盾箇所を報告する。
+矛盾箇所と、今回の作業への影響を報告する。
+
+矛盾のどちらを採用するかにより、今回の結果・変更範囲・実行権限が変わる場合は、影響する作業を停止し、利用者へ判断を求める。
+
+上記が変わらない矛盾は、報告して作業を続行できる。その矛盾を無断で解消・修正しない。
+
+影響の有無を判断できない場合は、判断できない内容を報告し、その判断に依存する作業を停止する。
+
+独立して進められる作業まで一律停止しない。
+
+この規則は、必須文書の欠落、承認範囲外の変更、禁止操作等の別の停止条件を解除しない。
 
 ## 6. Standard Document Adoption Gate（標準文書導入ゲート）
 
@@ -424,7 +436,9 @@ Governance Validation Assets
 
 ## 10. Git and Deployment Control（Git・デプロイ統制）
 
-- commit、push、deploy は利用者または設計担当の明示指示がある場合のみ
+- commit、push は、利用者の明示指示がある場合のみ
+- 設計担当の承認、レビュー合格、作業完了は、commit、push の許可にならない
+- deploy は、利用者または設計担当の明示指示がある場合のみ
 - 実装担当 AI は、作業完了を理由に commit してはならない
 - force push、hard reset、clean 等の破壊的操作は禁止（明示指示時を除く）
 - clasp pull / push / deploy は明示指示がある場合のみ
@@ -455,7 +469,7 @@ Governance Validation Assets
 14. 指定外の未決事項追加が必要になる
 15. 指定外の確定仕様追加が必要になる
 16. 指定外の却下仕様追加が必要になる
-17. 複数の正本が存在する
+17. 複数の正本による矛盾で、今回の結果・変更範囲・実行権限が変わる。影響する作業を停止し、利用者へ判断を求める。停止範囲は §5.6 に従う
 18. GitHub 正本と GAS 実体の一致を前提にしないと進められない
 19. Git 操作または clasp 操作が必要になる
 20. 個人情報または秘密情報を記載する必要がある
