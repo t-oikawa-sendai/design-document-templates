@@ -3,10 +3,10 @@ Program Name: DDT CHANGELOG
 Language: Markdown
 Function: design-document-templates の変更履歴正本
 Created: 2026-10-09
-Last Updated: 2026-10-11
+Last Updated: 2026-10-12
 Author: Takashi Oikawa
 AI: Cursor
-Memo: Document ID DDT-CHANGELOG-001。Version 0.19 / Draft。正式承認ではない
+Memo: Document ID DDT-CHANGELOG-001。Version 0.20 / Draft。正式承認ではない。Version 0.20 は GOV-01 の履歴である。commit 識別は Git 履歴を正とする。Version 0.17 は未反映の保留履歴である
 -->
 
 # CHANGELOG
@@ -15,10 +15,10 @@ Memo: Document ID DDT-CHANGELOG-001。Version 0.19 / Draft。正式承認では�
 | Item（項目） | Value（値） |
 |---|---|
 | Document ID（文書ID） | DDT-CHANGELOG-001 |
-| Version（バージョン） | 0.19 |
+| Version（バージョン） | 0.20 |
 | Status（ステータス） | Draft |
 | Created Date（作成日） | 2026-10-09 |
-| Last Updated（最終更新日） | 2026-10-11 |
+| Last Updated（最終更新日） | 2026-10-12 |
 | Owner（管理者） | Takashi Oikawa |
 | Related Documents（関連文書） | [README.md](./README.md) / [docs/STUDENT_USAGE_GUIDE.md](./docs/STUDENT_USAGE_GUIDE.md) / [CONSTITUTION.md](./CONSTITUTION.md) / [AGENTS.md](./AGENTS.md) / [docs/design/README.md](./docs/design/README.md) |
 
@@ -56,10 +56,18 @@ Governance 導入 Baseline は、Governance 導入成功後に記録する。
 
 原本の Version 相違が未解消である間は、整合確認完了、正式公開完了とは記録しない。正式承認、commit、push、生徒向け公開の完了とは区別する。
 
+反映済みと未反映の区分は次のとおりである。各行の本文は当時の記録として維持し、今回の状態を過去の行へ遡及させない。
+
+- GOV-01 の履歴: Version 0.20。対象は `project-notes/CURRENT.md` と `CHANGELOG.md` である。commit 識別は Git 履歴を正とし、本文に commit SHA は記録しない。
+- 未反映の保留: Version 0.17。履歴の文章は保持する。対象ファイルの差分は GOV-01 に含めていない。
+- 現況訂正 commit `7f6c5a6ad4c27ce75271acea068049a6e5716893` に含まれる履歴: Version 0.19、Version 0.18、および Version 0.16 以下。この SHA は GOV-01 の親であり、GOV-01 反映後の HEAD ではない。
+
 | Version（バージョン） | Date（日付） | Document（文書） | Category（変更分類） | Changes（内容） | Author（作成者） |
 |---|---|---|---|---|---|
+| 0.20 | 2026-10-12 | project-notes/CURRENT.md、CHANGELOG.md | Fixed | GOV-01として、GitHub反映済みの履歴と未commitのローカル保留履歴を区分して統合した。対象版は CURRENT 0.20、CHANGELOG 0.20、いずれも Draft。GOV-01 の親は、現況訂正 commit `7f6c5a6ad4c27ce75271acea068049a6e5716893`（メッセージ `docs: correct recorded redistribution state`）である。この commit は再配布 commit `4edcddc501ce099b2d9dd8152400c53503c3bc39` の後続である。GOV-01 着手時点の local HEAD、origin/main、GitHub main はこの SHA で一致した。この SHA を GOV-01 反映後の HEAD とは扱わない。Governance再配布と現況訂正は、この現況訂正 commit に含まれている。Claude独立レビューの記録は、GitHub main の Version 0.19 に残る結果を維持する。中央原本と DDT の制御2文書（AGENTS.md、CONSTITUTION.md）は合格、総合は条件付き合格であり、S-1 対応結果の確認が残る。repository-governance のレビュー担当の確認は未完了であり、再配布 commit `ffa743eb1f0ae1db39864c579641c17c36791134` への追加レビューが必要である。Version 0.17 の保留履歴は未反映のまま保持し、反映済みとは記録しない。テンプレート7件と管理設計文書の未commit差分は、この行の反映内容ではない。この行の commit 識別は Git 履歴を正とする。本文に commit SHA は記録しない。2026-10-12 のこの作業ツリーで、`python3 scripts/validate-docs.py` は PASS、`git diff --check` は PASS である。既存の未commit差分に由来する失敗はなかった。正式承認、公開前確認、Public化、Persona導入は未実施である。過去行の本文は当時の記録として変更していない。 | Takashi Oikawa |
 | 0.19 | 2026-10-11 | project-notes/CURRENT.md、CHANGELOG.md | Fixed | 再配布 commit `4edcddc501ce099b2d9dd8152400c53503c3bc39`（メッセージ `docs: redistribute governance standards`）の後に残っていた CURRENT の現況を訂正した。対象版は CURRENT 0.19、CHANGELOG 0.19、いずれも Draft。再配布はその commit で commit し、`main` へ通常 push 済みである。記録作成時点の local HEAD、origin/main、GitHub main は同 SHA で一致した。この SHA は再配布 commit および記録作成時点の確認値である。同 SHA の Actions「Validate Documents」run `38140991881` は success、job `validate-docs` も success である。https://github.com/t-oikawa-sendai/design-document-templates/actions/runs/38140991881 この Actions 成功は再配布 commit の検証結果である。独立レビューは、中央原本と DDT の制御2文書（AGENTS.md、CONSTITUTION.md）が合格、総合は条件付き合格であり、S-1 対応結果の確認が残る。repository-governance のレビュー担当の確認は未完了であり、再配布 commit `ffa743eb1f0ae1db39864c579641c17c36791134` への追加レビューが必要である。Persona導入と公開の完了は記録しない。保留中のテンプレート7件、管理設計文書、0.17 履歴は、この履歴に含めていない。過去行の未commitは当時の記録として維持する。本行は、この訂正の commit SHA、push 結果、再レビュー完了を含まない。 | Takashi Oikawa |
 | 0.18 | 2026-10-11 | AGENTS.md、CONSTITUTION.md、project-notes/CURRENT.md、CHANGELOG.md | Changed | 中央原本 `solacom_main` の commit `d5564ccdcfecdb485b079ec952813c31b4145822` から、`docs/standards/project-bootstrap/AGENTS_SOURCE.md` を `/AGENTS.md` へ、`docs/standards/project-bootstrap/CONSTITUTION.md` を `/CONSTITUTION.md` へ無変換でコピーした。AGENTS は Version 1.6、blob `655831c74eb62c1d072ae3e7eea6104847703c43`。CONSTITUTION は STANDARD_VERSION 1.8、blob `481017bc141ff22668b616a668866815af0ee4aa`。バイト一致を確認した。この候補に含む文書は AGENTS.md、CONSTITUTION.md、CHANGELOG.md、project-notes/CURRENT.md の4件である。版は CURRENT 0.18、CHANGELOG 0.18、いずれも Draft。記録時点の実 HEAD は `fa8a5a48608131edd2e16e283de73cf93f23b1c7` であり、この候補の親である。この候補自身は未commitである。commit・push、更新後 SHA の Actions、独立レビュー、Persona導入は未実施である。作業ツリーに残る別作業は保留中であり、この候補の反映内容ではない。未commitの 0.17 履歴は、反映済み履歴としてこの候補に入れていない。テンプレート7件と管理設計文書の更新は、この候補に含めていない。候補4ファイルを基点コミットのツリーへ重ねた検証用ツリーの local validator は PASS である。この結果は、作業ツリー上の別作業の検証結果ではない。 | Takashi Oikawa |
+| 0.17 | 2026-10-11 | project-notes/CURRENT.md、CHANGELOG.md、docs/design/README.md、docs/design/01_REQUEST_DEFINITION.md、docs/design/03_DATA_AND_SECURITY_DESIGN.md、docs/design/05_ARCHITECTURE_DESIGN.md、templates/design/ の7文書 | Changed | 現在状態を誤認させる記述を訂正した。配布テンプレート7件を、固定した中央 commit `d7ebcace33593d170de88c2f217383d3708f0c1a` の `docs/standards/templates/design/` から無変換で再配布した。現行の照合基準を同じ SHA へ更新した。版は CURRENT 0.17、CHANGELOG 0.17、管理設計 README 0.13、01 は 0.9、03 は 0.8、05 は 0.7、いずれも Draft。02・04・06 の版は変えていない。本行は commit 前の記録であり、今回の commit・push・Actions 成功は含まない。記録時点の HEAD（この更新 commit の親）は `fa8a5a48608131edd2e16e283de73cf93f23b1c7` である。同 SHA の Actions 成功は、この修正の検証結果ではない。自己検証は設計担当の確認完了ではない。正式承認、独立レビュー、公開前確認、Public化は未実施である。 | Takashi Oikawa |
 | 0.16 | 2026-10-10 | project-notes/CURRENT.md、CHANGELOG.md | Fixed | 今回のcommit・push許可に関する誤記を訂正した。今回の作業ではcommit・pushを行わない。設計担当レビュー後、利用者の明示指示を待つ。レビューPASSをcommit・pushの許可とは扱わない。版は CURRENT 0.16、CHANGELOG 0.16、いずれも Draft。他の9文書は変更していない。本行は commit 前の記録であり、今回の Push と Actions 成功は含まない。基点は配布先 `fb56e5c8daf269bc89a8973c7a61dd497f154e40`。自己検証は設計担当レビュー PASS ではない。正式承認、独立レビュー、Public化は未実施である。 | Takashi Oikawa |
 | 0.15 | 2026-10-10 | README.md、docs/STUDENT_USAGE_GUIDE.md、docs/GOVERNED_DEVELOPMENT_GUIDE.md、docs/design/README.md、docs/design/01_REQUEST_DEFINITION.md、docs/design/02_REQUIREMENTS_DEFINITION.md、docs/design/03_DATA_AND_SECURITY_DESIGN.md、docs/design/04_UI_AND_FLOW_DESIGN.md、docs/design/06_OPERATION_AND_HANDOFF.md、project-notes/CURRENT.md、CHANGELOG.md | Changed | 案内の共通前提を参考資料§1へ集約し、使用説明書とルートREADMEの重複説明を参照へ置き換えた。管理用02 §5.5を12文書の内訳の記載先とし、03の内訳再掲、04 §5.4の同一手順、06の長い受け入れセルと旧§8を、参照と§5.7へ整理した。CURRENTの過去工程は、CHANGELOGと編集前のGit履歴への参照へ置き換えた。版は README 0.11、使用説明書 0.9、参考資料 0.7、管理設計 README 0.12、01 は 0.8、02 は 0.11、03 と 04 は 0.7、06 は 0.10、CURRENT 0.15、CHANGELOG 0.15、いずれも Draft。05 は 0.6 のままである。本行は commit 前の記録であり、今回の Push と Actions 成功は含まない。基点は配布先 `fb56e5c8daf269bc89a8973c7a61dd497f154e40`。同 SHA の Actions 成功は、この整理の検証結果ではない。前回の README 修正のレビュー PASS は、この修正の PASS ではない。正式承認、独立レビュー、Public化は未実施である。 | Takashi Oikawa |
 | 0.14 | 2026-10-10 | README.md、docs/design/02_REQUIREMENTS_DEFINITION.md、docs/design/README.md、project-notes/CURRENT.md、CHANGELOG.md | Changed | ルート README の7文書の名称・役割表に、実ファイル名の列を追加した。各ファイル名は `templates/design/` の該当ファイルへの相対リンクである。設定ファイルの導入説明を、AGENTS.md と CONSTITUTION.md の役割、利用の任意、設定の有無にかかわらず同じ7文書管理方式を適用する文章へ置き換えた。メリット・デメリットと参考資料へのリンクは維持し、配布元の設定ファイルを利用先へコピーする案内は加えていない。版は README 0.10、02 は 0.10、管理設計 README 0.11、CURRENT 0.14、CHANGELOG 0.14、いずれも Draft。本行は commit 前の記録であり、今回の Push と Actions 成功は含まない。基点は配布先 `515f859b1368c09a47fde730bd64f9e92225be6b`。前回の文書情報表の折りたたみのレビュー PASS は、この修正の PASS ではない。正式承認、独立レビュー、Public化は未実施である。 | Takashi Oikawa |
